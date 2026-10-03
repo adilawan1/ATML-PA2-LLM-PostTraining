@@ -16,3 +16,10 @@ output: outputs/task3_grpo/standard
 results_dir: results/task3_grpo
 group_cache: cached/grpo_k_cache.jsonl
 cache_generation_cap: 768
+
+# Student additions (operational only; released constants above are unchanged).
+eval_max_response_length: 768   # held-out generation cap, same frozen-evaluation cap as configs/ppo.yaml
+eval_batch_size: 16
+eval_logprob_chunk: 2
+grad_diagnostics: true          # per-completion policy-gradient norms for the length-normalization study
+# logprob_temperature defaults to generation.temperature (TRL GRPO convention).
