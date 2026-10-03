@@ -12,3 +12,7 @@ policies:
   grpo: outputs/task3_grpo/standard
   rlvr: checkpoints/rlvr_policy
   rlaif: checkpoints/rlaif_policy
+
+# Student additions (operational only; released constants above are unchanged).
+safety_batch_size: 16           # XSTest prompts per greedy generation batch (same for every policy)
+judge_batch_size: 1             # 1 = the supplied single-example judge_one exactly; >1 batches the same prompt/decoding

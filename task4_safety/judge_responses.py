@@ -8,7 +8,8 @@ from pathlib import Path
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
-from common.data import load_yaml, read_jsonl
+from common.data import load_yaml, read_jsonl, repo_path
+from common.logging_utils import append_jsonl, save_json
 from common.models import resolve_dtype
 
 LABELS = {
@@ -102,20 +103,84 @@ def judge_one(tok, model, prompt, response, max_new_tokens=64):
     return parse_json(generated)
 
 
+@torch.no_grad()
+def judge_batch(tok, model, prompts, responses, max_new_tokens=64):
+    """Batched form of judge_one: identical judge prompt, chat template, greedy decoding and parser.
+
+    Left padding can introduce tiny fp16 numeric differences versus judge_one, so the default
+    (judge_batch_size: 1) routes every example through judge_one unchanged.
+    """
+    texts = [
+        tok.apply_chat_template([{"role": "user", "content": JUDGE_PROMPT.format(prompt=p, response=r)}],
+                                tokenize=False, add_generation_prompt=True)
+        for p, r in zip(prompts, responses)
+    ]
+    enc = tok(texts, return_tensors="pt", padding=True, add_special_tokens=False)
+    enc = {k: v.to(next(model.parameters()).device) for k, v in enc.items()}
+    out = model.generate(
+        **enc,
+        max_new_tokens=max_new_tokens,
+        do_sample=False,
+        pad_token_id=tok.eos_token_id,
+        eos_token_id=tok.eos_token_id,
+    )
+    width = enc["input_ids"].shape[1]
+    return [parse_json(tok.decode(row[width:], skip_special_tokens=True)) for row in out]
+
+
+POLICIES = ["sft", "dpo", "ppo", "grpo"]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="configs/feedback.yaml")
     ap.add_argument("--input", help="Optional generated JSONL file to inspect")
+    ap.add_argument("--policies", nargs="+", choices=POLICIES, help="subset (default: every generated policy file)")
     args = ap.parse_args()
     cfg = load_yaml(args.config)
-    tok, model = load_judge(cfg)
-    print("Fixed Task 4 judge loaded:", cfg["ai_judge_model"])
+    outdir = repo_path(cfg["results_dir"]) / "task4_safety"
     if args.input:
         rows = read_jsonl(args.input)
         print("Input rows:", len(rows))
-    raise NotImplementedError(
-        "TODO(student): apply judge_one to your frozen-policy response files, cache the labels, and implement the required Task 4 aggregation."
-    )
+        return
+    todo = []
+    for name in args.policies or POLICIES:
+        src = outdir / f"generated_{name}.jsonl"
+        if not src.is_file():
+            print(f"[judge] {name}: no {src.name}; skipping", flush=True)
+            continue
+        dst = outdir / f"judged_{name}.jsonl"
+        done = {int(r["xstest_id"]) for r in read_jsonl(dst)} if dst.is_file() else set()
+        rows = [r for r in read_jsonl(src) if int(r["xstest_id"]) not in done]
+        print(f"[judge] {name}: {len(done)} already judged, {len(rows)} to go", flush=True)
+        if rows:
+            todo.append((name, dst, rows))
+    if not todo:
+        print("[judge] nothing to do", flush=True)
+        return
+
+    tok, model = load_judge(cfg)
+    print("Fixed Task 4 judge loaded:", cfg["ai_judge_model"])
+    max_new = int(cfg["judge_max_new_tokens"])
+    bs = int(cfg.get("judge_batch_size", 1))
+    for name, dst, rows in todo:
+        for start in range(0, len(rows), bs):
+            chunk = rows[start:start + bs]
+            if bs == 1:
+                labels = [judge_one(tok, model, chunk[0]["prompt"], chunk[0]["response"], max_new_tokens=max_new)]
+            else:
+                labels = judge_batch(tok, model, [r["prompt"] for r in chunk], [r["response"] for r in chunk], max_new_tokens=max_new)
+            for r, lab in zip(chunk, labels):
+                append_jsonl(dst, {"xstest_id": int(r["xstest_id"]), "policy": name, "benchmark_class": r["benchmark_class"],
+                                   "type": r["type"], **lab})
+            if (start // bs) % 25 == 0:
+                print(f"[judge] {name}: {start + len(chunk)}/{len(rows)}", flush=True)
+        print(f"[judge] {name}: done -> {dst}", flush=True)
+    save_json(outdir / "judge_protocol.json", {
+        "judge_model": cfg["ai_judge_model"], "decoding": "greedy", "max_new_tokens": max_new,
+        "judge_batch_size": bs, "quantized_4bit": bool(torch.cuda.is_available() and cfg.get("quantize_frozen_models", True)),
+        "prompt": JUDGE_PROMPT,
+    })
 
 
 if __name__ == "__main__":

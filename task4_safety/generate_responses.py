@@ -3,9 +3,10 @@ from __future__ import annotations
 import argparse
 import pandas as pd
 
-from common.data import load_yaml, repo_path
+from common.data import load_yaml, read_jsonl, repo_path, write_jsonl
 from common.generation import batch_generate
-from common.models import load_policy, load_tokenizer
+from common.logging_utils import save_json
+from common.models import clear_gpu, load_policy, load_tokenizer
 
 
 def policy_specs(cfg):
@@ -59,13 +60,37 @@ def generate_for_policy(cfg, policy_name: str, batch_size: int = 4):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="configs/feedback.yaml")
+    ap.add_argument("--policies", nargs="+", choices=["sft", "dpo", "ppo", "grpo"], help="subset (default: all four)")
+    ap.add_argument("--force", action="store_true", help="regenerate even if a complete response file exists")
     args = ap.parse_args()
     cfg = load_yaml(args.config)
-    print("Policies:", list(policy_specs(cfg)))
-    print("XSTest rows:", len(load_xstest(cfg)))
-    raise NotImplementedError(
-        "TODO(student): call generate_for_policy for SFT/DPO/PPO/GRPO, save common deterministic responses, and preserve the fixed prompt order."
-    )
+    specs = policy_specs(cfg)
+    print("Policies:", list(specs))
+    n_rows = len(load_xstest(cfg))
+    print("XSTest rows:", n_rows)
+    outdir = repo_path(cfg["results_dir"]) / "task4_safety"
+    outdir.mkdir(parents=True, exist_ok=True)
+    batch_size = int(cfg.get("safety_batch_size", 16))
+
+    for name in args.policies or list(specs):
+        path = outdir / f"generated_{name}.jsonl"
+        if path.is_file() and not args.force and len(read_jsonl(path)) == n_rows:
+            print(f"[safety] {name}: {path} already complete; skipping", flush=True)
+            continue
+        adapter = specs[name]
+        if adapter is not None and not repo_path(adapter).is_dir():
+            raise SystemExit(f"[safety] {name}: adapter {adapter} not found; train the standard {name.upper()} policy first.")
+        print(f"[safety] {name}: generating ({adapter or 'no adapter'}), greedy, max_new_tokens={cfg['safety_max_new_tokens']}", flush=True)
+        records = generate_for_policy(cfg, name, batch_size=batch_size)
+        write_jsonl(path, records)  # fixed XSTest order preserved
+        clear_gpu()
+        lengths = [r["response_tokens"] for r in records]
+        print(f"[safety] {name}: wrote {len(records)} rows, mean length {sum(lengths) / len(lengths):.1f} tokens", flush=True)
+    save_json(outdir / "generation_protocol.json", {
+        "policies": specs, "decoding": "greedy (do_sample=False)", "max_new_tokens": int(cfg["safety_max_new_tokens"]),
+        "max_prompt_length": 256, "batch_size": batch_size, "prompt_format": "single user turn, chat template",
+        "xstest_file": cfg["paths"]["xstest"],
+    })
 
 
 if __name__ == "__main__":
