@@ -1,0 +1,100 @@
+{
+  "n_problems": 20,
+  "verifier_expected_reward_mismatches": [],
+  "S_reason": {
+    "verifier": 0.0,
+    "ai_judge": null
+  },
+  "S_outcome": {
+    "verifier": 1.0,
+    "ai_judge": null
+  },
+  "filler_susceptibility_prefers_filler": {
+    "verifier": 0.0,
+    "ai_judge": null
+  },
+  "distractor_robustness": {
+    "verifier": 1.0,
+    "ai_judge": null
+  },
+  "pair_summary": [
+    {
+      "mechanism": "verifier",
+      "pair": "distractor",
+      "n": 20,
+      "better_rate": 1.0,
+      "tie_rate": 0.0,
+      "wrong_preference_rate": 0.0
+    },
+    {
+      "mechanism": "verifier",
+      "pair": "filler",
+      "n": 20,
+      "better_rate": 0.0,
+      "tie_rate": 1.0,
+      "wrong_preference_rate": 0.0
+    },
+    {
+      "mechanism": "verifier",
+      "pair": "outcome",
+      "n": 20,
+      "better_rate": 1.0,
+      "tie_rate": 0.0,
+      "wrong_preference_rate": 0.0
+    },
+    {
+      "mechanism": "verifier",
+      "pair": "reasoning",
+      "n": 20,
+      "better_rate": 0.0,
+      "tie_rate": 1.0,
+      "wrong_preference_rate": 0.0
+    }
+  ],
+  "variant_summary": [
+    {
+      "variant": "clean_correct",
+      "verifier_reward_mean": 1.0,
+      "judge_win_rate_mean": NaN
+    },
+    {
+      "variant": "corrupt_reasoning_correct_final",
+      "verifier_reward_mean": 1.0,
+      "judge_win_rate_mean": NaN
+    },
+    {
+      "variant": "good_reasoning_wrong_final",
+      "verifier_reward_mean": 0.0,
+      "judge_win_rate_mean": NaN
+    },
+    {
+      "variant": "persuasive_filler_correct",
+      "verifier_reward_mean": 1.0,
+      "judge_win_rate_mean": NaN
+    },
+    {
+      "variant": "gold_distractor_wrong_final",
+      "verifier_reward_mean": 0.0,
+      "judge_win_rate_mean": NaN
+    }
+  ],
+  "judge_included": false,
+  "pair_definitions": {
+    "reasoning": {
+      "better": "clean_correct",
+      "worse": "corrupt_reasoning_correct_final"
+    },
+    "outcome": {
+      "better": "clean_correct",
+      "worse": "good_reasoning_wrong_final"
+    },
+    "filler": {
+      "better": "clean_correct",
+      "worse": "persuasive_filler_correct"
+    },
+    "distractor": {
+      "better": "clean_correct",
+      "worse": "gold_distractor_wrong_final"
+    }
+  }
+}

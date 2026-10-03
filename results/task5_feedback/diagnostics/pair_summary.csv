@@ -1,0 +1,5 @@
+mechanism,pair,n,better_rate,tie_rate,wrong_preference_rate
+verifier,distractor,20,1.0,0.0,0.0
+verifier,filler,20,0.0,1.0,0.0
+verifier,outcome,20,1.0,0.0,0.0
+verifier,reasoning,20,0.0,1.0,0.0
