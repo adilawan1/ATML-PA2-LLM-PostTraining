@@ -13,3 +13,12 @@ max_grad_norm: 1.0
 standard_output: outputs/task1_dpo/standard
 length_output: outputs/task1_dpo/length_balanced
 results_dir: results/task1_dpo
+
+# Student additions (operational only; released constants above are unchanged).
+checkpoint_every_steps: 10      # optimizer steps between crash-safe checkpoints
+eval_batch_size: 16             # prompts per generation batch during evaluation
+eval_pair_batch_size: 4         # preference pairs per teacher-forced scoring batch
+eval_logprob_chunk: 4           # sequences per log-prob/KL forward (bounds vocab-sized memory)
+max_prompt_length: 512          # generation prompt cap (left-truncated)
+reward_max_length: 1280         # reward-model input cap, matching configs/ppo.yaml
+word_limit_samples: 5           # sampled responses per word-limit prompt
