@@ -1,0 +1,1157 @@
+{
+  "meta": {
+    "cache": "cached/grpo_k_cache.jsonl",
+    "n_prompts": 24,
+    "total_generations": 192,
+    "tolerance": 1e-06,
+    "sensitivity_tolerances": [
+      0.05,
+      0.1,
+      0.25
+    ],
+    "difficulty_rule": "tertiles of per-prompt mean reward over its 8 cached completions (lowest third = hard)",
+    "difficulty_thresholds": [
+      1.3125813802083333,
+      2.4212239583333335
+    ],
+    "difficulty_bins": {
+      "hard": [
+        "671",
+        "495",
+        "457",
+        "961",
+        "953",
+        "175",
+        "936",
+        "280"
+      ],
+      "medium": [
+        "254",
+        "796",
+        "510",
+        "873",
+        "436",
+        "981",
+        "124",
+        "922"
+      ],
+      "easy": [
+        "263",
+        "185",
+        "832",
+        "942",
+        "184",
+        "463",
+        "755",
+        "507"
+      ]
+    },
+    "regrouping_rule": "per prompt, consecutive disjoint groups of size K in generation_index order; all_subsets = average over all C(8,K) subsets"
+  },
+  "rows": [
+    {
+      "K": 2,
+      "source_index": "671",
+      "prompt_id": "01a4b2ed4479c8fa682c3466f7db16f277168d90c8450a729089f4527345ee8d",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -1.45556640625,
+      "prompt_std_k8": 1.9795737868410508,
+      "group_stds": [
+        0.6796875,
+        2.84765625,
+        0.85546875,
+        2.076171875
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 2
+    },
+    {
+      "K": 2,
+      "source_index": "495",
+      "prompt_id": "81b5deabb0959afb606520d2b821cd91dfd5c103f414ed5c2c132d18b0cc2f3a",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -1.42041015625,
+      "prompt_std_k8": 0.35993681406126987,
+      "group_stds": [
+        0.21484375,
+        0.08984375,
+        0.201171875,
+        0.0
+      ],
+      "informative_groups": 3,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "457",
+      "prompt_id": "651e4c1d0b8bf0212c220f3f0a7d08161ad0952d9e3ea9d0963ab97a45937ea6",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -0.85198974609375,
+      "prompt_std_k8": 0.47132480689723505,
+      "group_stds": [
+        0.2783203125,
+        0.09765625,
+        0.2109375,
+        0.677001953125
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "961",
+      "prompt_id": "23bd8f99e8359f0052e16c65689eae80cb20bf937ea6ca5794d36d29734a560b",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -0.1944580078125,
+      "prompt_std_k8": 0.6329310623998741,
+      "group_stds": [
+        0.0458984375,
+        0.5927734375,
+        0.36669921875,
+        0.87109375
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "953",
+      "prompt_id": "527fbcd702b2e3e8125b5516be289806fa79e2685c0e4285276d03acf3dcc043",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 0.73388671875,
+      "prompt_std_k8": 0.7473388189352107,
+      "group_stds": [
+        0.6875,
+        0.314453125,
+        0.12890625,
+        0.77734375
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "175",
+      "prompt_id": "faff5c962224bd104f4c6eb8c00bcfd84c37b29d3de55e600ccc3cc3ea4c3f99",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 0.7420654296875,
+      "prompt_std_k8": 0.8345445721364121,
+      "group_stds": [
+        0.28515625,
+        0.24658203125,
+        0.9111328125,
+        0.8017578125
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 7
+    },
+    {
+      "K": 2,
+      "source_index": "936",
+      "prompt_id": "d995e3ae06848698448f0310c0956505e70240e048f520449e325f00ed1479a0",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 0.8939208984375,
+      "prompt_std_k8": 1.0813008883524027,
+      "group_stds": [
+        0.2646484375,
+        0.43359375,
+        0.72705078125,
+        0.10546875
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "280",
+      "prompt_id": "be78486affffe4f57015a153c5529c949aeb7511e1f30ed76da522452f245bed",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 1.2734375,
+      "prompt_std_k8": 0.0,
+      "group_stds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "informative_groups": 0,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "254",
+      "prompt_id": "5294c9606e5e6fb93dc94319d5547c1cba3d6d44da00ee551d2621227e3b6ee8",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 1.3321533203125,
+      "prompt_std_k8": 0.9530207389339215,
+      "group_stds": [
+        1.2646484375,
+        0.08203125,
+        0.93017578125,
+        0.30078125
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 6
+    },
+    {
+      "K": 2,
+      "source_index": "796",
+      "prompt_id": "cb3bebe583bd8475019b58042be3a76432b23c81b79b32c441d4b3bf203760df",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 1.81658935546875,
+      "prompt_std_k8": 1.0774114690525276,
+      "group_stds": [
+        0.34765625,
+        1.103515625,
+        0.984375,
+        1.344970703125
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 3
+    },
+    {
+      "K": 2,
+      "source_index": "510",
+      "prompt_id": "4f38c04a24c73c45df69326d4c7cd11dd422127645725ebba220231150bca382",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 1.86572265625,
+      "prompt_std_k8": 0.7184153897474302,
+      "group_stds": [
+        0.751953125,
+        0.390625,
+        0.46484375,
+        0.484375
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "873",
+      "prompt_id": "c359f7ed5e4a168b1e27bd1c27dc9752980103a2e1b38991e5011a7ea44d214e",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.1845703125,
+      "prompt_std_k8": 0.7471864697278944,
+      "group_stds": [
+        0.1796875,
+        0.125,
+        0.109375,
+        0.70703125
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 7
+    },
+    {
+      "K": 2,
+      "source_index": "436",
+      "prompt_id": "15837ad2725266a35255f91d2e023ea644ede5cb9d7ec9270ab3c6dd6449a74c",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.212890625,
+      "prompt_std_k8": 0.3636748120182155,
+      "group_stds": [
+        0.1328125,
+        0.6171875,
+        0.1015625,
+        0.0625
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "981",
+      "prompt_id": "b8b9d3c72997de501f1e5179b0e5e2b5dae4c865f92dbe51ac4224e2039ea58d",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.2646484375,
+      "prompt_std_k8": 0.28358507379548353,
+      "group_stds": [
+        0.3046875,
+        0.046875,
+        0.0,
+        0.35546875
+      ],
+      "informative_groups": 3,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "124",
+      "prompt_id": "d407599fef051a44d505c8439c3c6a6fb7d8fb6658384a4c391e9c2f2146f16d",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.375,
+      "prompt_std_k8": 0.3900972998116143,
+      "group_stds": [
+        0.42578125,
+        0.09375,
+        0.41796875,
+        0.375
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "922",
+      "prompt_id": "ad86afe9508e533cc19d35c42f785e900274a28e57d150e0007c7fb632a70889",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.4169921875,
+      "prompt_std_k8": 0.2587853773322521,
+      "group_stds": [
+        0.1015625,
+        0.0078125,
+        0.33984375,
+        0.2421875
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "263",
+      "prompt_id": "da4fae100599eb9dfb9500f28dd604665eaba000cd4b94940f3471c85c8de99d",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.4296875,
+      "prompt_std_k8": 0.4283893743484863,
+      "group_stds": [
+        0.48828125,
+        0.5703125,
+        0.140625,
+        0.33203125
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "185",
+      "prompt_id": "bdfcf969f2a84458b2498e0acc198d3094334b81d595fed1724210d7c9f89279",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.4599609375,
+      "prompt_std_k8": 1.2204730251883498,
+      "group_stds": [
+        0.00390625,
+        0.140625,
+        0.234375,
+        0.421875
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 4
+    },
+    {
+      "K": 2,
+      "source_index": "832",
+      "prompt_id": "d618f38c0b2f73bb7985a1f07a7b4ca3b70e62a96407b8f6877da59e9241ba82",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.65625,
+      "prompt_std_k8": 0.4307515235028194,
+      "group_stds": [
+        0.4296875,
+        0.078125,
+        0.203125,
+        0.0546875
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "942",
+      "prompt_id": "a2d24c910daf54855e433d30c3e03a33384b87f028e9306be71ecab95700964b",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.6875,
+      "prompt_std_k8": 0.19200321449132043,
+      "group_stds": [
+        0.1640625,
+        0.1796875,
+        0.1015625,
+        0.0703125
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "184",
+      "prompt_id": "ba7ddaf72f0e034da39b43276b9f418894a12a6fffdbcf6359a302ef1b34688e",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.966796875,
+      "prompt_std_k8": 0.3191133709292974,
+      "group_stds": [
+        0.171875,
+        0.1328125,
+        0.3125,
+        0.1875
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "463",
+      "prompt_id": "5df5fb2b07b896cb5c4419afc9d3fd2b653535528abe1819bd2b52c07d52726b",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 3.00390625,
+      "prompt_std_k8": 0.1781095799246562,
+      "group_stds": [
+        0.1875,
+        0.0625,
+        0.1328125,
+        0.0546875
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "755",
+      "prompt_id": "de9a80e769756c36c3bec31ccca84a180e2862f7dd06ef5e5a36fde7caceaa2a",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 3.072265625,
+      "prompt_std_k8": 0.4708246731031992,
+      "group_stds": [
+        0.5859375,
+        0.0859375,
+        0.234375,
+        0.0546875
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 2,
+      "source_index": "507",
+      "prompt_id": "d31b039922e3bb89d63a8f7331c90d77437a449e4b5f757a114b28002ffae60a",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 3.220703125,
+      "prompt_std_k8": 0.7185137816655707,
+      "group_stds": [
+        0.8203125,
+        0.4375,
+        0.828125,
+        0.03125
+      ],
+      "informative_groups": 4,
+      "n_groups": 4,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "671",
+      "prompt_id": "01a4b2ed4479c8fa682c3466f7db16f277168d90c8450a729089f4527345ee8d",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -1.45556640625,
+      "prompt_std_k8": 1.9795737868410508,
+      "group_stds": [
+        2.2406991943673904,
+        1.59616892633394
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 2
+    },
+    {
+      "K": 4,
+      "source_index": "495",
+      "prompt_id": "81b5deabb0959afb606520d2b821cd91dfd5c103f414ed5c2c132d18b0cc2f3a",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -1.42041015625,
+      "prompt_std_k8": 0.35993681406126987,
+      "group_stds": [
+        0.18574208481201157,
+        0.1500827561020893
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "457",
+      "prompt_id": "651e4c1d0b8bf0212c220f3f0a7d08161ad0952d9e3ea9d0963ab97a45937ea6",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -0.85198974609375,
+      "prompt_std_k8": 0.47132480689723505,
+      "group_stds": [
+        0.2187341956832677,
+        0.5704810925383759
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "961",
+      "prompt_id": "23bd8f99e8359f0052e16c65689eae80cb20bf937ea6ca5794d36d29734a560b",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -0.1944580078125,
+      "prompt_std_k8": 0.6329310623998741,
+      "group_stds": [
+        0.505268945368029,
+        0.6702536159163152
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "953",
+      "prompt_id": "527fbcd702b2e3e8125b5516be289806fa79e2685c0e4285276d03acf3dcc043",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 0.73388671875,
+      "prompt_std_k8": 0.7473388189352107,
+      "group_stds": [
+        0.6167631984453539,
+        0.5701787086218013
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "175",
+      "prompt_id": "faff5c962224bd104f4c6eb8c00bcfd84c37b29d3de55e600ccc3cc3ea4c3f99",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 0.7420654296875,
+      "prompt_std_k8": 0.8345445721364121,
+      "group_stds": [
+        0.3646224500470845,
+        0.859078095906142
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 7
+    },
+    {
+      "K": 4,
+      "source_index": "936",
+      "prompt_id": "d995e3ae06848698448f0310c0956505e70240e048f520449e325f00ed1479a0",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 0.8939208984375,
+      "prompt_std_k8": 1.0813008883524027,
+      "group_stds": [
+        0.67689572204825,
+        1.3588351131266756
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "280",
+      "prompt_id": "be78486affffe4f57015a153c5529c949aeb7511e1f30ed76da522452f245bed",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 1.2734375,
+      "prompt_std_k8": 0.0,
+      "group_stds": [
+        0.0,
+        0.0
+      ],
+      "informative_groups": 0,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "254",
+      "prompt_id": "5294c9606e5e6fb93dc94319d5547c1cba3d6d44da00ee551d2621227e3b6ee8",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 1.3321533203125,
+      "prompt_std_k8": 0.9530207389339215,
+      "group_stds": [
+        0.9237221784105724,
+        0.8779580320677265
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 6
+    },
+    {
+      "K": 4,
+      "source_index": "796",
+      "prompt_id": "cb3bebe583bd8475019b58042be3a76432b23c81b79b32c441d4b3bf203760df",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 1.81658935546875,
+      "prompt_std_k8": 1.0774114690525276,
+      "group_stds": [
+        0.8540422922780299,
+        1.2346033476622236
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 3
+    },
+    {
+      "K": 4,
+      "source_index": "510",
+      "prompt_id": "4f38c04a24c73c45df69326d4c7cd11dd422127645725ebba220231150bca382",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 1.86572265625,
+      "prompt_std_k8": 0.7184153897474302,
+      "group_stds": [
+        0.7094516527882946,
+        0.5042051862813858
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "873",
+      "prompt_id": "c359f7ed5e4a168b1e27bd1c27dc9752980103a2e1b38991e5011a7ea44d214e",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.1845703125,
+      "prompt_std_k8": 0.7471864697278944,
+      "group_stds": [
+        0.6476722706100575,
+        0.7406928824046589
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 7
+    },
+    {
+      "K": 4,
+      "source_index": "436",
+      "prompt_id": "15837ad2725266a35255f91d2e023ea644ede5cb9d7ec9270ab3c6dd6449a74c",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.212890625,
+      "prompt_std_k8": 0.3636748120182155,
+      "group_stds": [
+        0.5006099794875248,
+        0.08655671799281382
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "981",
+      "prompt_id": "b8b9d3c72997de501f1e5179b0e5e2b5dae4c865f92dbe51ac4224e2039ea58d",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.2646484375,
+      "prompt_std_k8": 0.28358507379548353,
+      "group_stds": [
+        0.28002663621910595,
+        0.2870695125388568
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "124",
+      "prompt_id": "d407599fef051a44d505c8439c3c6a6fb7d8fb6658384a4c391e9c2f2146f16d",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.375,
+      "prompt_std_k8": 0.3900972998116143,
+      "group_stds": [
+        0.3085875691627854,
+        0.42058450625801336
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "922",
+      "prompt_id": "ad86afe9508e533cc19d35c42f785e900274a28e57d150e0007c7fb632a70889",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.4169921875,
+      "prompt_std_k8": 0.2587853773322521,
+      "group_stds": [
+        0.10065702130254005,
+        0.3506661750973736
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "263",
+      "prompt_id": "da4fae100599eb9dfb9500f28dd604665eaba000cd4b94940f3471c85c8de99d",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.4296875,
+      "prompt_std_k8": 0.4283893743484863,
+      "group_stds": [
+        0.5311745982795317,
+        0.28839529206008524
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "185",
+      "prompt_id": "bdfcf969f2a84458b2498e0acc198d3094334b81d595fed1724210d7c9f89279",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.4599609375,
+      "prompt_std_k8": 1.2204730251883498,
+      "group_stds": [
+        0.9291682997434032,
+        0.4523160883165665
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 4
+    },
+    {
+      "K": 4,
+      "source_index": "832",
+      "prompt_id": "d618f38c0b2f73bb7985a1f07a7b4ca3b70e62a96407b8f6877da59e9241ba82",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.65625,
+      "prompt_std_k8": 0.4307515235028194,
+      "group_stds": [
+        0.3807141149270506,
+        0.4436475178756075
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "942",
+      "prompt_id": "a2d24c910daf54855e433d30c3e03a33384b87f028e9306be71ecab95700964b",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.6875,
+      "prompt_std_k8": 0.19200321449132043,
+      "group_stds": [
+        0.23241366844755496,
+        0.13997244427475716
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "184",
+      "prompt_id": "ba7ddaf72f0e034da39b43276b9f418894a12a6fffdbcf6359a302ef1b34688e",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.966796875,
+      "prompt_std_k8": 0.3191133709292974,
+      "group_stds": [
+        0.15600566834153015,
+        0.39311705079403514
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "463",
+      "prompt_id": "5df5fb2b07b896cb5c4419afc9d3fd2b653535528abe1819bd2b52c07d52726b",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 3.00390625,
+      "prompt_std_k8": 0.1781095799246562,
+      "group_stds": [
+        0.2155174097520894,
+        0.10881553341550093
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "755",
+      "prompt_id": "de9a80e769756c36c3bec31ccca84a180e2862f7dd06ef5e5a36fde7caceaa2a",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 3.072265625,
+      "prompt_std_k8": 0.4708246731031992,
+      "group_stds": [
+        0.4370114459670936,
+        0.495016053835315
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 4,
+      "source_index": "507",
+      "prompt_id": "d31b039922e3bb89d63a8f7331c90d77437a449e4b5f757a114b28002ffae60a",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 3.220703125,
+      "prompt_std_k8": 0.7185137816655707,
+      "group_stds": [
+        0.6624866412273439,
+        0.6915276199970252
+      ],
+      "informative_groups": 2,
+      "n_groups": 2,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "671",
+      "prompt_id": "01a4b2ed4479c8fa682c3466f7db16f277168d90c8450a729089f4527345ee8d",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -1.45556640625,
+      "prompt_std_k8": 1.9795737868410508,
+      "group_stds": [
+        1.9795737868410508
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 2
+    },
+    {
+      "K": 8,
+      "source_index": "495",
+      "prompt_id": "81b5deabb0959afb606520d2b821cd91dfd5c103f414ed5c2c132d18b0cc2f3a",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -1.42041015625,
+      "prompt_std_k8": 0.35993681406126987,
+      "group_stds": [
+        0.35993681406126987
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "457",
+      "prompt_id": "651e4c1d0b8bf0212c220f3f0a7d08161ad0952d9e3ea9d0963ab97a45937ea6",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -0.85198974609375,
+      "prompt_std_k8": 0.47132480689723505,
+      "group_stds": [
+        0.47132480689723505
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "961",
+      "prompt_id": "23bd8f99e8359f0052e16c65689eae80cb20bf937ea6ca5794d36d29734a560b",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": -0.1944580078125,
+      "prompt_std_k8": 0.6329310623998741,
+      "group_stds": [
+        0.6329310623998741
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "953",
+      "prompt_id": "527fbcd702b2e3e8125b5516be289806fa79e2685c0e4285276d03acf3dcc043",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 0.73388671875,
+      "prompt_std_k8": 0.7473388189352107,
+      "group_stds": [
+        0.7473388189352107
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "175",
+      "prompt_id": "faff5c962224bd104f4c6eb8c00bcfd84c37b29d3de55e600ccc3cc3ea4c3f99",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 0.7420654296875,
+      "prompt_std_k8": 0.8345445721364121,
+      "group_stds": [
+        0.8345445721364121
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 7
+    },
+    {
+      "K": 8,
+      "source_index": "936",
+      "prompt_id": "d995e3ae06848698448f0310c0956505e70240e048f520449e325f00ed1479a0",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 0.8939208984375,
+      "prompt_std_k8": 1.0813008883524027,
+      "group_stds": [
+        1.0813008883524027
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "280",
+      "prompt_id": "be78486affffe4f57015a153c5529c949aeb7511e1f30ed76da522452f245bed",
+      "difficulty": "hard",
+      "prompt_mean_reward_k8": 1.2734375,
+      "prompt_std_k8": 0.0,
+      "group_stds": [
+        0.0
+      ],
+      "informative_groups": 0,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "254",
+      "prompt_id": "5294c9606e5e6fb93dc94319d5547c1cba3d6d44da00ee551d2621227e3b6ee8",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 1.3321533203125,
+      "prompt_std_k8": 0.9530207389339215,
+      "group_stds": [
+        0.9530207389339215
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 6
+    },
+    {
+      "K": 8,
+      "source_index": "796",
+      "prompt_id": "cb3bebe583bd8475019b58042be3a76432b23c81b79b32c441d4b3bf203760df",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 1.81658935546875,
+      "prompt_std_k8": 1.0774114690525276,
+      "group_stds": [
+        1.0774114690525276
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 3
+    },
+    {
+      "K": 8,
+      "source_index": "510",
+      "prompt_id": "4f38c04a24c73c45df69326d4c7cd11dd422127645725ebba220231150bca382",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 1.86572265625,
+      "prompt_std_k8": 0.7184153897474302,
+      "group_stds": [
+        0.7184153897474302
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "873",
+      "prompt_id": "c359f7ed5e4a168b1e27bd1c27dc9752980103a2e1b38991e5011a7ea44d214e",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.1845703125,
+      "prompt_std_k8": 0.7471864697278944,
+      "group_stds": [
+        0.7471864697278944
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 7
+    },
+    {
+      "K": 8,
+      "source_index": "436",
+      "prompt_id": "15837ad2725266a35255f91d2e023ea644ede5cb9d7ec9270ab3c6dd6449a74c",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.212890625,
+      "prompt_std_k8": 0.3636748120182155,
+      "group_stds": [
+        0.3636748120182155
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "981",
+      "prompt_id": "b8b9d3c72997de501f1e5179b0e5e2b5dae4c865f92dbe51ac4224e2039ea58d",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.2646484375,
+      "prompt_std_k8": 0.28358507379548353,
+      "group_stds": [
+        0.28358507379548353
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "124",
+      "prompt_id": "d407599fef051a44d505c8439c3c6a6fb7d8fb6658384a4c391e9c2f2146f16d",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.375,
+      "prompt_std_k8": 0.3900972998116143,
+      "group_stds": [
+        0.3900972998116143
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "922",
+      "prompt_id": "ad86afe9508e533cc19d35c42f785e900274a28e57d150e0007c7fb632a70889",
+      "difficulty": "medium",
+      "prompt_mean_reward_k8": 2.4169921875,
+      "prompt_std_k8": 0.2587853773322521,
+      "group_stds": [
+        0.2587853773322521
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "263",
+      "prompt_id": "da4fae100599eb9dfb9500f28dd604665eaba000cd4b94940f3471c85c8de99d",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.4296875,
+      "prompt_std_k8": 0.4283893743484863,
+      "group_stds": [
+        0.4283893743484863
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "185",
+      "prompt_id": "bdfcf969f2a84458b2498e0acc198d3094334b81d595fed1724210d7c9f89279",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.4599609375,
+      "prompt_std_k8": 1.2204730251883498,
+      "group_stds": [
+        1.2204730251883498
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 4
+    },
+    {
+      "K": 8,
+      "source_index": "832",
+      "prompt_id": "d618f38c0b2f73bb7985a1f07a7b4ca3b70e62a96407b8f6877da59e9241ba82",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.65625,
+      "prompt_std_k8": 0.4307515235028194,
+      "group_stds": [
+        0.4307515235028194
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "942",
+      "prompt_id": "a2d24c910daf54855e433d30c3e03a33384b87f028e9306be71ecab95700964b",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.6875,
+      "prompt_std_k8": 0.19200321449132043,
+      "group_stds": [
+        0.19200321449132043
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "184",
+      "prompt_id": "ba7ddaf72f0e034da39b43276b9f418894a12a6fffdbcf6359a302ef1b34688e",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 2.966796875,
+      "prompt_std_k8": 0.3191133709292974,
+      "group_stds": [
+        0.3191133709292974
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "463",
+      "prompt_id": "5df5fb2b07b896cb5c4419afc9d3fd2b653535528abe1819bd2b52c07d52726b",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 3.00390625,
+      "prompt_std_k8": 0.1781095799246562,
+      "group_stds": [
+        0.1781095799246562
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "755",
+      "prompt_id": "de9a80e769756c36c3bec31ccca84a180e2862f7dd06ef5e5a36fde7caceaa2a",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 3.072265625,
+      "prompt_std_k8": 0.4708246731031992,
+      "group_stds": [
+        0.4708246731031992
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    },
+    {
+      "K": 8,
+      "source_index": "507",
+      "prompt_id": "d31b039922e3bb89d63a8f7331c90d77437a449e4b5f757a114b28002ffae60a",
+      "difficulty": "easy",
+      "prompt_mean_reward_k8": 3.220703125,
+      "prompt_std_k8": 0.7185137816655707,
+      "group_stds": [
+        0.7185137816655707
+      ],
+      "informative_groups": 1,
+      "n_groups": 1,
+      "truncated_completions": 0
+    }
+  ]
+}

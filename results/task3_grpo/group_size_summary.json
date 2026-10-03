@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "cache": "cached/grpo_k_cache.jsonl",
+    "n_prompts": 24,
+    "total_generations": 192,
+    "tolerance": 1e-06,
+    "sensitivity_tolerances": [
+      0.05,
+      0.1,
+      0.25
+    ],
+    "difficulty_rule": "tertiles of per-prompt mean reward over its 8 cached completions (lowest third = hard)",
+    "difficulty_thresholds": [
+      1.3125813802083333,
+      2.4212239583333335
+    ],
+    "difficulty_bins": {
+      "hard": [
+        "671",
+        "495",
+        "457",
+        "961",
+        "953",
+        "175",
+        "936",
+        "280"
+      ],
+      "medium": [
+        "254",
+        "796",
+        "510",
+        "873",
+        "436",
+        "981",
+        "124",
+        "922"
+      ],
+      "easy": [
+        "263",
+        "185",
+        "832",
+        "942",
+        "184",
+        "463",
+        "755",
+        "507"
+      ]
+    },
+    "regrouping_rule": "per prompt, consecutive disjoint groups of size K in generation_index order; all_subsets = average over all C(8,K) subsets"
+  },
+  "rows": [
+    {
+      "K": 2,
+      "scheme": "disjoint",
+      "prompts_equivalent": 24,
+      "n_groups": 96,
+      "n_completions": 192,
+      "informative_rate": 0.9375,
+      "uninformative_rate": 0.0625,
+      "mean_within_group_std": 0.3845672607421875,
+      "median_within_group_std": 0.244384765625,
+      "adv_variance": 0.9374814117154188,
+      "adv_mean_abs": 0.9374907054007053,
+      "centred_reward_variance": 0.3368348789711793,
+      "sign_agreement_with_k8": 0.7445652173913043,
+      "uninformative_rate_tol0.05": 0.11458333333333333,
+      "uninformative_rate_tol0.1": 0.23958333333333334,
+      "uninformative_rate_tol0.25": 0.5104166666666666
+    },
+    {
+      "K": 2,
+      "scheme": "all_subsets",
+      "prompts_equivalent": 168,
+      "n_groups": 672,
+      "n_completions": 1344,
+      "informative_rate": 0.9479166666666666,
+      "uninformative_rate": 0.052083333333333336,
+      "mean_within_group_std": 0.3852488199869792,
+      "median_within_group_std": 0.246337890625,
+      "adv_variance": 0.9478950912347992,
+      "adv_mean_abs": 0.9479058785807519,
+      "centred_reward_variance": 0.3199400821966784,
+      "sign_agreement_with_k8": 0.7639751552795031,
+      "uninformative_rate_tol0.05": 0.17708333333333334,
+      "uninformative_rate_tol0.1": 0.25892857142857145,
+      "uninformative_rate_tol0.25": 0.5029761904761905
+    },
+    {
+      "K": 4,
+      "scheme": "disjoint",
+      "prompts_equivalent": 24,
+      "n_groups": 48,
+      "n_completions": 192,
+      "informative_rate": 0.9583333333333334,
+      "uninformative_rate": 0.041666666666666664,
+      "mean_within_group_std": 0.5410043647319412,
+      "median_within_group_std": 0.4736660710759407,
+      "adv_variance": 0.9583276147577543,
+      "adv_mean_abs": 0.8307160442588307,
+      "centred_reward_variance": 0.4677260586371024,
+      "sign_agreement_with_k8": 0.8858695652173914,
+      "uninformative_rate_tol0.05": 0.041666666666666664,
+      "uninformative_rate_tol0.1": 0.0625,
+      "uninformative_rate_tol0.25": 0.25
+    },
+    {
+      "K": 4,
+      "scheme": "all_subsets",
+      "prompts_equivalent": 840,
+      "n_groups": 1680,
+      "n_completions": 6720,
+      "informative_rate": 0.9583333333333334,
+      "uninformative_rate": 0.041666666666666664,
+      "mean_within_group_std": 0.548795931734076,
+      "median_within_group_std": 0.4362773521930475,
+      "adv_variance": 0.9583270892878153,
+      "adv_mean_abs": 0.8370218610610686,
+      "centred_reward_variance": 0.47991012329501764,
+      "sign_agreement_with_k8": 0.8712732919254659,
+      "uninformative_rate_tol0.05": 0.05476190476190476,
+      "uninformative_rate_tol0.1": 0.07857142857142857,
+      "uninformative_rate_tol0.25": 0.23333333333333334
+    },
+    {
+      "K": 8,
+      "scheme": "disjoint",
+      "prompts_equivalent": 24,
+      "n_groups": 24,
+      "n_completions": 192,
+      "informative_rate": 0.9583333333333334,
+      "uninformative_rate": 0.041666666666666664,
+      "mean_within_group_std": 0.6190544134665206,
+      "median_within_group_std": 0.4710747400002171,
+      "adv_variance": 0.9583290689649328,
+      "adv_mean_abs": 0.793928190033815,
+      "centred_reward_variance": 0.5598951438441873,
+      "sign_agreement_with_k8": 1.0,
+      "uninformative_rate_tol0.05": 0.041666666666666664,
+      "uninformative_rate_tol0.1": 0.041666666666666664,
+      "uninformative_rate_tol0.25": 0.125
+    },
+    {
+      "K": 8,
+      "scheme": "all_subsets",
+      "prompts_equivalent": 24,
+      "n_groups": 24,
+      "n_completions": 192,
+      "informative_rate": 0.9583333333333334,
+      "uninformative_rate": 0.041666666666666664,
+      "mean_within_group_std": 0.6190544134665206,
+      "median_within_group_std": 0.4710747400002171,
+      "adv_variance": 0.9583290689649328,
+      "adv_mean_abs": 0.793928190033815,
+      "centred_reward_variance": 0.5598951438441873,
+      "sign_agreement_with_k8": 1.0,
+      "uninformative_rate_tol0.05": 0.041666666666666664,
+      "uninformative_rate_tol0.1": 0.041666666666666664,
+      "uninformative_rate_tol0.25": 0.125
+    }
+  ]
+}
