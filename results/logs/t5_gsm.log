@@ -1,0 +1,83 @@
+
+=== 2026-10-04 09:59:38 $ python -m task5_feedback.evaluate_math --config configs/feedback.yaml --dataset gsm
+2026-10-04 09:59:44.581104: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Rows: 300
+Policies: ['sft', 'rlvr', 'rlaif']
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[math] sft: 16/300
+[math] sft: 32/300
+[math] sft: 48/300
+[math] sft: 64/300
+[math] sft: 80/300
+[math] sft: 96/300
+[math] sft: 112/300
+[math] sft: 128/300
+[math] sft: 144/300
+[math] sft: 160/300
+[math] sft: 176/300
+[math] sft: 192/300
+[math] sft: 208/300
+[math] sft: 224/300
+[math] sft: 240/300
+[math] sft: 256/300
+[math] sft: 272/300
+[math] sft: 288/300
+[math] sft: 300/300
+[math] rlvr: 16/300
+[math] rlvr: 32/300
+[math] rlvr: 48/300
+[math] rlvr: 64/300
+[math] rlvr: 80/300
+[math] rlvr: 96/300
+[math] rlvr: 112/300
+[math] rlvr: 128/300
+[math] rlvr: 144/300
+[math] rlvr: 160/300
+[math] rlvr: 176/300
+[math] rlvr: 192/300
+[math] rlvr: 208/300
+[math] rlvr: 224/300
+[math] rlvr: 240/300
+[math] rlvr: 256/300
+[math] rlvr: 272/300
+[math] rlvr: 288/300
+[math] rlvr: 300/300
+[math] rlaif: 16/300
+[math] rlaif: 32/300
+[math] rlaif: 48/300
+[math] rlaif: 64/300
+[math] rlaif: 80/300
+[math] rlaif: 96/300
+[math] rlaif: 112/300
+[math] rlaif: 128/300
+[math] rlaif: 144/300
+[math] rlaif: 160/300
+[math] rlaif: 176/300
+[math] rlaif: 192/300
+[math] rlaif: 208/300
+[math] rlaif: 224/300
+[math] rlaif: 240/300
+[math] rlaif: 256/300
+[math] rlaif: 272/300
+[math] rlaif: 288/300
+[math] rlaif: 300/300
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files:  50%|█████     | 1/2 [01:27<01:27, 87.65s/it]
+Fetching 2 files: 100%|██████████| 2/2 [01:27<00:00, 43.83s/it]
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.28s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:25<00:00, 11.95s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:25<00:00, 12.60s/it]
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+[math] judged rlvr vs sft
+[math] judged rlaif vs sft
+[math] judged rlvr vs rlaif
+[math] gsm sft: acc=0.273 format=0.353 len=275
+[math] gsm rlvr: acc=0.293 format=0.363 len=276
+[math] gsm rlaif: acc=0.290 format=0.363 len=277
+[math] rlvr_vs_sft: win_rate=0.503 (W/T/L 6/290/4) agree_on_decisive=0.0
+[math] rlaif_vs_sft: win_rate=0.500 (W/T/L 4/292/4) agree_on_decisive=0.0
+[math] rlvr_vs_rlaif: win_rate=0.500 (W/T/L 5/290/5) agree_on_decisive=0.0
