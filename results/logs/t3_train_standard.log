@@ -1,0 +1,26 @@
+
+=== 2026-10-04 12:56:04 $ python -m task3_grpo.continue_train --config configs/grpo.yaml --run-name standard
+2026-10-04 12:56:12.533534: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[grpo] standard: 20 updates, K=4, loss_type=grpo, starting at update 0
+[grpo] standard update 1/20 reward=-1.488 grp_std=0.689 uninf=0.00 kl=0.0005 ent=1.107 loss=0.0000 gnorm=0.916 len=73 0.2min
+[grpo] standard update 2/20 reward=-0.439 grp_std=0.430 uninf=0.00 kl=0.0002 ent=0.467 loss=0.0000 gnorm=0.000 len=512 0.7min
+[grpo] standard update 3/20 reward=3.184 grp_std=0.196 uninf=0.00 kl=0.0004 ent=0.196 loss=0.0000 gnorm=0.193 len=220 1.1min
+[grpo] standard update 4/20 reward=2.965 grp_std=0.203 uninf=0.00 kl=0.0001 ent=0.640 loss=0.0000 gnorm=0.183 len=426 1.8min
+[grpo] standard update 5/20 reward=3.243 grp_std=0.318 uninf=0.00 kl=0.0003 ent=0.666 loss=0.0000 gnorm=0.251 len=216 2.1min
+[grpo] standard update 6/20 reward=0.810 grp_std=0.328 uninf=0.00 kl=0.0002 ent=0.455 loss=0.1389 gnorm=0.095 len=456 2.6min
+[grpo] standard update 7/20 reward=-0.239 grp_std=0.432 uninf=0.00 kl=0.0005 ent=0.822 loss=0.0000 gnorm=0.676 len=52 2.7min
+[grpo] standard update 8/20 reward=-2.078 grp_std=0.741 uninf=0.00 kl=0.0003 ent=0.502 loss=0.0000 gnorm=0.568 len=32 2.9min
+[grpo] standard update 9/20 reward=0.774 grp_std=0.229 uninf=0.00 kl=-0.0035 ent=0.460 loss=0.0000 gnorm=1.270 len=6 2.9min
+[grpo] standard update 10/20 reward=3.288 grp_std=0.170 uninf=0.00 kl=-0.0004 ent=0.538 loss=0.0000 gnorm=0.226 len=308 3.4min
+[grpo] standard update 11/20 reward=0.189 grp_std=0.972 uninf=0.00 kl=0.0006 ent=0.633 loss=0.0000 gnorm=0.637 len=63 3.5min
+[grpo] standard update 12/20 reward=0.780 grp_std=1.006 uninf=0.00 kl=-0.0001 ent=0.849 loss=0.0000 gnorm=0.000 len=512 4.0min
+[grpo] standard update 13/20 reward=2.223 grp_std=0.476 uninf=0.00 kl=-0.0000 ent=0.825 loss=0.0000 gnorm=0.000 len=512 4.6min
+[grpo] standard update 14/20 reward=-3.250 grp_std=0.000 uninf=1.00 kl=0.0002 ent=0.896 loss=0.0000 gnorm=0.001 len=472 5.1min
+[grpo] standard update 15/20 reward=-0.192 grp_std=0.628 uninf=0.00 kl=-0.0000 ent=0.413 loss=0.0000 gnorm=0.000 len=512 5.6min
+[grpo] standard update 16/20 reward=2.588 grp_std=0.339 uninf=0.00 kl=-0.0004 ent=0.349 loss=0.0000 gnorm=0.629 len=77 5.8min
+[grpo] standard update 17/20 reward=1.944 grp_std=1.395 uninf=0.00 kl=0.0001 ent=0.598 loss=-0.4309 gnorm=0.126 len=435 6.4min
+[grpo] standard update 18/20 reward=1.246 grp_std=0.788 uninf=0.00 kl=0.0000 ent=0.541 loss=-0.2755 gnorm=0.126 len=436 7.0min
+[grpo] standard update 19/20 reward=0.212 grp_std=1.448 uninf=0.00 kl=0.0006 ent=0.674 loss=0.0000 gnorm=0.792 len=78 7.2min
+[grpo] standard update 20/20 reward=-0.245 grp_std=0.430 uninf=0.00 kl=0.0006 ent=0.229 loss=0.0000 gnorm=0.788 len=23 7.2min
+[grpo] standard: saved adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/standard

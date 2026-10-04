@@ -1,0 +1,18 @@
+
+=== 2026-10-04 13:04:04 $ python -m task3_grpo.evaluate --config configs/grpo.yaml --adapter outputs/task3_grpo/standard --name standard
+2026-10-04 13:04:15.304633: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[eval] standard: 16/200
+[eval] standard: 32/200
+[eval] standard: 48/200
+[eval] standard: 64/200
+[eval] standard: 80/200
+[eval] standard: 96/200
+[eval] standard: 112/200
+[eval] standard: 128/200
+[eval] standard: 144/200
+[eval] standard: 160/200
+[eval] standard: 176/200
+[eval] standard: 192/200
+[eval] standard: 200/200
+[eval] standard: reward=1.621 kl_tok=0.0001 entropy=0.592 len=292.2 eos=0.93

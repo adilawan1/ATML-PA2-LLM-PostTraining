@@ -1,0 +1,18 @@
+
+=== 2026-10-04 13:16:42 $ python -m task3_grpo.evaluate --config configs/grpo.yaml --adapter checkpoints/grpo_midpoint_policy --name midpoint
+2026-10-04 13:16:50.149572: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[eval] midpoint: 16/200
+[eval] midpoint: 32/200
+[eval] midpoint: 48/200
+[eval] midpoint: 64/200
+[eval] midpoint: 80/200
+[eval] midpoint: 96/200
+[eval] midpoint: 112/200
+[eval] midpoint: 128/200
+[eval] midpoint: 144/200
+[eval] midpoint: 160/200
+[eval] midpoint: 176/200
+[eval] midpoint: 192/200
+[eval] midpoint: 200/200
+[eval] midpoint: reward=1.641 kl_tok=0.0000 entropy=0.604 len=278.6 eos=0.95

@@ -1,0 +1,35 @@
+{
+  "name": "standard",
+  "n_prompts": 200,
+  "reward_mean": 1.6211182403564453,
+  "reward_std": 1.4093076301020317,
+  "effective_reward_mean": 1.6211182403564453,
+  "kl_token_mean": 0.00010149957299936294,
+  "kl_seq_mean": 0.029655637741088866,
+  "entropy_token_mean": 0.5916713213894073,
+  "response_length": {
+    "mean": 292.175,
+    "std": 257.209767262054,
+    "median": 204.5,
+    "q1": 75.5,
+    "q3": 479.0,
+    "iqr": 403.5,
+    "n": 200
+  },
+  "eos_rate": 0.925,
+  "truncation_rate": 0.075,
+  "protocol": {
+    "seed": 6304,
+    "generation": {
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "do_sample": true
+    },
+    "logprob_temperature": 0.7,
+    "max_new_tokens": 768,
+    "max_prompt_length": 256,
+    "prompts_file": "data/rl_prompt_pool_eval.jsonl",
+    "missing_eos_penalty": 0.0
+  },
+  "eval_wall_clock_s": 705.9445163399996
+}

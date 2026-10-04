@@ -1,0 +1,35 @@
+{
+  "name": "midpoint",
+  "n_prompts": 200,
+  "reward_mean": 1.6407575225830078,
+  "reward_std": 1.358822535863927,
+  "effective_reward_mean": 1.6407575225830078,
+  "kl_token_mean": 1.3170023733174948e-05,
+  "kl_seq_mean": 0.003668971061706543,
+  "entropy_token_mean": 0.6038148944259839,
+  "response_length": {
+    "mean": 278.585,
+    "std": 241.32845413460882,
+    "median": 233.0,
+    "q1": 68.25,
+    "q3": 445.0,
+    "iqr": 376.75,
+    "n": 200
+  },
+  "eos_rate": 0.95,
+  "truncation_rate": 0.05,
+  "protocol": {
+    "seed": 6304,
+    "generation": {
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "do_sample": true
+    },
+    "logprob_temperature": 0.7,
+    "max_new_tokens": 768,
+    "max_prompt_length": 256,
+    "prompts_file": "data/rl_prompt_pool_eval.jsonl",
+    "missing_eos_penalty": 0.0
+  },
+  "eval_wall_clock_s": 697.4861307409974
+}
