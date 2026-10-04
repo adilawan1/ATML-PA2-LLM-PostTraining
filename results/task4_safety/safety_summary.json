@@ -1,0 +1,137 @@
+{
+  "per_policy": {
+    "sft": {
+      "n_safe": 250,
+      "n_unsafe": 200,
+      "safe_answer_rate": 0.572,
+      "safe_over_refusal_rate": 0.0,
+      "unsafe_compliance_rate": 0.0,
+      "justified_refusal_rate": 0.885,
+      "safe_any_refusal_rate": 0.416,
+      "unsafe_any_answer_rate": 0.115,
+      "ambiguous_rate": 0.0,
+      "ambiguous_rate_safe": 0.0,
+      "ambiguous_rate_unsafe": 0.0,
+      "safe_label_distribution": {
+        "SAFE_ANSWER": 0.572,
+        "JUSTIFIED_REFUSAL": 0.416,
+        "UNSAFE_COMPLIANCE": 0.012,
+        "OVER_REFUSAL": 0.0,
+        "AMBIGUOUS": 0.0
+      },
+      "unsafe_label_distribution": {
+        "SAFE_ANSWER": 0.115,
+        "JUSTIFIED_REFUSAL": 0.885,
+        "UNSAFE_COMPLIANCE": 0.0,
+        "OVER_REFUSAL": 0.0,
+        "AMBIGUOUS": 0.0
+      },
+      "response_tokens_mean": 108.19111111111111,
+      "response_tokens_std": 80.62130355963193,
+      "response_tokens_mean_safe": 136.264,
+      "response_tokens_mean_unsafe": 73.1,
+      "judge_parse_failures": 0,
+      "mean_judge_confidence": 1.0
+    },
+    "dpo": {
+      "n_safe": 250,
+      "n_unsafe": 200,
+      "safe_answer_rate": 0.572,
+      "safe_over_refusal_rate": 0.0,
+      "unsafe_compliance_rate": 0.0,
+      "justified_refusal_rate": 0.865,
+      "safe_any_refusal_rate": 0.42,
+      "unsafe_any_answer_rate": 0.135,
+      "ambiguous_rate": 0.0,
+      "ambiguous_rate_safe": 0.0,
+      "ambiguous_rate_unsafe": 0.0,
+      "safe_label_distribution": {
+        "SAFE_ANSWER": 0.572,
+        "JUSTIFIED_REFUSAL": 0.42,
+        "UNSAFE_COMPLIANCE": 0.008,
+        "OVER_REFUSAL": 0.0,
+        "AMBIGUOUS": 0.0
+      },
+      "unsafe_label_distribution": {
+        "SAFE_ANSWER": 0.135,
+        "JUSTIFIED_REFUSAL": 0.865,
+        "UNSAFE_COMPLIANCE": 0.0,
+        "OVER_REFUSAL": 0.0,
+        "AMBIGUOUS": 0.0
+      },
+      "response_tokens_mean": 108.5111111111111,
+      "response_tokens_std": 81.11041095588222,
+      "response_tokens_mean_safe": 135.24,
+      "response_tokens_mean_unsafe": 75.1,
+      "judge_parse_failures": 0,
+      "mean_judge_confidence": 1.0
+    },
+    "ppo": {
+      "n_safe": 250,
+      "n_unsafe": 200,
+      "safe_answer_rate": 0.576,
+      "safe_over_refusal_rate": 0.0,
+      "unsafe_compliance_rate": 0.0,
+      "justified_refusal_rate": 0.88,
+      "safe_any_refusal_rate": 0.412,
+      "unsafe_any_answer_rate": 0.12,
+      "ambiguous_rate": 0.0,
+      "ambiguous_rate_safe": 0.0,
+      "ambiguous_rate_unsafe": 0.0,
+      "safe_label_distribution": {
+        "SAFE_ANSWER": 0.576,
+        "JUSTIFIED_REFUSAL": 0.412,
+        "UNSAFE_COMPLIANCE": 0.012,
+        "OVER_REFUSAL": 0.0,
+        "AMBIGUOUS": 0.0
+      },
+      "unsafe_label_distribution": {
+        "SAFE_ANSWER": 0.12,
+        "JUSTIFIED_REFUSAL": 0.88,
+        "UNSAFE_COMPLIANCE": 0.0,
+        "OVER_REFUSAL": 0.0,
+        "AMBIGUOUS": 0.0
+      },
+      "response_tokens_mean": 107.92,
+      "response_tokens_std": 80.13814627809211,
+      "response_tokens_mean_safe": 136.004,
+      "response_tokens_mean_unsafe": 72.815,
+      "judge_parse_failures": 0,
+      "mean_judge_confidence": 1.0
+    },
+    "grpo": {
+      "n_safe": 250,
+      "n_unsafe": 200,
+      "safe_answer_rate": 0.572,
+      "safe_over_refusal_rate": 0.0,
+      "unsafe_compliance_rate": 0.0,
+      "justified_refusal_rate": 0.875,
+      "safe_any_refusal_rate": 0.416,
+      "unsafe_any_answer_rate": 0.125,
+      "ambiguous_rate": 0.0,
+      "ambiguous_rate_safe": 0.0,
+      "ambiguous_rate_unsafe": 0.0,
+      "safe_label_distribution": {
+        "SAFE_ANSWER": 0.572,
+        "JUSTIFIED_REFUSAL": 0.416,
+        "UNSAFE_COMPLIANCE": 0.012,
+        "OVER_REFUSAL": 0.0,
+        "AMBIGUOUS": 0.0
+      },
+      "unsafe_label_distribution": {
+        "SAFE_ANSWER": 0.125,
+        "JUSTIFIED_REFUSAL": 0.875,
+        "UNSAFE_COMPLIANCE": 0.0,
+        "OVER_REFUSAL": 0.0,
+        "AMBIGUOUS": 0.0
+      },
+      "response_tokens_mean": 107.55111111111111,
+      "response_tokens_std": 80.50081192750577,
+      "response_tokens_mean_safe": 134.76,
+      "response_tokens_mean_unsafe": 73.54,
+      "judge_parse_failures": 0,
+      "mean_judge_confidence": 0.9998888888888888
+    }
+  },
+  "manual_audit": null
+}

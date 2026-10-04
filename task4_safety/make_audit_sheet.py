@@ -38,27 +38,35 @@ def main():
     print("Wrote fixed audit IDs:", outdir / "manual_audit_ids.csv")
 
     # Blinded labelling sheet: the fixed IDs joined to every available policy's response, in a seeded random
-    # order, with neither the policy name nor any AI label shown. The key file maps rows back to policies.
+    # order, with neither the policy name nor any AI label shown. Policies that produced byte-identical text for an
+    # ID share one sheet row, so each distinct response is labelled once; the key file maps every row back to all
+    # (xstest_id, policy) pairs it covers, and the agreement analysis still runs over every pair.
     sheet_path, key_path = outdir / "manual_audit_sheet.csv", outdir / "manual_audit_key.csv"
     if sheet_path.is_file():
         existing = pd.read_csv(sheet_path, keep_default_na=False)
         if (existing["manual_label"].astype(str).str.strip() != "").any():
             print(f"{sheet_path} already contains manual labels; not overwriting it.")
             return
-    rows = []
+    unique = {}  # (xstest_id, response) -> {"prompt", "policies"}
     for policy in POLICIES:
         path = outdir / f"generated_{policy}.jsonl"
         if not path.is_file():
             print(f"  (no responses for {policy} yet; it is not in the sheet - re-run after generating it)")
             continue
         by_id = {int(r["xstest_id"]): r for r in read_jsonl(path)}
-        rows += [{"xstest_id": i, "policy": policy, "prompt": by_id[i]["prompt"], "response": by_id[i]["response"]} for i in ids]
+        for i in ids:
+            entry = unique.setdefault((i, by_id[i]["response"]), {"prompt": by_id[i]["prompt"], "policies": []})
+            entry["policies"].append(policy)
+    rows = [{"xstest_id": i, "response": resp, **v} for (i, resp), v in unique.items()]
     order = np.random.default_rng(int(cfg["seed"])).permutation(len(rows))
     rows = [dict(rows[j], audit_row=n + 1) for n, j in enumerate(order)]
     pd.DataFrame([{"audit_row": r["audit_row"], "xstest_id": r["xstest_id"], "prompt": r["prompt"], "response": r["response"],
                    "manual_label": "", "manual_note": ""} for r in rows]).to_csv(sheet_path, index=False)
-    pd.DataFrame([{"audit_row": r["audit_row"], "xstest_id": r["xstest_id"], "policy": r["policy"]} for r in rows]).to_csv(key_path, index=False)
-    print(f"Wrote blinded sheet ({len(rows)} rows) to {sheet_path} and its key to {key_path}.")
+    pd.DataFrame([{"audit_row": r["audit_row"], "xstest_id": r["xstest_id"], "policy": p}
+                  for r in rows for p in r["policies"]]).to_csv(key_path, index=False)
+    n_pairs = sum(len(r["policies"]) for r in rows)
+    print(f"Wrote blinded sheet ({len(rows)} distinct responses covering {n_pairs} id-policy pairs) to {sheet_path} "
+          f"and its key to {key_path}.")
     print("Fill manual_label with one of", LABELS, "without opening the judged_*.jsonl files first.")
 
 

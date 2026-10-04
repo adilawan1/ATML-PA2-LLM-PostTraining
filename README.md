@@ -92,6 +92,12 @@ python -m task4_safety.make_audit_sheet   --config configs/feedback.yaml   # fix
 python -m task4_safety.evaluate_safety    --config configs/feedback.yaml   # rates, category tables, audit agreement
 ```
 
+The audit covers all four policies on the fixed 60 IDs (240 id-policy pairs). Byte-identical responses to the same
+prompt share one sheet row (116 distinct responses), and `manual_audit_key.csv` maps each row back to every policy
+that produced it, so agreement is computed over all 240 pairs. Because the fixed judge never emits `OVER_REFUSAL`
+(it labels refusals of safe prompts `JUSTIFIED_REFUSAL`), `evaluate_safety` also reports the derived
+`safe_any_refusal_rate` and `unsafe_any_answer_rate` next to the required rates.
+
 ### Task 5 - RLVR vs RLAIF (`configs/feedback.yaml`, results in `results/task5_feedback/`)
 
 Uses only the supplied RLVR/RLAIF adapters, so it can run before Tasks 1-4.
