@@ -1,0 +1,92 @@
+
+=== 2026-10-04 14:48:46 $ python -m task4_safety.judge_responses --config configs/feedback.yaml
+2026-10-04 14:48:59.452862: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[judge] sft: 0 already judged, 450 to go
+[judge] dpo: 0 already judged, 450 to go
+[judge] ppo: 0 already judged, 450 to go
+[judge] grpo: 0 already judged, 450 to go
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:18<00:18, 18.42s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:29<00:00, 13.82s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:29<00:00, 14.51s/it]
+Fixed Task 4 judge loaded: Qwen/Qwen2.5-3B-Instruct
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+[judge] sft: 1/450
+[judge] sft: 26/450
+[judge] sft: 51/450
+[judge] sft: 76/450
+[judge] sft: 101/450
+[judge] sft: 126/450
+[judge] sft: 151/450
+[judge] sft: 176/450
+[judge] sft: 201/450
+[judge] sft: 226/450
+[judge] sft: 251/450
+[judge] sft: 276/450
+[judge] sft: 301/450
+[judge] sft: 326/450
+[judge] sft: 351/450
+[judge] sft: 376/450
+[judge] sft: 401/450
+[judge] sft: 426/450
+[judge] sft: done -> /content/ATML-PA2-LLM-PostTraining/results/task4_safety/judged_sft.jsonl
+[judge] dpo: 1/450
+[judge] dpo: 26/450
+[judge] dpo: 51/450
+[judge] dpo: 76/450
+[judge] dpo: 101/450
+[judge] dpo: 126/450
+[judge] dpo: 151/450
+[judge] dpo: 176/450
+[judge] dpo: 201/450
+[judge] dpo: 226/450
+[judge] dpo: 251/450
+[judge] dpo: 276/450
+[judge] dpo: 301/450
+[judge] dpo: 326/450
+[judge] dpo: 351/450
+[judge] dpo: 376/450
+[judge] dpo: 401/450
+[judge] dpo: 426/450
+[judge] dpo: done -> /content/ATML-PA2-LLM-PostTraining/results/task4_safety/judged_dpo.jsonl
+[judge] ppo: 1/450
+[judge] ppo: 26/450
+[judge] ppo: 51/450
+[judge] ppo: 76/450
+[judge] ppo: 101/450
+[judge] ppo: 126/450
+[judge] ppo: 151/450
+[judge] ppo: 176/450
+[judge] ppo: 201/450
+[judge] ppo: 226/450
+[judge] ppo: 251/450
+[judge] ppo: 276/450
+[judge] ppo: 301/450
+[judge] ppo: 326/450
+[judge] ppo: 351/450
+[judge] ppo: 376/450
+[judge] ppo: 401/450
+[judge] ppo: 426/450
+[judge] ppo: done -> /content/ATML-PA2-LLM-PostTraining/results/task4_safety/judged_ppo.jsonl
+[judge] grpo: 1/450
+[judge] grpo: 26/450
+[judge] grpo: 51/450
+[judge] grpo: 76/450
+[judge] grpo: 101/450
+[judge] grpo: 126/450
+[judge] grpo: 151/450
+[judge] grpo: 176/450
+[judge] grpo: 201/450
+[judge] grpo: 226/450
+[judge] grpo: 251/450
+[judge] grpo: 276/450
+[judge] grpo: 301/450
+[judge] grpo: 326/450
+[judge] grpo: 351/450
+[judge] grpo: 376/450
+[judge] grpo: 401/450
+[judge] grpo: 426/450
+[judge] grpo: done -> /content/ATML-PA2-LLM-PostTraining/results/task4_safety/judged_grpo.jsonl
