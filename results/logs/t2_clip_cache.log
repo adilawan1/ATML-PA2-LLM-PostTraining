@@ -1,0 +1,17 @@
+
+=== 2026-10-04 09:02:31 $ python -m task2_ppo.analyze_clipping --config configs/ppo.yaml --cache-only
+2026-10-04 09:02:36.308759: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[cache] 32/32 cached rollouts rebuilt; excluded: []
+[cache] log-prob convention check: {'0.7': {'mean_abs_diff_old': 0.20214947627391666, 'mean_abs_diff_ref': 0.20050496188923717}, '1.0': {'mean_abs_diff_old': 0.06671288033976452, 'mean_abs_diff_ref': 0.06633289236924611}} -> using temperature 1.0
+[cache] eps=0.05: final affected fraction at own eps = 0.1670
+[cache] eps=0.2: final affected fraction at own eps = 0.0562
+[cache] eps=0.5: final affected fraction at own eps = 0.0301
+ epsilon  n_tokens  affected_token_fraction  clip_active_fraction  clipped_surrogate  unclipped_surrogate  ratio_mean  ratio_std  mean_abs_log_ratio    ratio_min  ratio_max
+    0.05      8814                 0.167574              0.079873          -0.016712            -0.001358    0.999294   0.519423            0.096078 2.026859e-08  32.822254
+    0.20      8814                 0.055934              0.026095          -0.012348            -0.001358    0.999294   0.519423            0.096078 2.026859e-08  32.822254
+    0.50      8814                 0.029952              0.013842          -0.008303            -0.001358    0.999294   0.519423            0.096078 2.026859e-08  32.822254
+ train_epsilon  affected_token_fraction_mean  clip_active_fraction_mean  clipped_surrogate_mean  unclipped_surrogate_mean  mean_abs_log_ratio_last  grad_norm_mean
+          0.05                      0.149067                   0.067998               -0.010190                  0.000283                 0.014755        0.499827
+          0.20                      0.038278                   0.019446               -0.006579                  0.000212                 0.014563        0.543026
+          0.50                      0.018684                   0.008765               -0.003918                  0.000229                 0.014625        0.551813
