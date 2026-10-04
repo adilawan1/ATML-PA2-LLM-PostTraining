@@ -1,0 +1,45 @@
+{
+  "run_name": "standard",
+  "dataset": "data/dpo_standard_train.jsonl",
+  "n_examples": 1500,
+  "beta": 0.1,
+  "epochs": 1,
+  "batch_size": 2,
+  "grad_accum_steps": 8,
+  "optimizer_steps": 94,
+  "learning_rate": 2e-05,
+  "weight_decay": 0.0,
+  "max_sequence_length": 768,
+  "max_grad_norm": 1.0,
+  "seed": 6304,
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ]
+  },
+  "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "dtype": "float16",
+  "grad_scaler": true,
+  "output": "/content/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/standard",
+  "wall_clock_s": 1363.5090462929993,
+  "peak_vram_gib": 6.649150371551514,
+  "final_train_record": {
+    "step": 94,
+    "loss": 0.6570732196172079,
+    "preference_accuracy": 0.9166666666666666,
+    "pref_margin": 0.7473831176757812,
+    "chosen_logratio": -0.25664885838826496,
+    "rejected_logratio": -1.0040334065755208,
+    "chosen_tokens": 227.41666666666666,
+    "rejected_tokens": 266.0833333333333,
+    "grad_norm": 2.7939865589141846,
+    "step_skipped_nonfinite": false,
+    "examples_seen": 1500,
+    "elapsed_s": 1362.953598403,
+    "peak_vram_gib": 6.649150371551514
+  }
+}

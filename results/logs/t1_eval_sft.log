@@ -1,0 +1,31 @@
+
+=== 2026-10-04 11:33:11 $ python -m task1_dpo.evaluate --config configs/dpo.yaml --adapter none --name sft
+2026-10-04 11:33:20.520901: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[eval] sft: scoring 300 held-out pairs
+[eval] sft: scoring 246 length-stratified pairs
+[eval] sft: generating for 300 held-out prompts
+[eval] generated 16/300
+[eval] generated 32/300
+[eval] generated 48/300
+[eval] generated 64/300
+[eval] generated 80/300
+[eval] generated 96/300
+[eval] generated 112/300
+[eval] generated 128/300
+[eval] generated 144/300
+[eval] generated 160/300
+[eval] generated 176/300
+[eval] generated 192/300
+[eval] generated 208/300
+[eval] generated 224/300
+[eval] generated 240/300
+[eval] generated 256/300
+[eval] generated 272/300
+[eval] generated 288/300
+[eval] generated 300/300
+[eval] generated 16/50
+[eval] generated 32/50
+[eval] generated 48/50
+[eval] generated 50/50
+[eval] sft: loss=0.6931 acc=0.000 reward=1.260 kl_tok=0.0000 kl_seq=0.00 len=157.2 wl_compliance=0.52

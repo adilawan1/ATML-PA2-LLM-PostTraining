@@ -1,0 +1,119 @@
+{
+  "name": "sft",
+  "adapter": null,
+  "beta_for_loss": 0.1,
+  "heldout_pairs": {
+    "n_pairs": 300,
+    "dpo_loss": 0.6931471805599453,
+    "preference_accuracy": 0.0,
+    "pref_margin_mean": 0.0,
+    "pref_margin_median": 0.0,
+    "chosen_logratio_mean": 0.0,
+    "rejected_logratio_mean": 0.0,
+    "implicit_reward_chosen_mean": 0.0,
+    "implicit_reward_rejected_mean": 0.0
+  },
+  "stratified_pairs": {
+    "all": {
+      "n_pairs": 246,
+      "dpo_loss": 0.6931471805599453,
+      "preference_accuracy": 0.0,
+      "pref_margin_mean": 0.0,
+      "pref_margin_median": 0.0,
+      "chosen_logratio_mean": 0.0,
+      "rejected_logratio_mean": 0.0,
+      "implicit_reward_chosen_mean": 0.0,
+      "implicit_reward_rejected_mean": 0.0
+    },
+    "length_matched": {
+      "n_pairs": 82,
+      "dpo_loss": 0.6931471805599454,
+      "preference_accuracy": 0.0,
+      "pref_margin_mean": 0.0,
+      "pref_margin_median": 0.0,
+      "chosen_logratio_mean": 0.0,
+      "rejected_logratio_mean": 0.0,
+      "implicit_reward_chosen_mean": 0.0,
+      "implicit_reward_rejected_mean": 0.0
+    },
+    "preferred_longer": {
+      "n_pairs": 82,
+      "dpo_loss": 0.6931471805599454,
+      "preference_accuracy": 0.0,
+      "pref_margin_mean": 0.0,
+      "pref_margin_median": 0.0,
+      "chosen_logratio_mean": 0.0,
+      "rejected_logratio_mean": 0.0,
+      "implicit_reward_chosen_mean": 0.0,
+      "implicit_reward_rejected_mean": 0.0
+    },
+    "rejected_longer": {
+      "n_pairs": 82,
+      "dpo_loss": 0.6931471805599454,
+      "preference_accuracy": 0.0,
+      "pref_margin_mean": 0.0,
+      "pref_margin_median": 0.0,
+      "chosen_logratio_mean": 0.0,
+      "rejected_logratio_mean": 0.0,
+      "implicit_reward_chosen_mean": 0.0,
+      "implicit_reward_rejected_mean": 0.0
+    }
+  },
+  "generation": {
+    "n_responses": 300,
+    "reward_mean": 1.2600886313120525,
+    "reward_std": 1.2674437891404284,
+    "kl_token_mean": 0.0,
+    "kl_seq_mean": 0.0,
+    "entropy_token_mean": 0.7755365232670312,
+    "response_length": {
+      "mean": 157.23,
+      "std": 104.6905460551875,
+      "median": 195.0,
+      "q1": 44.75,
+      "q3": 256.0,
+      "iqr": 211.25,
+      "n": 300
+    },
+    "truncation_rate": 0.46
+  },
+  "word_limit": {
+    "n_responses": 50,
+    "samples_per_prompt": 5,
+    "compliance_rate": 0.52,
+    "words": {
+      "mean": 37.88,
+      "std": 17.08992685765507,
+      "median": 30.0,
+      "q1": 25.0,
+      "q3": 46.75,
+      "iqr": 21.75,
+      "n": 50
+    },
+    "response_length": {
+      "mean": 44.88,
+      "std": 19.5239750051059,
+      "median": 38.0,
+      "q1": 30.0,
+      "q3": 54.75,
+      "iqr": 24.75,
+      "n": 50
+    }
+  },
+  "protocol": {
+    "seed": 6304,
+    "generation": {
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "do_sample": true
+    },
+    "max_generation_tokens": 256,
+    "max_prompt_length": 512,
+    "max_sequence_length": 768,
+    "heldout_file": "data/dpo_standard_eval.jsonl",
+    "stratified_file": "data/dpo_length_stratified_eval.jsonl",
+    "word_limit_file": "data/word_limit_prompts.jsonl",
+    "n_generation_prompts": 300
+  },
+  "eval_wall_clock_s": 697.8193974799997
+}
