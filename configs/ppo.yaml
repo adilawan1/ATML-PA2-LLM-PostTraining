@@ -37,4 +37,6 @@ cached_rollouts: cached/ppo_rollout.pt
 eval_batch_size: 16             # prompts per generation batch during held-out evaluation
 eval_logprob_chunk: 2           # sequences per log-prob/entropy forward (bounds vocab-sized memory)
 # logprob_temperature defaults to generation.temperature (TRL convention); analyze_clipping reports which
-# convention reproduces the supplied cached old/ref log-probs.
+# convention reproduces the supplied cached old/ref log-probs. The cache study selected 1.0
+# (mean |diff| vs cached old log-probs: 0.067 at T=1.0 vs 0.202 at T=0.7; results/task2_ppo/clipping_cache.json).
+logprob_temperature: 1.0
