@@ -1,0 +1,26 @@
+
+=== 2026-10-04 11:52:53 $ python -m task2_ppo.continue_train --config configs/ppo.yaml --run-name standard
+2026-10-04 11:53:01.917112: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[ppo] standard: 20 updates, eps=0.2, kl_beta=0.1, starting at update 0
+[ppo] standard update 1/20 reward=-1.449 kl=0.0000 ent=1.347 pl=-0.0004 vl=8.025 clip=0.000 len=156 0.2min
+[ppo] standard update 2/20 reward=-0.818 kl=-0.0002 ent=0.837 pl=-0.0002 vl=7.682 clip=0.000 len=512 0.7min
+[ppo] standard update 3/20 reward=3.359 kl=-0.0004 ent=0.302 pl=0.0001 vl=5.385 clip=0.000 len=233 0.9min
+[ppo] standard update 4/20 reward=0.775 kl=0.0001 ent=1.181 pl=0.0000 vl=5.627 clip=0.000 len=512 1.4min
+[ppo] standard update 5/20 reward=3.119 kl=-0.0004 ent=1.363 pl=0.0004 vl=2.329 clip=0.000 len=220 1.6min
+[ppo] standard update 6/20 reward=-0.987 kl=-0.0001 ent=0.721 pl=0.0002 vl=4.592 clip=0.000 len=512 2.1min
+[ppo] standard update 7/20 reward=-0.947 kl=0.0001 ent=1.127 pl=0.0006 vl=1.726 clip=0.000 len=50 2.2min
+[ppo] standard update 8/20 reward=-2.299 kl=-0.0003 ent=0.730 pl=-0.0007 vl=3.726 clip=0.000 len=13 2.2min
+[ppo] standard update 9/20 reward=1.185 kl=-0.0011 ent=0.816 pl=0.0023 vl=3.328 clip=0.000 len=5 2.3min
+[ppo] standard update 10/20 reward=3.830 kl=-0.0002 ent=0.824 pl=0.0001 vl=4.353 clip=0.000 len=254 2.5min
+[ppo] standard update 11/20 reward=-1.226 kl=-0.0003 ent=0.608 pl=-0.0001 vl=3.140 clip=0.000 len=13 2.5min
+[ppo] standard update 12/20 reward=0.862 kl=0.0004 ent=1.509 pl=0.0000 vl=5.270 clip=0.000 len=512 3.0min
+[ppo] standard update 13/20 reward=1.844 kl=-0.0004 ent=1.403 pl=0.0000 vl=2.974 clip=0.000 len=512 3.5min
+[ppo] standard update 14/20 reward=-3.305 kl=-0.0001 ent=1.535 pl=0.0001 vl=5.392 clip=0.000 len=512 4.0min
+[ppo] standard update 15/20 reward=0.713 kl=-0.0003 ent=0.726 pl=-0.0001 vl=5.388 clip=0.000 len=512 4.5min
+[ppo] standard update 16/20 reward=2.191 kl=0.0007 ent=0.557 pl=-0.0005 vl=4.826 clip=0.000 len=56 4.6min
+[ppo] standard update 17/20 reward=1.130 kl=0.0002 ent=0.624 pl=0.0001 vl=4.001 clip=0.000 len=512 5.1min
+[ppo] standard update 18/20 reward=2.123 kl=-0.0004 ent=0.632 pl=-0.0001 vl=2.885 clip=0.000 len=504 5.5min
+[ppo] standard update 19/20 reward=0.311 kl=-0.0001 ent=0.827 pl=0.0000 vl=3.001 clip=0.000 len=57 5.6min
+[ppo] standard update 20/20 reward=-0.365 kl=0.0009 ent=0.425 pl=-0.0003 vl=2.501 clip=0.000 len=23 5.7min
+[ppo] standard: saved policy adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/standard (critic in /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/standard/value)

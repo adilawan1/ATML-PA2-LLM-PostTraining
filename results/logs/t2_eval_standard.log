@@ -1,0 +1,18 @@
+
+=== 2026-10-04 11:59:26 $ python -m task2_ppo.evaluate --config configs/ppo.yaml --adapter outputs/task2_ppo/standard --name standard
+2026-10-04 11:59:36.062270: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[eval] standard: 16/200
+[eval] standard: 32/200
+[eval] standard: 48/200
+[eval] standard: 64/200
+[eval] standard: 80/200
+[eval] standard: 96/200
+[eval] standard: 112/200
+[eval] standard: 128/200
+[eval] standard: 144/200
+[eval] standard: 160/200
+[eval] standard: 176/200
+[eval] standard: 192/200
+[eval] standard: 200/200
+[eval] standard: reward=1.729 kl_tok=0.0000 entropy=1.000 len=284.5 eos=0.93
