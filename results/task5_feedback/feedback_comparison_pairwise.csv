@@ -1,0 +1,4 @@
+comparison,gsm_win_rate,gsm_ties,gsm_agree_3way,gsm_agree_on_decisive,gsm_judge_decisive_when_verifier_tied,transfer_win_rate,transfer_ties,transfer_agree_3way,transfer_agree_on_decisive,transfer_judge_decisive_when_verifier_tied,win_rate_drop_transfer_minus_gsm
+rlaif_vs_sft,0.5,292,0.96,0.0,0.023728813559322035,0.535,79,0.77,0.3333333333333333,0.20212765957446807,0.03500000000000003
+rlvr_vs_rlaif,0.5,290,0.93,0.0,0.03460207612456748,0.53,78,0.78,0.5,0.21428571428571427,0.030000000000000027
+rlvr_vs_sft,0.5033333333333333,290,0.93,0.0,0.03125,0.53,78,0.78,0.5,0.20212765957446807,0.026666666666666727

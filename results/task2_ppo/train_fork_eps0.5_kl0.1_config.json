@@ -1,0 +1,59 @@
+{
+  "run_name": "fork_eps0.5_kl0.1",
+  "updates": 8,
+  "prompts_per_update": 1,
+  "ppo_epochs": 2,
+  "clip_epsilon": 0.5,
+  "kl_beta": 0.1,
+  "gamma": 1.0,
+  "gae_lambda": 0.95,
+  "value_coef": 0.5,
+  "missing_eos_penalty": 1.0,
+  "policy_learning_rate": 3e-06,
+  "value_lora_learning_rate": 0.0001,
+  "value_head_learning_rate": 0.0003,
+  "value_train_mode": "lora_head",
+  "max_prompt_length": 256,
+  "max_response_length": 512,
+  "reward_max_length": 1280,
+  "max_grad_norm": 1.0,
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "do_sample": true
+  },
+  "logprob_temperature": 1.0,
+  "seed": 6304,
+  "dropout_disabled": true,
+  "grad_scaler": true,
+  "policy_init": "checkpoints/ppo_midpoint_policy",
+  "value_init": "checkpoints/ppo_midpoint_value",
+  "reward_model": "yavuz-ai/qwen2.5-1.5b-rm-ultrafeedback",
+  "reference": "base model (policy adapter disabled)",
+  "prompt_schedule": [
+    [
+      "a08d9fd33989b75cecb4cb15174dc324bef7cafb2f9094dfb82bd8d30d25d850"
+    ],
+    [
+      "5364ad78a375f913c67d4ac9f9aae4ae5e04c84203bae7186dd504d87da384ec"
+    ],
+    [
+      "591bef6842f3e7593e1d9e7a036f85a91e93573bed26d7fe6eb26eda6099820c"
+    ],
+    [
+      "eff64b71d7b8476916f075f0caee8b75bd48dadbe3ec69522eb21f838c0fec69"
+    ],
+    [
+      "c0e012b9d2e0c1d77772502f0e09ee9983a9f39200c0e4c11bc9a820ea43f98f"
+    ],
+    [
+      "fa2ccdb02682bd3365b27b7526f78558bd8fcbfea869e348c25627fe1c379bcc"
+    ],
+    [
+      "749e8e5f7bf19f1883531583cc236f8cc2ba68dc81e20c5154db14f865a136d7"
+    ],
+    [
+      "2ff1c7d59d55e649c12cecf0a491ca9957c337b57cd428e39f1df5c5cb9bb57b"
+    ]
+  ]
+}

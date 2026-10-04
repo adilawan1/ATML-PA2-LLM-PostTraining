@@ -1,0 +1,79 @@
+
+=== 2026-10-04 20:42:16 $ python -m task3_grpo.compare_normalization --config configs/grpo.yaml
+2026-10-04 20:42:27.909139: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Fork updates: 8
+=== GRPO fork fork_grpo: 8 updates -> /content/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/fork_grpo
+[grpo] fork_grpo: 8 updates, K=4, loss_type=grpo, starting at update 0
+[grpo] fork_grpo update 1/8 reward=-1.488 grp_std=0.689 uninf=0.00 kl=0.0005 ent=1.107 loss=0.0000 gnorm=0.916 len=73 0.2min
+[grpo] fork_grpo update 2/8 reward=-0.439 grp_std=0.430 uninf=0.00 kl=0.0002 ent=0.467 loss=0.0000 gnorm=0.000 len=512 0.8min
+[grpo] fork_grpo update 3/8 reward=3.184 grp_std=0.196 uninf=0.00 kl=0.0004 ent=0.196 loss=0.0000 gnorm=0.193 len=220 1.2min
+[grpo] fork_grpo update 4/8 reward=2.965 grp_std=0.203 uninf=0.00 kl=0.0001 ent=0.640 loss=0.0000 gnorm=0.183 len=426 1.8min
+[grpo] fork_grpo update 5/8 reward=3.243 grp_std=0.318 uninf=0.00 kl=0.0003 ent=0.666 loss=0.0000 gnorm=0.251 len=216 2.1min
+[grpo] fork_grpo update 6/8 reward=0.810 grp_std=0.328 uninf=0.00 kl=0.0002 ent=0.455 loss=0.1389 gnorm=0.095 len=456 2.7min
+[grpo] fork_grpo update 7/8 reward=-0.239 grp_std=0.432 uninf=0.00 kl=0.0005 ent=0.822 loss=0.0000 gnorm=0.676 len=52 2.8min
+[grpo] fork_grpo update 8/8 reward=-2.078 grp_std=0.741 uninf=0.00 kl=0.0003 ent=0.502 loss=0.0000 gnorm=0.568 len=32 3.0min
+[grpo] fork_grpo: saved adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/fork_grpo
+[eval] fork_grpo: 16/200
+[eval] fork_grpo: 32/200
+[eval] fork_grpo: 48/200
+[eval] fork_grpo: 64/200
+[eval] fork_grpo: 80/200
+[eval] fork_grpo: 96/200
+[eval] fork_grpo: 112/200
+[eval] fork_grpo: 128/200
+[eval] fork_grpo: 144/200
+[eval] fork_grpo: 160/200
+[eval] fork_grpo: 176/200
+[eval] fork_grpo: 192/200
+[eval] fork_grpo: 200/200
+[eval] fork_grpo: reward=1.610 kl_tok=0.0001 entropy=0.582 len=282.4 eos=0.91
+=== GRPO fork fork_dr_grpo: 8 updates -> /content/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/fork_dr_grpo
+[grpo] fork_dr_grpo: 8 updates, K=4, loss_type=dr_grpo, starting at update 0
+[grpo] fork_dr_grpo update 1/8 reward=-1.488 grp_std=0.689 uninf=0.00 kl=0.0005 ent=1.107 loss=-0.0486 gnorm=0.113 len=73 0.2min
+[grpo] fork_dr_grpo update 2/8 reward=-0.139 grp_std=0.501 uninf=0.00 kl=-0.0000 ent=0.448 loss=0.0000 gnorm=0.000 len=512 0.8min
+[grpo] fork_dr_grpo update 3/8 reward=3.184 grp_std=0.196 uninf=0.00 kl=0.0004 ent=0.196 loss=0.0020 gnorm=0.081 len=220 1.2min
+[grpo] fork_dr_grpo update 4/8 reward=3.015 grp_std=0.129 uninf=0.00 kl=0.0002 ent=0.635 loss=-0.0861 gnorm=0.158 len=418 1.8min
+[grpo] fork_dr_grpo update 5/8 reward=3.420 grp_std=0.270 uninf=0.00 kl=-0.0001 ent=0.617 loss=0.0964 gnorm=0.129 len=230 2.2min
+[grpo] fork_dr_grpo update 6/8 reward=0.681 grp_std=0.435 uninf=0.00 kl=0.0001 ent=0.431 loss=-0.0662 gnorm=0.032 len=465 2.8min
+[grpo] fork_dr_grpo update 7/8 reward=-0.239 grp_std=0.432 uninf=0.00 kl=0.0008 ent=0.822 loss=-0.0080 gnorm=0.082 len=52 2.9min
+[grpo] fork_dr_grpo update 8/8 reward=-2.078 grp_std=0.741 uninf=0.00 kl=-0.0002 ent=0.502 loss=-0.0651 gnorm=0.071 len=32 3.1min
+[grpo] fork_dr_grpo: saved adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/fork_dr_grpo
+[eval] fork_dr_grpo: 16/200
+[eval] fork_dr_grpo: 32/200
+[eval] fork_dr_grpo: 48/200
+[eval] fork_dr_grpo: 64/200
+[eval] fork_dr_grpo: 80/200
+[eval] fork_dr_grpo: 96/200
+[eval] fork_dr_grpo: 112/200
+[eval] fork_dr_grpo: 128/200
+[eval] fork_dr_grpo: 144/200
+[eval] fork_dr_grpo: 160/200
+[eval] fork_dr_grpo: 176/200
+[eval] fork_dr_grpo: 192/200
+[eval] fork_dr_grpo: 200/200
+[eval] fork_dr_grpo: reward=1.721 kl_tok=0.0001 entropy=0.611 len=287.8 eos=0.93
+loss_type  heldout_reward  heldout_reward_std  heldout_kl_token_mean  heldout_kl_seq_mean  heldout_entropy  heldout_len_mean  heldout_len_std  heldout_len_iqr  heldout_truncation_rate  train_generated_tokens  train_len_first_update  train_len_last_update
+     grpo        1.610399            1.378412               0.000061             0.017215         0.581960           282.365       253.813853           428.50                    0.095                  7955.0                    73.0                  32.25
+  dr_grpo        1.721287            1.250822               0.000112             0.032372         0.611017           287.775       247.991480           408.75                    0.070                  8008.0                    73.0                  32.25
+loss_type length_bin  n  grad_norm_mean  abs_adv_mean  analytic_weight_mean  length_mean
+  dr_grpo       long  8        0.063093      0.738368              0.527218      355.500
+  dr_grpo     medium  8        0.052216      0.966873              0.294687      158.125
+  dr_grpo      short  9        0.022710      0.753752              0.061177       35.000
+     grpo       long  9        0.111787      0.862939              0.862939      368.000
+     grpo     medium  8        0.193443      0.898303              0.898303      157.000
+     grpo      short  9        0.269946      0.753752              0.753752       35.000
+{
+  "grpo": {
+    "n_active_completions": 26,
+    "grad_norm_long_over_short": 0.41410712490221935,
+    "corr_grad_norm_vs_length": -0.38754275264216115,
+    "corr_analytic_weight_vs_length": 0.10564681649373885
+  },
+  "dr_grpo": {
+    "n_active_completions": 25,
+    "grad_norm_long_over_short": 2.778199920278388,
+    "corr_grad_norm_vs_length": 0.42980083886694515,
+    "corr_analytic_weight_vs_length": 0.6648726387594638
+  }
+}

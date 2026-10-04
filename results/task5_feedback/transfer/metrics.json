@@ -1,0 +1,161 @@
+{
+  "dataset": "transfer",
+  "n_problems": 100,
+  "policies": {
+    "sft": {
+      "exact_accuracy": 0.42,
+      "format_compliance": 0.55,
+      "response_tokens": {
+        "mean": 163.35,
+        "std": 70.86428931415314,
+        "median": 143.0,
+        "iqr": 79.25,
+        "n": 100
+      },
+      "failure_types": {
+        "no_final_format": 45,
+        "correct": 42,
+        "wrong_final": 13
+      }
+    },
+    "rlvr": {
+      "exact_accuracy": 0.46,
+      "format_compliance": 0.58,
+      "response_tokens": {
+        "mean": 164.41,
+        "std": 72.14860982721704,
+        "median": 143.0,
+        "iqr": 78.25,
+        "n": 100
+      },
+      "failure_types": {
+        "correct": 46,
+        "no_final_format": 42,
+        "wrong_final": 12
+      }
+    },
+    "rlaif": {
+      "exact_accuracy": 0.48,
+      "format_compliance": 0.62,
+      "response_tokens": {
+        "mean": 164.32,
+        "std": 73.00354511939814,
+        "median": 140.0,
+        "iqr": 78.25,
+        "n": 100
+      },
+      "failure_types": {
+        "correct": 48,
+        "no_final_format": 38,
+        "wrong_final": 14
+      }
+    }
+  },
+  "pairwise": {
+    "rlvr_vs_sft": {
+      "n": 100,
+      "win_rate": 0.53,
+      "wins": 14,
+      "ties": 78,
+      "losses": 8,
+      "verifier_judge_agreement_3way": 0.78,
+      "decisive_pairs": 6,
+      "judge_agrees_on_decisive": 0.5,
+      "verifier_tied_pairs": 94,
+      "judge_decisive_when_verifier_tied": 0.20212765957446807,
+      "table_verifier_rows_judge_cols": {
+        "1": {
+          "1": 2,
+          "0": 3,
+          "-1": 0
+        },
+        "0": {
+          "1": 12,
+          "0": 75,
+          "-1": 7
+        },
+        "-1": {
+          "1": 0,
+          "0": 0,
+          "-1": 1
+        }
+      }
+    },
+    "rlaif_vs_sft": {
+      "n": 100,
+      "win_rate": 0.535,
+      "wins": 14,
+      "ties": 79,
+      "losses": 7,
+      "verifier_judge_agreement_3way": 0.77,
+      "decisive_pairs": 6,
+      "judge_agrees_on_decisive": 0.3333333333333333,
+      "verifier_tied_pairs": 94,
+      "judge_decisive_when_verifier_tied": 0.20212765957446807,
+      "table_verifier_rows_judge_cols": {
+        "1": {
+          "1": 2,
+          "0": 4,
+          "-1": 0
+        },
+        "0": {
+          "1": 12,
+          "0": 75,
+          "-1": 7
+        },
+        "-1": {
+          "1": 0,
+          "0": 0,
+          "-1": 0
+        }
+      }
+    },
+    "rlvr_vs_rlaif": {
+      "n": 100,
+      "win_rate": 0.53,
+      "wins": 14,
+      "ties": 78,
+      "losses": 8,
+      "verifier_judge_agreement_3way": 0.78,
+      "decisive_pairs": 2,
+      "judge_agrees_on_decisive": 0.5,
+      "verifier_tied_pairs": 98,
+      "judge_decisive_when_verifier_tied": 0.21428571428571427,
+      "table_verifier_rows_judge_cols": {
+        "1": {
+          "1": 0,
+          "0": 0,
+          "-1": 0
+        },
+        "0": {
+          "1": 14,
+          "0": 77,
+          "-1": 7
+        },
+        "-1": {
+          "1": 0,
+          "0": 1,
+          "-1": 1
+        }
+      }
+    }
+  },
+  "judge_cost": {
+    "judge_calls": 300,
+    "seconds": 55.65179969200108,
+    "seconds_per_call": 0.18550599897333692,
+    "total_cached_comparisons": 126
+  },
+  "protocol": {
+    "decoding": "greedy",
+    "max_new_tokens": 512,
+    "data_file": "data/math_transfer_eval.jsonl",
+    "judge_model": "Qwen/Qwen2.5-3B-Instruct",
+    "policies": {
+      "sft": null,
+      "rlvr": "checkpoints/rlvr_policy",
+      "rlaif": "checkpoints/rlaif_policy"
+    },
+    "win_rate": "win 1, tie 0.5, loss 0 for policy_a vs policy_b"
+  }
+}

@@ -1,0 +1,213 @@
+
+=== 2026-10-04 17:44:54 $ python -m task1_dpo.ablate_beta --config configs/dpo.yaml
+2026-10-04 17:45:03.580487: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+=== beta=0.03: train 600 pairs -> /content/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/beta_0.03
+[dpo] beta_0.03: 600 pairs, beta=0.03, 38 optimizer steps (batch 2 x accum 8), starting at step 0
+[dpo] beta_0.03 step 1/38 loss=0.6931 acc=0.000 margin=0.000 gnorm=0.616 0.2min eta=7.6min
+[dpo] beta_0.03 step 2/38 loss=0.6926 acc=0.625 margin=0.038 gnorm=0.603 0.4min eta=7.7min
+[dpo] beta_0.03 step 3/38 loss=0.6921 acc=0.688 margin=0.068 gnorm=0.690 0.7min eta=7.9min
+[dpo] beta_0.03 step 4/38 loss=0.6921 acc=0.562 margin=0.070 gnorm=0.610 0.9min eta=7.5min
+[dpo] beta_0.03 step 5/38 loss=0.6915 acc=0.750 margin=0.111 gnorm=0.666 1.1min eta=7.4min
+[dpo] beta_0.03 step 6/38 loss=0.6943 acc=0.312 margin=-0.078 gnorm=0.671 1.4min eta=7.4min
+[dpo] beta_0.03 step 7/38 loss=0.6930 acc=0.500 margin=0.012 gnorm=0.659 1.6min eta=7.3min
+[dpo] beta_0.03 step 8/38 loss=0.6928 acc=0.500 margin=0.020 gnorm=0.663 1.9min eta=7.1min
+[dpo] beta_0.03 step 9/38 loss=0.6912 acc=0.688 margin=0.129 gnorm=0.595 2.1min eta=6.7min
+[dpo] beta_0.03 step 10/38 loss=0.6930 acc=0.375 margin=0.008 gnorm=0.588 2.3min eta=6.4min
+[dpo] beta_0.03 step 11/38 loss=0.6931 acc=0.438 margin=0.007 gnorm=0.697 2.5min eta=6.2min
+[dpo] beta_0.03 step 12/38 loss=0.6930 acc=0.438 margin=0.008 gnorm=0.774 2.8min eta=6.0min
+[dpo] beta_0.03 step 13/38 loss=0.6925 acc=0.500 margin=0.045 gnorm=0.623 3.1min eta=5.9min
+[dpo] beta_0.03 step 14/38 loss=0.6932 acc=0.500 margin=-0.004 gnorm=0.629 3.3min eta=5.6min
+[dpo] beta_0.03 step 15/38 loss=0.6914 acc=0.750 margin=0.119 gnorm=0.666 3.5min eta=5.4min
+[dpo] beta_0.03 step 16/38 loss=0.6947 acc=0.500 margin=-0.100 gnorm=0.580 3.8min eta=5.2min
+[dpo] beta_0.03 step 17/38 loss=0.6932 acc=0.625 margin=-0.001 gnorm=0.540 4.0min eta=4.9min
+[dpo] beta_0.03 step 18/38 loss=0.6923 acc=0.562 margin=0.060 gnorm=0.668 4.3min eta=4.7min
+[dpo] beta_0.03 step 19/38 loss=0.6930 acc=0.500 margin=0.011 gnorm=0.706 4.6min eta=4.6min
+[dpo] beta_0.03 step 20/38 loss=0.6908 acc=0.625 margin=0.160 gnorm=0.711 4.8min eta=4.3min
+[dpo] beta_0.03 step 21/38 loss=0.6918 acc=0.562 margin=0.089 gnorm=0.663 5.1min eta=4.1min
+[dpo] beta_0.03 step 22/38 loss=0.6912 acc=0.688 margin=0.136 gnorm=0.603 5.4min eta=3.9min
+[dpo] beta_0.03 step 23/38 loss=0.6918 acc=0.812 margin=0.087 gnorm=0.536 5.6min eta=3.6min
+[dpo] beta_0.03 step 24/38 loss=0.6914 acc=0.625 margin=0.121 gnorm=0.655 5.8min eta=3.4min
+[dpo] beta_0.03 step 25/38 loss=0.6944 acc=0.562 margin=-0.082 gnorm=0.691 6.0min eta=3.1min
+[dpo] beta_0.03 step 26/38 loss=0.6895 acc=0.750 margin=0.246 gnorm=0.582 6.3min eta=2.9min
+[dpo] beta_0.03 step 27/38 loss=0.6897 acc=0.562 margin=0.236 gnorm=0.631 6.5min eta=2.6min
+[dpo] beta_0.03 step 28/38 loss=0.6908 acc=0.625 margin=0.156 gnorm=0.687 6.8min eta=2.4min
+[dpo] beta_0.03 step 29/38 loss=0.6953 acc=0.188 margin=-0.140 gnorm=0.485 7.0min eta=2.2min
+[dpo] beta_0.03 step 30/38 loss=0.6864 acc=0.750 margin=0.456 gnorm=0.693 7.2min eta=1.9min
+[dpo] beta_0.03 step 31/38 loss=0.6881 acc=0.875 margin=0.336 gnorm=0.638 7.4min eta=1.7min
+[dpo] beta_0.03 step 32/38 loss=0.6897 acc=0.750 margin=0.234 gnorm=0.697 7.7min eta=1.4min
+[dpo] beta_0.03 step 33/38 loss=0.6942 acc=0.438 margin=-0.066 gnorm=0.727 8.0min eta=1.2min
+[dpo] beta_0.03 step 34/38 loss=0.6934 acc=0.562 margin=-0.015 gnorm=0.733 8.3min eta=1.0min
+[dpo] beta_0.03 step 35/38 loss=0.6912 acc=0.625 margin=0.134 gnorm=0.648 8.5min eta=0.7min
+[dpo] beta_0.03 step 36/38 loss=0.6915 acc=0.688 margin=0.112 gnorm=0.954 8.7min eta=0.5min
+[dpo] beta_0.03 step 37/38 loss=0.6929 acc=0.688 margin=0.020 gnorm=0.574 8.9min eta=0.2min
+[dpo] beta_0.03 step 38/38 loss=0.6898 acc=0.750 margin=0.227 gnorm=0.840 9.0min eta=0.0min
+[dpo] beta_0.03: saved adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/beta_0.03
+[eval] beta_0.03: scoring 300 held-out pairs
+[eval] beta_0.03: scoring 246 length-stratified pairs
+[eval] beta_0.03: generating for 300 held-out prompts
+[eval] generated 16/300
+[eval] generated 32/300
+[eval] generated 48/300
+[eval] generated 64/300
+[eval] generated 80/300
+[eval] generated 96/300
+[eval] generated 112/300
+[eval] generated 128/300
+[eval] generated 144/300
+[eval] generated 160/300
+[eval] generated 176/300
+[eval] generated 192/300
+[eval] generated 208/300
+[eval] generated 224/300
+[eval] generated 240/300
+[eval] generated 256/300
+[eval] generated 272/300
+[eval] generated 288/300
+[eval] generated 300/300
+[eval] generated 16/50
+[eval] generated 32/50
+[eval] generated 48/50
+[eval] generated 50/50
+[eval] beta_0.03: loss=0.6911 acc=0.613 reward=1.267 kl_tok=0.0001 kl_seq=0.02 len=158.0 wl_compliance=0.54
+=== beta=0.1: train 600 pairs -> /content/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/beta_0.1
+[dpo] beta_0.1: 600 pairs, beta=0.1, 38 optimizer steps (batch 2 x accum 8), starting at step 0
+[dpo] beta_0.1 step 1/38 loss=0.6931 acc=0.000 margin=0.000 gnorm=2.052 0.2min eta=8.0min
+[dpo] beta_0.1 step 2/38 loss=0.6926 acc=0.562 margin=0.010 gnorm=2.010 0.5min eta=8.4min
+[dpo] beta_0.1 step 3/38 loss=0.6898 acc=0.688 margin=0.068 gnorm=2.290 0.7min eta=8.7min
+[dpo] beta_0.1 step 4/38 loss=0.6902 acc=0.625 margin=0.060 gnorm=2.020 1.0min eta=8.2min
+[dpo] beta_0.1 step 5/38 loss=0.6893 acc=0.750 margin=0.078 gnorm=2.212 1.2min eta=8.0min
+[dpo] beta_0.1 step 6/38 loss=0.6978 acc=0.312 margin=-0.092 gnorm=2.246 1.5min eta=8.0min
+[dpo] beta_0.1 step 7/38 loss=0.6947 acc=0.438 margin=-0.031 gnorm=2.212 1.7min eta=7.7min
+[dpo] beta_0.1 step 8/38 loss=0.6923 acc=0.500 margin=0.018 gnorm=2.208 2.0min eta=7.5min
+[dpo] beta_0.1 step 9/38 loss=0.6867 acc=0.688 margin=0.132 gnorm=1.969 2.2min eta=7.0min
+[dpo] beta_0.1 step 10/38 loss=0.6908 acc=0.562 margin=0.051 gnorm=1.940 2.4min eta=6.7min
+[dpo] beta_0.1 step 11/38 loss=0.6934 acc=0.500 margin=-0.003 gnorm=2.320 2.6min eta=6.4min
+[dpo] beta_0.1 step 12/38 loss=0.6912 acc=0.562 margin=0.040 gnorm=2.582 2.9min eta=6.3min
+[dpo] beta_0.1 step 13/38 loss=0.6908 acc=0.500 margin=0.051 gnorm=2.070 3.2min eta=6.1min
+[dpo] beta_0.1 step 14/38 loss=0.6948 acc=0.438 margin=-0.030 gnorm=2.099 3.4min eta=5.8min
+[dpo] beta_0.1 step 15/38 loss=0.6870 acc=0.750 margin=0.127 gnorm=2.214 3.6min eta=5.6min
+[dpo] beta_0.1 step 16/38 loss=0.6999 acc=0.500 margin=-0.130 gnorm=1.952 3.9min eta=5.3min
+[dpo] beta_0.1 step 17/38 loss=0.6925 acc=0.688 margin=0.017 gnorm=1.795 4.1min eta=5.1min
+[dpo] beta_0.1 step 18/38 loss=0.6904 acc=0.625 margin=0.060 gnorm=2.221 4.4min eta=4.8min
+[dpo] beta_0.1 step 19/38 loss=0.6901 acc=0.562 margin=0.066 gnorm=2.337 4.7min eta=4.7min
+[dpo] beta_0.1 step 20/38 loss=0.6868 acc=0.625 margin=0.134 gnorm=2.371 4.9min eta=4.4min
+[dpo] beta_0.1 step 21/38 loss=0.6888 acc=0.562 margin=0.089 gnorm=2.198 5.2min eta=4.2min
+[dpo] beta_0.1 step 22/38 loss=0.6852 acc=0.812 margin=0.170 gnorm=1.996 5.5min eta=4.0min
+[dpo] beta_0.1 step 23/38 loss=0.6865 acc=0.812 margin=0.136 gnorm=1.771 5.7min eta=3.7min
+[dpo] beta_0.1 step 24/38 loss=0.6877 acc=0.562 margin=0.114 gnorm=2.157 5.9min eta=3.4min
+[dpo] beta_0.1 step 25/38 loss=0.6985 acc=0.562 margin=-0.099 gnorm=2.309 6.1min eta=3.2min
+[dpo] beta_0.1 step 26/38 loss=0.6801 acc=0.750 margin=0.267 gnorm=1.909 6.4min eta=2.9min
+[dpo] beta_0.1 step 27/38 loss=0.6850 acc=0.562 margin=0.176 gnorm=2.059 6.6min eta=2.7min
+[dpo] beta_0.1 step 28/38 loss=0.6865 acc=0.750 margin=0.136 gnorm=2.268 6.9min eta=2.5min
+[dpo] beta_0.1 step 29/38 loss=0.6972 acc=0.250 margin=-0.077 gnorm=1.611 7.1min eta=2.2min
+[dpo] beta_0.1 step 30/38 loss=0.6723 acc=0.750 margin=0.432 gnorm=2.258 7.3min eta=2.0min
+[dpo] beta_0.1 step 31/38 loss=0.6753 acc=0.875 margin=0.365 gnorm=2.075 7.6min eta=1.7min
+[dpo] beta_0.1 step 32/38 loss=0.6808 acc=0.750 margin=0.255 gnorm=2.296 7.8min eta=1.5min
+[dpo] beta_0.1 step 33/38 loss=0.6964 acc=0.438 margin=-0.056 gnorm=2.425 8.1min eta=1.2min
+[dpo] beta_0.1 step 34/38 loss=0.6937 acc=0.625 margin=-0.002 gnorm=2.469 8.4min eta=1.0min
+[dpo] beta_0.1 step 35/38 loss=0.6871 acc=0.562 margin=0.131 gnorm=2.141 8.7min eta=0.7min
+[dpo] beta_0.1 step 36/38 loss=0.6896 acc=0.625 margin=0.076 gnorm=3.198 8.9min eta=0.5min
+[dpo] beta_0.1 step 37/38 loss=0.6919 acc=0.688 margin=0.031 gnorm=1.902 9.0min eta=0.2min
+[dpo] beta_0.1 step 38/38 loss=0.6832 acc=0.750 margin=0.205 gnorm=2.776 9.2min eta=0.0min
+[dpo] beta_0.1: saved adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/beta_0.1
+[eval] beta_0.1: scoring 300 held-out pairs
+[eval] beta_0.1: scoring 246 length-stratified pairs
+[eval] beta_0.1: generating for 300 held-out prompts
+[eval] generated 16/300
+[eval] generated 32/300
+[eval] generated 48/300
+[eval] generated 64/300
+[eval] generated 80/300
+[eval] generated 96/300
+[eval] generated 112/300
+[eval] generated 128/300
+[eval] generated 144/300
+[eval] generated 160/300
+[eval] generated 176/300
+[eval] generated 192/300
+[eval] generated 208/300
+[eval] generated 224/300
+[eval] generated 240/300
+[eval] generated 256/300
+[eval] generated 272/300
+[eval] generated 288/300
+[eval] generated 300/300
+[eval] generated 16/50
+[eval] generated 32/50
+[eval] generated 48/50
+[eval] generated 50/50
+[eval] beta_0.1: loss=0.6873 acc=0.610 reward=1.275 kl_tok=0.0002 kl_seq=0.03 len=157.9 wl_compliance=0.52
+=== beta=0.3: train 600 pairs -> /content/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/beta_0.3
+[dpo] beta_0.3: 600 pairs, beta=0.3, 38 optimizer steps (batch 2 x accum 8), starting at step 0
+[dpo] beta_0.3 step 1/38 loss=0.6931 acc=0.000 margin=0.000 gnorm=6.157 0.2min eta=8.0min
+[dpo] beta_0.3 step 2/38 loss=0.6913 acc=0.500 margin=0.013 gnorm=6.008 0.5min eta=8.5min
+[dpo] beta_0.3 step 3/38 loss=0.6839 acc=0.688 margin=0.063 gnorm=nan 0.8min eta=8.8min
+[dpo] beta_0.3 step 4/38 loss=0.6878 acc=0.688 margin=0.037 gnorm=6.052 1.0min eta=8.3min
+[dpo] beta_0.3 step 5/38 loss=0.6899 acc=0.500 margin=0.022 gnorm=6.612 1.2min eta=8.1min
+[dpo] beta_0.3 step 6/38 loss=0.6943 acc=0.500 margin=-0.006 gnorm=6.690 1.5min eta=8.0min
+[dpo] beta_0.3 step 7/38 loss=0.6938 acc=0.500 margin=-0.002 gnorm=6.708 1.8min eta=7.8min
+[dpo] beta_0.3 step 8/38 loss=0.6852 acc=0.625 margin=0.054 gnorm=6.520 2.0min eta=7.5min
+[dpo] beta_0.3 step 9/38 loss=0.6751 acc=0.625 margin=0.125 gnorm=5.798 2.2min eta=7.0min
+[dpo] beta_0.3 step 10/38 loss=0.6945 acc=0.375 margin=-0.005 gnorm=5.788 2.4min eta=6.7min
+[dpo] beta_0.3 step 11/38 loss=0.6918 acc=0.500 margin=0.014 gnorm=6.895 2.6min eta=6.4min
+[dpo] beta_0.3 step 12/38 loss=0.6882 acc=0.562 margin=0.037 gnorm=7.731 2.9min eta=6.3min
+[dpo] beta_0.3 step 13/38 loss=0.6944 acc=0.500 margin=-0.000 gnorm=6.231 3.2min eta=6.1min
+[dpo] beta_0.3 step 14/38 loss=0.6915 acc=0.562 margin=0.016 gnorm=6.219 3.4min eta=5.8min
+[dpo] beta_0.3 step 15/38 loss=0.6816 acc=0.812 margin=0.085 gnorm=6.568 3.7min eta=5.6min
+[dpo] beta_0.3 step 16/38 loss=0.7082 acc=0.438 margin=-0.093 gnorm=5.917 3.9min eta=5.3min
+[dpo] beta_0.3 step 17/38 loss=0.6899 acc=0.625 margin=0.031 gnorm=5.313 4.1min eta=5.1min
+[dpo] beta_0.3 step 18/38 loss=0.6933 acc=0.688 margin=0.007 gnorm=6.670 4.4min eta=4.9min
+[dpo] beta_0.3 step 19/38 loss=0.6930 acc=0.500 margin=0.013 gnorm=6.938 4.7min eta=4.7min
+[dpo] beta_0.3 step 20/38 loss=0.6750 acc=0.562 margin=0.136 gnorm=7.032 5.0min eta=4.5min
+[dpo] beta_0.3 step 21/38 loss=0.6835 acc=0.562 margin=0.071 gnorm=6.513 5.3min eta=4.3min
+[dpo] beta_0.3 step 22/38 loss=0.6741 acc=0.750 margin=0.143 gnorm=5.866 5.5min eta=4.0min
+[dpo] beta_0.3 step 23/38 loss=0.6800 acc=0.812 margin=0.091 gnorm=5.242 5.7min eta=3.7min
+[dpo] beta_0.3 step 24/38 loss=0.6736 acc=0.688 margin=0.140 gnorm=6.230 5.9min eta=3.4min
+[dpo] beta_0.3 step 25/38 loss=0.7029 acc=0.625 margin=-0.055 gnorm=6.928 6.1min eta=3.2min
+[dpo] beta_0.3 step 26/38 loss=0.6647 acc=0.750 margin=0.201 gnorm=5.525 6.4min eta=2.9min
+[dpo] beta_0.3 step 27/38 loss=0.6782 acc=0.500 margin=0.118 gnorm=5.976 6.6min eta=2.7min
+[dpo] beta_0.3 step 28/38 loss=0.6681 acc=0.750 margin=0.175 gnorm=6.564 6.9min eta=2.5min
+[dpo] beta_0.3 step 29/38 loss=0.7072 acc=0.375 margin=-0.088 gnorm=4.836 7.1min eta=2.2min
+[dpo] beta_0.3 step 30/38 loss=0.6428 acc=0.750 margin=0.360 gnorm=6.473 7.3min eta=2.0min
+[dpo] beta_0.3 step 31/38 loss=0.6548 acc=0.812 margin=0.269 gnorm=5.991 7.6min eta=1.7min
+[dpo] beta_0.3 step 32/38 loss=0.6646 acc=0.812 margin=0.201 gnorm=6.696 7.9min eta=1.5min
+[dpo] beta_0.3 step 33/38 loss=0.6988 acc=0.438 margin=-0.018 gnorm=7.207 8.1min eta=1.2min
+[dpo] beta_0.3 step 34/38 loss=0.7045 acc=0.562 margin=-0.051 gnorm=7.736 8.4min eta=1.0min
+[dpo] beta_0.3 step 35/38 loss=0.6750 acc=0.625 margin=0.139 gnorm=6.254 8.7min eta=0.7min
+[dpo] beta_0.3 step 36/38 loss=0.6787 acc=0.688 margin=0.103 gnorm=9.501 8.9min eta=0.5min
+[dpo] beta_0.3 step 37/38 loss=0.6958 acc=0.625 margin=-0.008 gnorm=nan 9.0min eta=0.2min
+[dpo] beta_0.3 step 38/38 loss=0.6822 acc=0.750 margin=0.083 gnorm=8.248 9.2min eta=0.0min
+[dpo] beta_0.3: saved adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/beta_0.3
+[eval] beta_0.3: scoring 300 held-out pairs
+[eval] beta_0.3: scoring 246 length-stratified pairs
+[eval] beta_0.3: generating for 300 held-out prompts
+[eval] generated 16/300
+[eval] generated 32/300
+[eval] generated 48/300
+[eval] generated 64/300
+[eval] generated 80/300
+[eval] generated 96/300
+[eval] generated 112/300
+[eval] generated 128/300
+[eval] generated 144/300
+[eval] generated 160/300
+[eval] generated 176/300
+[eval] generated 192/300
+[eval] generated 208/300
+[eval] generated 224/300
+[eval] generated 240/300
+[eval] generated 256/300
+[eval] generated 272/300
+[eval] generated 288/300
+[eval] generated 300/300
+[eval] generated 16/50
+[eval] generated 32/50
+[eval] generated 48/50
+[eval] generated 50/50
+[eval] beta_0.3: loss=0.6809 acc=0.613 reward=1.268 kl_tok=0.0001 kl_seq=0.02 len=157.3 wl_compliance=0.52
+                      budget  train_examples      name  beta  heldout_dpo_loss  heldout_pref_acc  heldout_margin_mean  reward_mean  reward_std  kl_token_mean  kl_seq_mean  entropy_token_mean   len_mean    len_std  len_median  len_iqr  truncation_rate  word_limit_compliance
+   short (600 pairs, 1 pass)             600 beta_0.03  0.03          0.691138          0.613333             0.138154     1.266652    1.247910       0.000147     0.023284            0.777186 158.043333 104.755245       207.5    211.0         0.453333                   0.54
+   short (600 pairs, 1 pass)             600  beta_0.1  0.10          0.687269          0.610000             0.130087     1.274655    1.227500       0.000173     0.027361            0.773213 157.950000 104.619155       201.0    211.0         0.456667                   0.52
+   short (600 pairs, 1 pass)             600  beta_0.3  0.30          0.680889          0.613333             0.103946     1.268184    1.267295       0.000118     0.018502            0.770546 157.330000 104.267162       195.5    211.0         0.436667                   0.52
+standard (1 epoch, full set)            1500  standard  0.10          0.676364          0.633333             0.393342     1.280604    1.257039       0.000202     0.031815            0.775663 157.420000 105.007191       209.5    211.5         0.456667                   0.50

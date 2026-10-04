@@ -1,0 +1,156 @@
+
+=== 2026-10-04 18:50:51 $ python -m task1_dpo.analyze_length --config configs/dpo.yaml
+2026-10-04 18:51:03.702365: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[data] standard_train: chosen longer 0.563, mean diff 42.5 tokens
+[data] length_balanced_train: chosen longer 0.491, mean diff 5.2 tokens
+[data] standard_heldout: chosen longer 0.533, mean diff 30.6 tokens
+[data] length_stratified_heldout: chosen longer 0.484, mean diff 2.7 tokens
+[dpo] length_balanced: 1500 pairs, beta=0.1, 94 optimizer steps (batch 2 x accum 8), starting at step 0
+[dpo] length_balanced step 1/94 loss=0.6931 acc=0.000 margin=0.000 gnorm=1.723 0.2min eta=18.6min
+[dpo] length_balanced step 2/94 loss=0.6946 acc=0.250 margin=-0.029 gnorm=1.569 0.4min eta=16.9min
+[dpo] length_balanced step 3/94 loss=0.6931 acc=0.500 margin=0.002 gnorm=1.830 0.6min eta=17.7min
+[dpo] length_balanced step 4/94 loss=0.6898 acc=0.688 margin=0.067 gnorm=1.806 0.8min eta=16.9min
+[dpo] length_balanced step 5/94 loss=0.6911 acc=0.688 margin=0.042 gnorm=1.582 0.9min eta=16.8min
+[dpo] length_balanced step 6/94 loss=0.6925 acc=0.500 margin=0.013 gnorm=1.786 1.2min eta=17.2min
+[dpo] length_balanced step 7/94 loss=0.6952 acc=0.312 margin=-0.040 gnorm=1.892 1.4min eta=17.4min
+[dpo] length_balanced step 8/94 loss=0.6890 acc=0.812 margin=0.083 gnorm=1.907 1.6min eta=17.2min
+[dpo] length_balanced step 9/94 loss=0.6870 acc=0.625 margin=0.124 gnorm=2.015 1.7min eta=16.5min
+[dpo] length_balanced step 10/94 loss=0.6921 acc=0.562 margin=0.022 gnorm=1.876 1.9min eta=16.2min
+[dpo] length_balanced step 11/94 loss=0.6890 acc=0.750 margin=0.084 gnorm=1.826 2.2min eta=16.3min
+[dpo] length_balanced step 12/94 loss=0.6934 acc=0.500 margin=-0.005 gnorm=1.712 2.4min eta=16.2min
+[dpo] length_balanced step 13/94 loss=0.6883 acc=0.500 margin=0.099 gnorm=1.862 2.6min eta=15.9min
+[dpo] length_balanced step 14/94 loss=0.6903 acc=0.688 margin=0.059 gnorm=1.868 2.8min eta=16.1min
+[dpo] length_balanced step 15/94 loss=0.6796 acc=0.812 margin=0.275 gnorm=2.236 3.0min eta=15.8min
+[dpo] length_balanced step 16/94 loss=0.6884 acc=0.688 margin=0.096 gnorm=1.643 3.2min eta=15.7min
+[dpo] length_balanced step 17/94 loss=0.6850 acc=0.625 margin=0.167 gnorm=1.894 3.4min eta=15.6min
+[dpo] length_balanced step 18/94 loss=0.6930 acc=0.500 margin=0.007 gnorm=2.191 3.7min eta=15.6min
+[dpo] length_balanced step 19/94 loss=0.6914 acc=0.500 margin=0.039 gnorm=1.768 3.9min eta=15.2min
+[dpo] length_balanced step 20/94 loss=0.6916 acc=0.562 margin=0.033 gnorm=1.764 4.0min eta=15.0min
+[dpo] length_balanced step 21/94 loss=0.6923 acc=0.438 margin=0.021 gnorm=1.892 4.2min eta=14.6min
+[dpo] length_balanced step 22/94 loss=0.6791 acc=0.688 margin=0.289 gnorm=1.986 4.5min eta=14.6min
+[dpo] length_balanced step 23/94 loss=0.6912 acc=0.562 margin=0.040 gnorm=1.846 4.7min eta=14.4min
+[dpo] length_balanced step 24/94 loss=0.6910 acc=0.625 margin=0.045 gnorm=1.854 4.8min eta=14.1min
+[dpo] length_balanced step 25/94 loss=0.6871 acc=0.625 margin=0.127 gnorm=1.787 5.0min eta=13.9min
+[dpo] length_balanced step 26/94 loss=0.6929 acc=0.438 margin=0.013 gnorm=1.939 5.2min eta=13.7min
+[dpo] length_balanced step 27/94 loss=0.6864 acc=0.500 margin=0.141 gnorm=1.675 5.4min eta=13.4min
+[dpo] length_balanced step 28/94 loss=0.6927 acc=0.500 margin=0.013 gnorm=1.827 5.6min eta=13.1min
+[dpo] length_balanced step 29/94 loss=0.6845 acc=0.562 margin=0.179 gnorm=1.700 5.8min eta=12.9min
+[dpo] length_balanced step 30/94 loss=0.6873 acc=0.625 margin=0.123 gnorm=1.732 6.0min eta=12.7min
+[dpo] length_balanced step 31/94 loss=0.7057 acc=0.312 margin=-0.242 gnorm=2.351 6.2min eta=12.5min
+[dpo] length_balanced step 32/94 loss=0.6831 acc=0.688 margin=0.209 gnorm=1.739 6.3min eta=12.2min
+[dpo] length_balanced step 33/94 loss=0.6814 acc=0.562 margin=0.249 gnorm=1.933 6.5min eta=12.0min
+[dpo] length_balanced step 34/94 loss=0.6886 acc=0.688 margin=0.099 gnorm=nan 6.7min eta=11.9min
+[dpo] length_balanced step 35/94 loss=0.6899 acc=0.500 margin=0.069 gnorm=1.858 6.9min eta=11.7min
+[dpo] length_balanced step 36/94 loss=0.7067 acc=0.312 margin=-0.257 gnorm=1.795 7.1min eta=11.5min
+[dpo] length_balanced step 37/94 loss=0.6970 acc=0.500 margin=-0.065 gnorm=2.026 7.3min eta=11.3min
+[dpo] length_balanced step 38/94 loss=0.6815 acc=0.688 margin=0.245 gnorm=1.941 7.5min eta=11.0min
+[dpo] length_balanced step 39/94 loss=0.6927 acc=0.500 margin=0.019 gnorm=1.559 7.7min eta=10.8min
+[dpo] length_balanced step 40/94 loss=0.6893 acc=0.562 margin=0.082 gnorm=1.859 7.9min eta=10.7min
+[dpo] length_balanced step 41/94 loss=0.6785 acc=0.625 margin=0.302 gnorm=1.789 8.1min eta=10.5min
+[dpo] length_balanced step 42/94 loss=0.6842 acc=0.625 margin=0.186 gnorm=1.812 8.3min eta=10.3min
+[dpo] length_balanced step 43/94 loss=0.6833 acc=0.750 margin=0.207 gnorm=1.775 8.5min eta=10.1min
+[dpo] length_balanced step 44/94 loss=0.7033 acc=0.438 margin=-0.190 gnorm=2.086 8.7min eta=9.9min
+[dpo] length_balanced step 45/94 loss=0.6801 acc=0.562 margin=0.282 gnorm=2.466 8.9min eta=9.7min
+[dpo] length_balanced step 46/94 loss=0.6857 acc=0.500 margin=0.158 gnorm=1.696 9.1min eta=9.5min
+[dpo] length_balanced step 47/94 loss=0.6606 acc=0.875 margin=0.672 gnorm=2.169 9.3min eta=9.3min
+[dpo] length_balanced step 48/94 loss=0.6764 acc=0.688 margin=0.349 gnorm=2.105 9.5min eta=9.1min
+[dpo] length_balanced step 49/94 loss=0.6795 acc=0.688 margin=0.288 gnorm=1.834 9.7min eta=8.9min
+[dpo] length_balanced step 50/94 loss=0.6749 acc=0.812 margin=0.372 gnorm=1.742 9.9min eta=8.7min
+[dpo] length_balanced step 51/94 loss=0.6813 acc=0.500 margin=0.251 gnorm=1.720 10.1min eta=8.5min
+[dpo] length_balanced step 52/94 loss=0.6865 acc=0.500 margin=0.142 gnorm=1.629 10.2min eta=8.3min
+[dpo] length_balanced step 53/94 loss=0.6673 acc=0.688 margin=0.539 gnorm=2.024 10.4min eta=8.1min
+[dpo] length_balanced step 54/94 loss=0.6932 acc=0.500 margin=0.026 gnorm=1.980 10.6min eta=7.9min
+[dpo] length_balanced step 55/94 loss=0.6862 acc=0.562 margin=0.148 gnorm=1.785 10.8min eta=7.7min
+[dpo] length_balanced step 56/94 loss=0.6713 acc=0.625 margin=0.469 gnorm=1.823 11.0min eta=7.5min
+[dpo] length_balanced step 57/94 loss=0.6870 acc=0.500 margin=0.172 gnorm=1.973 11.2min eta=7.2min
+[dpo] length_balanced step 58/94 loss=0.6940 acc=0.562 margin=-0.010 gnorm=1.700 11.4min eta=7.0min
+[dpo] length_balanced step 59/94 loss=0.6983 acc=0.438 margin=-0.086 gnorm=1.981 11.6min eta=6.9min
+[dpo] length_balanced step 60/94 loss=0.6853 acc=0.562 margin=0.177 gnorm=1.985 11.8min eta=6.7min
+[dpo] length_balanced step 61/94 loss=0.6739 acc=0.625 margin=0.415 gnorm=2.086 11.9min eta=6.5min
+[dpo] length_balanced step 62/94 loss=0.6617 acc=0.812 margin=0.660 gnorm=2.041 12.1min eta=6.3min
+[dpo] length_balanced step 63/94 loss=0.6696 acc=0.750 margin=0.500 gnorm=1.900 12.3min eta=6.0min
+[dpo] length_balanced step 64/94 loss=0.6716 acc=0.750 margin=0.457 gnorm=1.863 12.5min eta=5.8min
+[dpo] length_balanced step 65/94 loss=0.6551 acc=0.875 margin=0.802 gnorm=2.185 12.7min eta=5.7min
+[dpo] length_balanced step 66/94 loss=0.6807 acc=0.688 margin=0.265 gnorm=1.652 12.9min eta=5.5min
+[dpo] length_balanced step 67/94 loss=0.6918 acc=0.312 margin=0.058 gnorm=1.928 13.2min eta=5.3min
+[dpo] length_balanced step 68/94 loss=0.6783 acc=0.562 margin=0.344 gnorm=2.018 13.3min eta=5.1min
+[dpo] length_balanced step 69/94 loss=0.6782 acc=0.625 margin=0.361 gnorm=1.813 13.5min eta=4.9min
+[dpo] length_balanced step 70/94 loss=0.7021 acc=0.375 margin=-0.108 gnorm=1.632 13.7min eta=4.7min
+[dpo] length_balanced step 71/94 loss=0.6760 acc=0.625 margin=0.416 gnorm=1.964 13.9min eta=4.5min
+[dpo] length_balanced step 72/94 loss=0.6997 acc=0.375 margin=-0.089 gnorm=2.096 14.0min eta=4.3min
+[dpo] length_balanced step 73/94 loss=0.6968 acc=0.562 margin=-0.041 gnorm=1.992 14.2min eta=4.1min
+[dpo] length_balanced step 74/94 loss=0.6925 acc=0.438 margin=0.051 gnorm=1.910 14.4min eta=3.9min
+[dpo] length_balanced step 75/94 loss=0.6631 acc=0.688 margin=0.641 gnorm=1.952 14.5min eta=3.7min
+[dpo] length_balanced step 76/94 loss=0.6677 acc=0.688 margin=0.555 gnorm=2.181 14.8min eta=3.5min
+[dpo] length_balanced step 77/94 loss=0.6859 acc=0.562 margin=0.197 gnorm=1.753 15.0min eta=3.3min
+[dpo] length_balanced step 78/94 loss=0.6426 acc=0.875 margin=1.099 gnorm=2.170 15.1min eta=3.1min
+[dpo] length_balanced step 79/94 loss=0.6517 acc=0.812 margin=0.887 gnorm=2.263 15.3min eta=2.9min
+[dpo] length_balanced step 80/94 loss=0.6697 acc=0.562 margin=0.553 gnorm=1.931 15.5min eta=2.7min
+[dpo] length_balanced step 81/94 loss=0.6253 acc=0.938 margin=1.475 gnorm=2.449 15.7min eta=2.5min
+[dpo] length_balanced step 82/94 loss=0.6731 acc=0.562 margin=0.447 gnorm=1.908 15.9min eta=2.3min
+[dpo] length_balanced step 83/94 loss=0.6932 acc=0.562 margin=0.044 gnorm=2.048 16.1min eta=2.1min
+[dpo] length_balanced step 84/94 loss=0.7307 acc=0.188 margin=-0.718 gnorm=1.955 16.3min eta=1.9min
+[dpo] length_balanced step 85/94 loss=0.6787 acc=0.562 margin=0.373 gnorm=1.917 16.5min eta=1.7min
+[dpo] length_balanced step 86/94 loss=0.7055 acc=0.562 margin=-0.205 gnorm=2.019 16.7min eta=1.6min
+[dpo] length_balanced step 87/94 loss=0.6899 acc=0.562 margin=0.104 gnorm=2.031 16.9min eta=1.4min
+[dpo] length_balanced step 88/94 loss=0.6247 acc=0.750 margin=1.488 gnorm=2.092 17.2min eta=1.2min
+[dpo] length_balanced step 89/94 loss=0.7084 acc=0.438 margin=-0.221 gnorm=2.564 17.3min eta=1.0min
+[dpo] length_balanced step 90/94 loss=0.6714 acc=0.625 margin=0.591 gnorm=2.258 17.5min eta=0.8min
+[dpo] length_balanced step 91/94 loss=0.7005 acc=0.500 margin=-0.114 gnorm=2.237 17.8min eta=0.6min
+[dpo] length_balanced step 92/94 loss=0.6798 acc=0.500 margin=0.299 gnorm=1.789 18.0min eta=0.4min
+[dpo] length_balanced step 93/94 loss=0.6643 acc=0.562 margin=0.746 gnorm=2.083 18.1min eta=0.2min
+[dpo] length_balanced step 94/94 loss=0.6431 acc=0.833 margin=1.121 gnorm=nan 18.3min eta=0.0min
+[dpo] length_balanced: saved adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/length_balanced
+[eval] length_balanced: scoring 300 held-out pairs
+[eval] length_balanced: scoring 246 length-stratified pairs
+[eval] length_balanced: generating for 300 held-out prompts
+[eval] generated 16/300
+[eval] generated 32/300
+[eval] generated 48/300
+[eval] generated 64/300
+[eval] generated 80/300
+[eval] generated 96/300
+[eval] generated 112/300
+[eval] generated 128/300
+[eval] generated 144/300
+[eval] generated 160/300
+[eval] generated 176/300
+[eval] generated 192/300
+[eval] generated 208/300
+[eval] generated 224/300
+[eval] generated 240/300
+[eval] generated 256/300
+[eval] generated 272/300
+[eval] generated 288/300
+[eval] generated 300/300
+[eval] generated 16/50
+[eval] generated 32/50
+[eval] generated 48/50
+[eval] generated 50/50
+[eval] length_balanced: loss=0.6767 acc=0.623 reward=1.278 kl_tok=0.0022 kl_seq=0.34 len=156.6 wl_compliance=0.52
+                                  0                1
+model                      standard  length_balanced
+acc_all                    0.577236         0.597561
+margin_all                 0.250929          0.41668
+n_all                           246              246
+acc_preferred_longer       0.463415         0.426829
+margin_preferred_longer   -0.140547        -0.527587
+n_preferred_longer               82               82
+acc_length_matched         0.585366         0.573171
+margin_length_matched      0.185041         0.364954
+n_length_matched                 82               82
+acc_rejected_longer        0.682927         0.792683
+margin_rejected_longer     0.708294         1.412673
+n_rejected_longer                82               82
+heldout_pref_acc           0.633333         0.623333
+reward_mean                1.280604         1.278207
+kl_token_mean              0.000202         0.002172
+len_mean                     157.42           156.64
+len_std                  105.007191       104.908899
+len_median                    209.5            195.5
+len_iqr                       211.5           211.25
+truncation_rate            0.456667         0.453333
+word_limit_compliance           0.5             0.52
+word_limit_words_mean         39.82            39.78
+word_limit_words_std      18.498313        20.835825

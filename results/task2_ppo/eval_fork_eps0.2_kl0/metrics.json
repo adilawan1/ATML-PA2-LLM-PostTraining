@@ -1,0 +1,35 @@
+{
+  "name": "fork_eps0.2_kl0",
+  "n_prompts": 200,
+  "reward_mean": 1.6216636848449708,
+  "reward_std": 1.3926131664827297,
+  "effective_reward_mean": 1.5466636848449706,
+  "kl_token_mean": -3.299193015800498e-05,
+  "kl_seq_mean": -0.009388513565063476,
+  "entropy_token_mean": 1.0016246341488562,
+  "response_length": {
+    "mean": 284.57,
+    "std": 251.0406443188035,
+    "median": 225.0,
+    "q1": 65.0,
+    "q3": 474.5,
+    "iqr": 409.5,
+    "n": 200
+  },
+  "eos_rate": 0.925,
+  "truncation_rate": 0.075,
+  "protocol": {
+    "seed": 6304,
+    "generation": {
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "do_sample": true
+    },
+    "logprob_temperature": 1.0,
+    "max_new_tokens": 768,
+    "max_prompt_length": 256,
+    "prompts_file": "data/rl_prompt_pool_eval.jsonl",
+    "missing_eos_penalty": 1.0
+  },
+  "eval_wall_clock_s": 726.5753506309993
+}

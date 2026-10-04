@@ -1,0 +1,61 @@
+
+=== 2026-10-04 21:25:30 $ python -m task5_feedback.compare_feedback --config configs/feedback.yaml
+                                           0          1          2
+policy                                   sft       rlvr      rlaif
+gsm_exact_accuracy                  0.273333   0.293333       0.29
+gsm_format_compliance               0.353333   0.363333   0.363333
+gsm_len_mean                      275.096667     275.75     276.64
+gsm_len_std                        86.376775  87.863991  87.086683
+gsm_fail_no_final_format                 188        184        184
+gsm_fail_correct                          82         88         87
+gsm_fail_wrong_final                      24         21         22
+gsm_fail_truncated_no_final                6          7          7
+transfer_exact_accuracy                 0.42       0.46       0.48
+transfer_format_compliance              0.55       0.58       0.62
+transfer_len_mean                     163.35     164.41     164.32
+transfer_len_std                   70.864289   72.14861  73.003545
+transfer_fail_no_final_format             45         42         38
+transfer_fail_correct                     42         46         48
+transfer_fail_wrong_final                 13         12         14
+accuracy_drop_transfer_minus_gsm    0.146667   0.166667       0.19
+format_drop_transfer_minus_gsm      0.196667   0.216667   0.256667
+                                                       0              1            2
+comparison                                  rlaif_vs_sft  rlvr_vs_rlaif  rlvr_vs_sft
+gsm_win_rate                                         0.5            0.5     0.503333
+gsm_ties                                             292            290          290
+gsm_agree_3way                                      0.96           0.93         0.93
+gsm_agree_on_decisive                                0.0            0.0          0.0
+gsm_judge_decisive_when_verifier_tied           0.023729       0.034602      0.03125
+transfer_win_rate                                  0.535           0.53         0.53
+transfer_ties                                         79             78           78
+transfer_agree_3way                                 0.77           0.78         0.78
+transfer_agree_on_decisive                      0.333333            0.5          0.5
+transfer_judge_decisive_when_verifier_tied      0.202128       0.214286     0.202128
+win_rate_drop_transfer_minus_gsm                   0.035           0.03     0.026667
+{
+  "diagnostics": {
+    "S_reason": {
+      "verifier": 0.0,
+      "ai_judge": 0.0
+    },
+    "S_outcome": {
+      "verifier": 1.0,
+      "ai_judge": 0.0
+    },
+    "filler_susceptibility_prefers_filler": {
+      "verifier": 0.0,
+      "ai_judge": 0.25
+    },
+    "distractor_robustness": {
+      "verifier": 1.0,
+      "ai_judge": 0.25
+    }
+  },
+  "cost": {
+    "judge_model": "Qwen/Qwen2.5-3B-Instruct",
+    "measured_seconds_per_judge_comparison": 0.23309641761750072,
+    "rlaif_comparisons_per_group": 6,
+    "group_size_K": 4,
+    "rlvr_cost": "one regex parse per sample (negligible, no model call)"
+  }
+}

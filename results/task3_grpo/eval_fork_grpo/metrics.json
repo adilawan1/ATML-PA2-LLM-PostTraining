@@ -1,0 +1,35 @@
+{
+  "name": "fork_grpo",
+  "n_prompts": 200,
+  "reward_mean": 1.6103988647460938,
+  "reward_std": 1.3784122276549755,
+  "effective_reward_mean": 1.6103988647460938,
+  "kl_token_mean": 6.096872176341806e-05,
+  "kl_seq_mean": 0.017215433120727538,
+  "entropy_token_mean": 0.5819601679701918,
+  "response_length": {
+    "mean": 282.365,
+    "std": 253.81385260659042,
+    "median": 224.0,
+    "q1": 69.0,
+    "q3": 497.5,
+    "iqr": 428.5,
+    "n": 200
+  },
+  "eos_rate": 0.905,
+  "truncation_rate": 0.095,
+  "protocol": {
+    "seed": 6304,
+    "generation": {
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "do_sample": true
+    },
+    "logprob_temperature": 0.7,
+    "max_new_tokens": 768,
+    "max_prompt_length": 256,
+    "prompts_file": "data/rl_prompt_pool_eval.jsonl",
+    "missing_eos_penalty": 0.0
+  },
+  "eval_wall_clock_s": 739.7678275090002
+}

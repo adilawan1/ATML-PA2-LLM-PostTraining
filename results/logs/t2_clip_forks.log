@@ -1,0 +1,83 @@
+
+=== 2026-10-04 19:22:17 $ python -m task2_ppo.analyze_clipping --config configs/ppo.yaml --forks-only
+2026-10-04 19:22:26.977121: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+=== PPO fork fork_eps0.05_kl0.1: 8 updates -> /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.05_kl0.1
+[ppo] fork_eps0.05_kl0.1: 8 updates, eps=0.05, kl_beta=0.1, starting at update 0
+[ppo] fork_eps0.05_kl0.1 update 1/8 reward=-1.449 kl=0.0000 ent=1.347 pl=-0.0004 vl=8.025 clip=0.000 len=156 0.2min
+[ppo] fork_eps0.05_kl0.1 update 2/8 reward=-0.818 kl=-0.0002 ent=0.837 pl=-0.0002 vl=7.682 clip=0.000 len=512 0.7min
+[ppo] fork_eps0.05_kl0.1 update 3/8 reward=3.359 kl=-0.0004 ent=0.302 pl=0.0001 vl=5.385 clip=0.000 len=233 1.0min
+[ppo] fork_eps0.05_kl0.1 update 4/8 reward=0.775 kl=0.0001 ent=1.181 pl=0.0000 vl=5.627 clip=0.000 len=512 1.5min
+[ppo] fork_eps0.05_kl0.1 update 5/8 reward=3.119 kl=-0.0004 ent=1.363 pl=0.0004 vl=2.329 clip=0.000 len=220 1.7min
+[ppo] fork_eps0.05_kl0.1 update 6/8 reward=-0.987 kl=-0.0001 ent=0.721 pl=0.0002 vl=4.592 clip=0.000 len=512 2.2min
+[ppo] fork_eps0.05_kl0.1 update 7/8 reward=-0.947 kl=0.0001 ent=1.127 pl=0.0006 vl=1.726 clip=0.000 len=50 2.3min
+[ppo] fork_eps0.05_kl0.1 update 8/8 reward=-2.299 kl=-0.0003 ent=0.730 pl=-0.0007 vl=3.726 clip=0.000 len=13 2.3min
+[ppo] fork_eps0.05_kl0.1: saved policy adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.05_kl0.1 (critic in /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.05_kl0.1/value)
+[eval] fork_eps0.05_kl0.1: 16/200
+[eval] fork_eps0.05_kl0.1: 32/200
+[eval] fork_eps0.05_kl0.1: 48/200
+[eval] fork_eps0.05_kl0.1: 64/200
+[eval] fork_eps0.05_kl0.1: 80/200
+[eval] fork_eps0.05_kl0.1: 96/200
+[eval] fork_eps0.05_kl0.1: 112/200
+[eval] fork_eps0.05_kl0.1: 128/200
+[eval] fork_eps0.05_kl0.1: 144/200
+[eval] fork_eps0.05_kl0.1: 160/200
+[eval] fork_eps0.05_kl0.1: 176/200
+[eval] fork_eps0.05_kl0.1: 192/200
+[eval] fork_eps0.05_kl0.1: 200/200
+[eval] fork_eps0.05_kl0.1: reward=1.766 kl_tok=-0.0000 entropy=1.010 len=294.3 eos=0.90
+=== PPO fork fork_eps0.2_kl0.1: 8 updates -> /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.2_kl0.1
+[ppo] fork_eps0.2_kl0.1: 8 updates, eps=0.2, kl_beta=0.1, starting at update 0
+[ppo] fork_eps0.2_kl0.1 update 1/8 reward=-1.449 kl=0.0000 ent=1.347 pl=-0.0004 vl=8.025 clip=0.000 len=156 0.2min
+[ppo] fork_eps0.2_kl0.1 update 2/8 reward=-0.818 kl=-0.0002 ent=0.837 pl=-0.0002 vl=7.682 clip=0.000 len=512 0.7min
+[ppo] fork_eps0.2_kl0.1 update 3/8 reward=3.359 kl=-0.0004 ent=0.302 pl=0.0001 vl=5.385 clip=0.000 len=233 1.0min
+[ppo] fork_eps0.2_kl0.1 update 4/8 reward=0.775 kl=0.0001 ent=1.181 pl=0.0000 vl=5.627 clip=0.000 len=512 1.5min
+[ppo] fork_eps0.2_kl0.1 update 5/8 reward=3.119 kl=-0.0004 ent=1.363 pl=0.0004 vl=2.329 clip=0.000 len=220 1.8min
+[ppo] fork_eps0.2_kl0.1 update 6/8 reward=-0.987 kl=-0.0001 ent=0.721 pl=0.0002 vl=4.592 clip=0.000 len=512 2.3min
+[ppo] fork_eps0.2_kl0.1 update 7/8 reward=-0.947 kl=0.0001 ent=1.127 pl=0.0006 vl=1.726 clip=0.000 len=50 2.4min
+[ppo] fork_eps0.2_kl0.1 update 8/8 reward=-2.299 kl=-0.0003 ent=0.730 pl=-0.0007 vl=3.726 clip=0.000 len=13 2.4min
+[ppo] fork_eps0.2_kl0.1: saved policy adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.2_kl0.1 (critic in /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.2_kl0.1/value)
+[eval] fork_eps0.2_kl0.1: 16/200
+[eval] fork_eps0.2_kl0.1: 32/200
+[eval] fork_eps0.2_kl0.1: 48/200
+[eval] fork_eps0.2_kl0.1: 64/200
+[eval] fork_eps0.2_kl0.1: 80/200
+[eval] fork_eps0.2_kl0.1: 96/200
+[eval] fork_eps0.2_kl0.1: 112/200
+[eval] fork_eps0.2_kl0.1: 128/200
+[eval] fork_eps0.2_kl0.1: 144/200
+[eval] fork_eps0.2_kl0.1: 160/200
+[eval] fork_eps0.2_kl0.1: 176/200
+[eval] fork_eps0.2_kl0.1: 192/200
+[eval] fork_eps0.2_kl0.1: 200/200
+[eval] fork_eps0.2_kl0.1: reward=1.766 kl_tok=-0.0000 entropy=1.010 len=294.3 eos=0.90
+=== PPO fork fork_eps0.5_kl0.1: 8 updates -> /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.5_kl0.1
+[ppo] fork_eps0.5_kl0.1: 8 updates, eps=0.5, kl_beta=0.1, starting at update 0
+[ppo] fork_eps0.5_kl0.1 update 1/8 reward=-1.449 kl=0.0000 ent=1.347 pl=-0.0004 vl=8.025 clip=0.000 len=156 0.2min
+[ppo] fork_eps0.5_kl0.1 update 2/8 reward=-0.818 kl=-0.0002 ent=0.837 pl=-0.0002 vl=7.682 clip=0.000 len=512 0.7min
+[ppo] fork_eps0.5_kl0.1 update 3/8 reward=3.359 kl=-0.0004 ent=0.302 pl=0.0001 vl=5.385 clip=0.000 len=233 1.0min
+[ppo] fork_eps0.5_kl0.1 update 4/8 reward=0.775 kl=0.0001 ent=1.181 pl=0.0000 vl=5.627 clip=0.000 len=512 1.5min
+[ppo] fork_eps0.5_kl0.1 update 5/8 reward=3.119 kl=-0.0004 ent=1.363 pl=0.0004 vl=2.329 clip=0.000 len=220 1.8min
+[ppo] fork_eps0.5_kl0.1 update 6/8 reward=-0.987 kl=-0.0001 ent=0.721 pl=0.0002 vl=4.592 clip=0.000 len=512 2.3min
+[ppo] fork_eps0.5_kl0.1 update 7/8 reward=-0.947 kl=0.0001 ent=1.127 pl=0.0006 vl=1.726 clip=0.000 len=50 2.4min
+[ppo] fork_eps0.5_kl0.1 update 8/8 reward=-2.299 kl=-0.0003 ent=0.730 pl=-0.0007 vl=3.726 clip=0.000 len=13 2.4min
+[ppo] fork_eps0.5_kl0.1: saved policy adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.5_kl0.1 (critic in /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.5_kl0.1/value)
+[eval] fork_eps0.5_kl0.1: 16/200
+[eval] fork_eps0.5_kl0.1: 32/200
+[eval] fork_eps0.5_kl0.1: 48/200
+[eval] fork_eps0.5_kl0.1: 64/200
+[eval] fork_eps0.5_kl0.1: 80/200
+[eval] fork_eps0.5_kl0.1: 96/200
+[eval] fork_eps0.5_kl0.1: 112/200
+[eval] fork_eps0.5_kl0.1: 128/200
+[eval] fork_eps0.5_kl0.1: 144/200
+[eval] fork_eps0.5_kl0.1: 160/200
+[eval] fork_eps0.5_kl0.1: 176/200
+[eval] fork_eps0.5_kl0.1: 192/200
+[eval] fork_eps0.5_kl0.1: 200/200
+[eval] fork_eps0.5_kl0.1: reward=1.766 kl_tok=-0.0000 entropy=1.010 len=294.3 eos=0.90
+              name  clip_epsilon  kl_beta  heldout_reward  heldout_reward_std  heldout_effective_reward  heldout_kl_token_mean  heldout_kl_seq_mean  heldout_entropy  heldout_len_mean  heldout_len_std  heldout_len_iqr  heldout_eos_rate  stab_updates  stab_policy_loss_std  stab_max_approx_kl_old_new  stab_max_abs_log_ratio  stab_final_epoch_clip_fraction  stab_grad_norm_max  stab_grad_norm_cv  stab_value_loss_last  stab_nonfinite_steps  stab_train_reward_mean  stab_train_kl_last  stab_generated_tokens
+fork_eps0.05_kl0.1          0.05      0.1        1.765539            1.267373                  1.665539              -0.000016            -0.004657         1.009525            294.31       256.369195            410.0               0.9             8              0.000402                    0.000021                0.029551                             0.0            1.299897            0.70838               3.72602                     4                0.094238            -0.00028                 2208.0
+ fork_eps0.2_kl0.1          0.20      0.1        1.765539            1.267373                  1.665539              -0.000016            -0.004657         1.009525            294.31       256.369195            410.0               0.9             8              0.000402                    0.000021                0.029551                             0.0            1.299897            0.70838               3.72602                     4                0.094238            -0.00028                 2208.0
+ fork_eps0.5_kl0.1          0.50      0.1        1.765539            1.267373                  1.665539              -0.000016            -0.004657         1.009525            294.31       256.369195            410.0               0.9             8              0.000402                    0.000021                0.029551                             0.0            1.299897            0.70838               3.72602                     4                0.094238            -0.00028                 2208.0

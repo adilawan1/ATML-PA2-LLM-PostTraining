@@ -1,0 +1,63 @@
+
+=== 2026-10-04 20:10:16 $ python -m task2_ppo.ablate_kl --config configs/ppo.yaml
+2026-10-04 20:10:28.843308: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+KL beta conditions: [0.0, 0.1, 0.2]
+Fork update budget: 8
+=== PPO fork fork_eps0.2_kl0: 8 updates -> /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.2_kl0
+[ppo] fork_eps0.2_kl0: 8 updates, eps=0.2, kl_beta=0.0, starting at update 0
+[ppo] fork_eps0.2_kl0 update 1/8 reward=-1.449 kl=0.0000 ent=1.347 pl=-0.0003 vl=8.025 clip=0.000 len=156 0.2min
+[ppo] fork_eps0.2_kl0 update 2/8 reward=-0.818 kl=-0.0002 ent=0.836 pl=0.0001 vl=7.681 clip=0.000 len=512 0.7min
+[ppo] fork_eps0.2_kl0 update 3/8 reward=3.359 kl=-0.0001 ent=0.303 pl=-0.0001 vl=5.381 clip=0.000 len=233 0.9min
+[ppo] fork_eps0.2_kl0 update 4/8 reward=0.973 kl=0.0003 ent=1.130 pl=-0.0002 vl=5.081 clip=0.000 len=512 1.5min
+[ppo] fork_eps0.2_kl0 update 5/8 reward=3.215 kl=0.0005 ent=1.020 pl=-0.0000 vl=2.983 clip=0.000 len=196 1.7min
+[ppo] fork_eps0.2_kl0 update 6/8 reward=0.744 kl=-0.0002 ent=0.763 pl=0.0000 vl=4.293 clip=0.000 len=512 2.2min
+[ppo] fork_eps0.2_kl0 update 7/8 reward=-0.947 kl=-0.0017 ent=1.125 pl=-0.0006 vl=1.701 clip=0.000 len=50 2.2min
+[ppo] fork_eps0.2_kl0 update 8/8 reward=-2.299 kl=0.0004 ent=0.728 pl=-0.0002 vl=3.599 clip=0.000 len=13 2.3min
+[ppo] fork_eps0.2_kl0: saved policy adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.2_kl0 (critic in /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.2_kl0/value)
+[eval] fork_eps0.2_kl0: 16/200
+[eval] fork_eps0.2_kl0: 32/200
+[eval] fork_eps0.2_kl0: 48/200
+[eval] fork_eps0.2_kl0: 64/200
+[eval] fork_eps0.2_kl0: 80/200
+[eval] fork_eps0.2_kl0: 96/200
+[eval] fork_eps0.2_kl0: 112/200
+[eval] fork_eps0.2_kl0: 128/200
+[eval] fork_eps0.2_kl0: 144/200
+[eval] fork_eps0.2_kl0: 160/200
+[eval] fork_eps0.2_kl0: 176/200
+[eval] fork_eps0.2_kl0: 192/200
+[eval] fork_eps0.2_kl0: 200/200
+[eval] fork_eps0.2_kl0: reward=1.622 kl_tok=-0.0000 entropy=1.002 len=284.6 eos=0.93
+=== PPO fork fork_eps0.2_kl0.1: 8 updates -> /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.2_kl0.1
+[ppo] fork_eps0.2_kl0.1: already complete at /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.2_kl0.1; skipping.
+[eval] fork_eps0.2_kl0.1: reusing /content/ATML-PA2-LLM-PostTraining/results/task2_ppo/eval_fork_eps0.2_kl0.1/metrics.json
+=== PPO fork fork_eps0.2_kl0.2: 8 updates -> /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.2_kl0.2
+[ppo] fork_eps0.2_kl0.2: 8 updates, eps=0.2, kl_beta=0.2, starting at update 0
+[ppo] fork_eps0.2_kl0.2 update 1/8 reward=-1.449 kl=0.0000 ent=1.347 pl=-0.0003 vl=8.025 clip=0.000 len=156 0.2min
+[ppo] fork_eps0.2_kl0.2 update 2/8 reward=-0.818 kl=-0.0003 ent=0.836 pl=-0.0000 vl=7.682 clip=0.000 len=512 0.7min
+[ppo] fork_eps0.2_kl0.2 update 3/8 reward=3.359 kl=-0.0004 ent=0.303 pl=-0.0001 vl=5.390 clip=0.000 len=233 1.0min
+[ppo] fork_eps0.2_kl0.2 update 4/8 reward=0.775 kl=-0.0002 ent=1.182 pl=0.0001 vl=5.628 clip=0.000 len=512 1.5min
+[ppo] fork_eps0.2_kl0.2 update 5/8 reward=2.926 kl=-0.0001 ent=1.380 pl=0.0001 vl=2.506 clip=0.000 len=252 1.8min
+[ppo] fork_eps0.2_kl0.2 update 6/8 reward=0.864 kl=-0.0002 ent=0.776 pl=0.0000 vl=5.036 clip=0.000 len=512 2.3min
+[ppo] fork_eps0.2_kl0.2 update 7/8 reward=-0.947 kl=-0.0011 ent=1.127 pl=-0.0000 vl=1.740 clip=0.000 len=50 2.4min
+[ppo] fork_eps0.2_kl0.2 update 8/8 reward=-2.299 kl=0.0004 ent=0.726 pl=0.0005 vl=3.814 clip=0.000 len=13 2.5min
+[ppo] fork_eps0.2_kl0.2: saved policy adapter to /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.2_kl0.2 (critic in /content/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/fork_eps0.2_kl0.2/value)
+[eval] fork_eps0.2_kl0.2: 16/200
+[eval] fork_eps0.2_kl0.2: 32/200
+[eval] fork_eps0.2_kl0.2: 48/200
+[eval] fork_eps0.2_kl0.2: 64/200
+[eval] fork_eps0.2_kl0.2: 80/200
+[eval] fork_eps0.2_kl0.2: 96/200
+[eval] fork_eps0.2_kl0.2: 112/200
+[eval] fork_eps0.2_kl0.2: 128/200
+[eval] fork_eps0.2_kl0.2: 144/200
+[eval] fork_eps0.2_kl0.2: 160/200
+[eval] fork_eps0.2_kl0.2: 176/200
+[eval] fork_eps0.2_kl0.2: 192/200
+[eval] fork_eps0.2_kl0.2: 200/200
+[eval] fork_eps0.2_kl0.2: reward=1.691 kl_tok=0.0000 entropy=1.007 len=295.0 eos=0.91
+             name  clip_epsilon  kl_beta  heldout_reward  heldout_reward_std  heldout_effective_reward  heldout_kl_token_mean  heldout_kl_seq_mean  heldout_entropy  heldout_len_mean  heldout_len_std  heldout_len_iqr  heldout_eos_rate  stab_updates  stab_policy_loss_std  stab_max_approx_kl_old_new  stab_max_abs_log_ratio  stab_final_epoch_clip_fraction  stab_grad_norm_max  stab_grad_norm_cv  stab_value_loss_last  stab_nonfinite_steps  stab_train_reward_mean  stab_train_kl_last  stab_generated_tokens
+  fork_eps0.2_kl0           0.2      0.0        1.621664            1.392613                  1.546664              -0.000033            -0.009389         1.001625           284.570       251.040644            409.5             0.925             8              0.000204                    0.000015                0.029720                             0.0            1.319423           0.688881              3.598529                     4                0.347229            0.000406                 2184.0
+fork_eps0.2_kl0.1           0.2      0.1        1.765539            1.267373                  1.665539              -0.000016            -0.004657         1.009525           294.310       256.369195            410.0             0.900             8              0.000402                    0.000021                0.029551                             0.0            1.299897           0.708380              3.726020                     4                0.094238           -0.000280                 2208.0
+fork_eps0.2_kl0.2           0.2      0.2        1.690887            1.251663                  1.595887               0.000005             0.001405         1.007073           295.045       254.934135            412.5             0.905             8              0.000192                    0.000017                0.039858                             0.0            1.280574           0.723741              3.814220                     4                0.301392            0.000364                 2240.0

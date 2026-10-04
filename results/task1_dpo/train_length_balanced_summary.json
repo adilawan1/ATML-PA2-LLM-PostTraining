@@ -1,0 +1,45 @@
+{
+  "run_name": "length_balanced",
+  "dataset": "data/dpo_length_balanced_train.jsonl",
+  "n_examples": 1500,
+  "beta": 0.1,
+  "epochs": 1,
+  "batch_size": 2,
+  "grad_accum_steps": 8,
+  "optimizer_steps": 94,
+  "learning_rate": 2e-05,
+  "weight_decay": 0.0,
+  "max_sequence_length": 768,
+  "max_grad_norm": 1.0,
+  "seed": 6304,
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ]
+  },
+  "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "dtype": "float16",
+  "grad_scaler": true,
+  "output": "/content/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/length_balanced",
+  "wall_clock_s": 1096.3471767070005,
+  "peak_vram_gib": 6.649150371551514,
+  "final_train_record": {
+    "step": 94,
+    "loss": 0.6431213319301605,
+    "preference_accuracy": 0.8333333333333334,
+    "pref_margin": 1.1214345296223958,
+    "chosen_logratio": -0.6913108825683594,
+    "rejected_logratio": -1.8127444585164387,
+    "chosen_tokens": 129.16666666666666,
+    "rejected_tokens": 163.58333333333334,
+    "grad_norm": NaN,
+    "step_skipped_nonfinite": true,
+    "examples_seen": 1500,
+    "elapsed_s": 1095.7141628190002,
+    "peak_vram_gib": 6.649150371551514
+  }
+}

@@ -1,0 +1,43 @@
+
+=== 2026-10-04 21:17:48 $ python -m task5_feedback.evaluate_math --config configs/feedback.yaml --dataset transfer
+2026-10-04 21:17:56.721022: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Rows: 100
+Policies: ['sft', 'rlvr', 'rlaif']
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[math] sft: 16/100
+[math] sft: 32/100
+[math] sft: 48/100
+[math] sft: 64/100
+[math] sft: 80/100
+[math] sft: 96/100
+[math] sft: 100/100
+[math] rlvr: 16/100
+[math] rlvr: 32/100
+[math] rlvr: 48/100
+[math] rlvr: 64/100
+[math] rlvr: 80/100
+[math] rlvr: 96/100
+[math] rlvr: 100/100
+[math] rlaif: 16/100
+[math] rlaif: 32/100
+[math] rlaif: 48/100
+[math] rlaif: 64/100
+[math] rlaif: 80/100
+[math] rlaif: 96/100
+[math] rlaif: 100/100
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.92s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:25<00:00, 12.30s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:25<00:00, 12.99s/it]
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+[math] judged rlvr vs sft
+[math] judged rlaif vs sft
+[math] judged rlvr vs rlaif
+[math] transfer sft: acc=0.420 format=0.550 len=163
+[math] transfer rlvr: acc=0.460 format=0.580 len=164
+[math] transfer rlaif: acc=0.480 format=0.620 len=164
+[math] rlvr_vs_sft: win_rate=0.530 (W/T/L 14/78/8) agree_on_decisive=0.5
+[math] rlaif_vs_sft: win_rate=0.535 (W/T/L 14/79/7) agree_on_decisive=0.3333333333333333
+[math] rlvr_vs_rlaif: win_rate=0.530 (W/T/L 14/78/8) agree_on_decisive=0.5

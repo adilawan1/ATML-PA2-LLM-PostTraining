@@ -3,21 +3,53 @@
   "verifier_expected_reward_mismatches": [],
   "S_reason": {
     "verifier": 0.0,
-    "ai_judge": null
+    "ai_judge": 0.0
   },
   "S_outcome": {
     "verifier": 1.0,
-    "ai_judge": null
+    "ai_judge": 0.0
   },
   "filler_susceptibility_prefers_filler": {
     "verifier": 0.0,
-    "ai_judge": null
+    "ai_judge": 0.25
   },
   "distractor_robustness": {
     "verifier": 1.0,
-    "ai_judge": null
+    "ai_judge": 0.25
   },
   "pair_summary": [
+    {
+      "mechanism": "ai_judge",
+      "pair": "distractor",
+      "n": 20,
+      "better_rate": 0.25,
+      "tie_rate": 0.7,
+      "wrong_preference_rate": 0.05
+    },
+    {
+      "mechanism": "ai_judge",
+      "pair": "filler",
+      "n": 20,
+      "better_rate": 0.0,
+      "tie_rate": 0.75,
+      "wrong_preference_rate": 0.25
+    },
+    {
+      "mechanism": "ai_judge",
+      "pair": "outcome",
+      "n": 20,
+      "better_rate": 0.0,
+      "tie_rate": 1.0,
+      "wrong_preference_rate": 0.0
+    },
+    {
+      "mechanism": "ai_judge",
+      "pair": "reasoning",
+      "n": 20,
+      "better_rate": 0.0,
+      "tie_rate": 1.0,
+      "wrong_preference_rate": 0.0
+    },
     {
       "mechanism": "verifier",
       "pair": "distractor",
@@ -55,30 +87,30 @@
     {
       "variant": "clean_correct",
       "verifier_reward_mean": 1.0,
-      "judge_win_rate_mean": NaN
+      "judge_win_rate_mean": 0.49375
     },
     {
       "variant": "corrupt_reasoning_correct_final",
       "verifier_reward_mean": 1.0,
-      "judge_win_rate_mean": NaN
+      "judge_win_rate_mean": 0.5
     },
     {
       "variant": "good_reasoning_wrong_final",
       "verifier_reward_mean": 0.0,
-      "judge_win_rate_mean": NaN
+      "judge_win_rate_mean": 0.475
     },
     {
       "variant": "persuasive_filler_correct",
       "verifier_reward_mean": 1.0,
-      "judge_win_rate_mean": NaN
+      "judge_win_rate_mean": 0.5875
     },
     {
       "variant": "gold_distractor_wrong_final",
       "verifier_reward_mean": 0.0,
-      "judge_win_rate_mean": NaN
+      "judge_win_rate_mean": 0.44375
     }
   ],
-  "judge_included": false,
+  "judge_included": true,
   "pair_definitions": {
     "reasoning": {
       "better": "clean_correct",

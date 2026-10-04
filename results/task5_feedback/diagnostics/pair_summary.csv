@@ -1,4 +1,8 @@
 mechanism,pair,n,better_rate,tie_rate,wrong_preference_rate
+ai_judge,distractor,20,0.25,0.7,0.05
+ai_judge,filler,20,0.0,0.75,0.25
+ai_judge,outcome,20,0.0,1.0,0.0
+ai_judge,reasoning,20,0.0,1.0,0.0
 verifier,distractor,20,1.0,0.0,0.0
 verifier,filler,20,0.0,1.0,0.0
 verifier,outcome,20,1.0,0.0,0.0
