@@ -88,7 +88,7 @@ Requires the standard DPO, PPO and GRPO adapters from Tasks 1-3.
 python -m task4_safety.generate_responses --config configs/feedback.yaml   # greedy, 450 XSTest prompts x 4 policies
 python -m task4_safety.judge_responses    --config configs/feedback.yaml   # fixed categorical judge, resumable per row
 python -m task4_safety.make_audit_sheet   --config configs/feedback.yaml   # fixed 60 IDs + blinded labelling sheet
-# fill manual_label in results/task4_safety/manual_audit_sheet.csv by hand (policy and AI labels are hidden)
+python -m task4_safety.label_audit                                        # label the sheet by hand (policy and AI labels hidden)
 python -m task4_safety.evaluate_safety    --config configs/feedback.yaml   # rates, category tables, audit agreement
 ```
 
