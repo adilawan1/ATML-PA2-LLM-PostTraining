@@ -1,0 +1,52 @@
+{
+  "n": 80,
+  "tie_fallback_rate": 0.0,
+  "parsed_token_counts": {
+    "TIE": 69,
+    "B": 7,
+    "A": 4
+  },
+  "most_common_raw_4": [
+    [
+      "TIE",
+      69
+    ],
+    [
+      "B",
+      7
+    ],
+    [
+      "A, B",
+      4
+    ]
+  ],
+  "by_pair": {
+    "reasoning": {
+      "tie_fallback_rate": 0.0,
+      "verdicts": {
+        "TIE": 20
+      }
+    },
+    "outcome": {
+      "tie_fallback_rate": 0.0,
+      "verdicts": {
+        "TIE": 20
+      }
+    },
+    "filler": {
+      "tie_fallback_rate": 0.0,
+      "verdicts": {
+        "TIE": 15,
+        "B": 5
+      }
+    },
+    "distractor": {
+      "tie_fallback_rate": 0.0,
+      "verdicts": {
+        "TIE": 14,
+        "A": 5,
+        "B": 1
+      }
+    }
+  }
+}

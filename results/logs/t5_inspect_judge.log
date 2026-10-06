@@ -1,0 +1,38 @@
+
+=== 2026-10-06 16:22:19 $ python -m task5_feedback.inspect_judge_outputs --config configs/feedback.yaml
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791303744.919810    3140 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791303747.221842    3140 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files:  50%|█████     | 1/2 [00:50<00:50, 50.00s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:50<00:00, 25.00s/it]
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:11<00:11, 11.78s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:21<00:00, 10.47s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:21<00:00, 10.66s/it]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[inspect] problem 803 done
+[inspect] problem 750 done
+[inspect] problem 867 done
+[inspect] problem 506 done
+[inspect] problem 505 done
+[inspect] problem 289 done
+[inspect] problem 736 done
+[inspect] problem 558 done
+[inspect] problem 677 done
+[inspect] problem 23 done
+[inspect] problem 1122 done
+[inspect] problem 569 done
+[inspect] problem 620 done
+[inspect] problem 299 done
+[inspect] problem 1200 done
+[inspect] problem 1245 done
+[inspect] problem 103 done
+[inspect] problem 459 done
+[inspect] problem 113 done
+[inspect] problem 681 done
+{'n': 80, 'tie_fallback_rate': 0.0, 'parsed_token_counts': {'TIE': 69, 'B': 7, 'A': 4}, 'most_common_raw_4': [('TIE', 69), ('B', 7), ('A, B', 4)], 'by_pair': {'reasoning': {'tie_fallback_rate': 0.0, 'verdicts': {'TIE': 20}}, 'outcome': {'tie_fallback_rate': 0.0, 'verdicts': {'TIE': 20}}, 'filler': {'tie_fallback_rate': 0.0, 'verdicts': {'TIE': 15, 'B': 5}}, 'distractor': {'tie_fallback_rate': 0.0, 'verdicts': {'TIE': 14, 'A': 5, 'B': 1}}}}
