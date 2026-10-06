@@ -107,7 +107,11 @@ python -m task5_feedback.evaluate_math       --config configs/feedback.yaml --da
 python -m task5_feedback.score_perturbations --config configs/feedback.yaml   # --verifier-only needs no GPU
 python -m task5_feedback.evaluate_math       --config configs/feedback.yaml --dataset transfer
 python -m task5_feedback.compare_feedback    --config configs/feedback.yaml
+python -m task5_feedback.inspect_judge_outputs --config configs/feedback.yaml # raw judge text on the 80 controlled pairs
 ```
+
+`inspect_judge_outputs` re-runs the fixed judge with its own rubric and 4-token decoding on the controlled pairs and
+saves the raw text it emits, to separate genuine `TIE` answers from the parser's TIE fallback. It changes no metric.
 
 ## 4. Implementation conventions
 
