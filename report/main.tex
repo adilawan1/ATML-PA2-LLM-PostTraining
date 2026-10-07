@@ -18,6 +18,10 @@
 
 \newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
 
+% Qualitative example box: \qex{who / condition}{quoted text}. Quote only the minimum text needed.
+\newcommand{\qex}[2]{\par\smallskip\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+  \footnotesize\textbf{#1:} \ttfamily #2}}\par\smallskip}
+
 \title{\todo{title}}
 
 \author{%
@@ -179,16 +183,48 @@ feedback-source discussion}
 \section{Conclusion}
 \todo{conclusion}
 
-% References do not count toward the 8 pages.
-\begin{thebibliography}{9}
-\bibitem{rafailov2023} \todo{Rafailov et al., 2023}
-\bibitem{schulman2017} \todo{Schulman et al., 2017}
-\bibitem{ouyang2022} \todo{Ouyang et al., 2022}
-\bibitem{shao2024} \todo{Shao et al., 2024}
-\bibitem{liu2025} \todo{Liu et al., 2025}
-\bibitem{rottger2023} \todo{R\"ottger et al., 2023}
-\bibitem{deepseek2025} \todo{DeepSeek-AI et al., 2025}
-\bibitem{lee2024} \todo{Lee et al., 2024}
+% References do not count toward the 8 pages. Cite with \cite{key}; delete entries you do not cite.
+\begin{thebibliography}{99}\small
+\bibitem{rafailov2023} R.~Rafailov, A.~Sharma, E.~Mitchell, S.~Ermon, C.~D.~Manning, and C.~Finn. Direct preference
+  optimization: Your language model is secretly a reward model. In \emph{NeurIPS}, 2023. arXiv:2305.18290.
+\bibitem{schulman2017} J.~Schulman, F.~Wolski, P.~Dhariwal, A.~Radford, and O.~Klimov. Proximal policy optimization
+  algorithms. arXiv:1707.06347, 2017.
+\bibitem{schulman2016gae} J.~Schulman, P.~Moritz, S.~Levine, M.~Jordan, and P.~Abbeel. High-dimensional continuous
+  control using generalized advantage estimation. In \emph{ICLR}, 2016. arXiv:1506.02438.
+\bibitem{ouyang2022} L.~Ouyang, J.~Wu, X.~Jiang, D.~Almeida, C.~Wainwright, P.~Mishkin, et~al. Training language models
+  to follow instructions with human feedback. In \emph{NeurIPS}, 2022. arXiv:2203.02155.
+\bibitem{shao2024} Z.~Shao, P.~Wang, Q.~Zhu, R.~Xu, J.~Song, X.~Bi, H.~Zhang, M.~Zhang, Y.~K.~Li, Y.~Wu, and D.~Guo.
+  DeepSeekMath: Pushing the limits of mathematical reasoning in open language models. arXiv:2402.03300, 2024.
+\bibitem{liu2025} Z.~Liu, C.~Chen, W.~Li, P.~Qi, T.~Pang, C.~Du, W.~S.~Lee, and M.~Lin. Understanding R1-Zero-like
+  training: A critical perspective. arXiv:2503.20783, 2025.
+\bibitem{deepseek2025} DeepSeek-AI. DeepSeek-R1: Incentivizing reasoning capability in LLMs via reinforcement
+  learning. arXiv:2501.12948, 2025.
+\bibitem{lee2024} H.~Lee, S.~Phatale, H.~Mansoor, T.~Mesnard, J.~Ferret, K.~Lu, C.~Bishop, E.~Hall, V.~Carbune,
+  A.~Rastogi, and S.~Prakash. RLAIF vs.\ RLHF: Scaling reinforcement learning from human feedback with AI feedback.
+  In \emph{ICML}, 2024. arXiv:2309.00267.
+\bibitem{rottger2023} P.~R\"ottger, H.~R.~Kirk, B.~Vidgen, G.~Attanasio, F.~Bianchi, and D.~Hovy. XSTest: A test suite
+  for identifying exaggerated safety behaviours in large language models. In \emph{NAACL}, 2024. arXiv:2308.01263.
+\bibitem{bai2022cai} Y.~Bai, S.~Kadavath, S.~Kundu, A.~Askell, J.~Kernion, et~al. Constitutional AI: Harmlessness from
+  AI feedback. arXiv:2212.08073, 2022.
+\bibitem{qwen2025} Qwen Team. Qwen2.5 technical report. arXiv:2412.15115, 2024.
+\bibitem{hu2022lora} E.~J.~Hu, Y.~Shen, P.~Wallis, Z.~Allen-Zhu, Y.~Li, S.~Wang, L.~Wang, and W.~Chen. LoRA: Low-rank
+  adaptation of large language models. In \emph{ICLR}, 2022. arXiv:2106.09685.
+\bibitem{cui2023ultrafeedback} G.~Cui, L.~Yuan, N.~Ding, G.~Yao, W.~Zhu, Y.~Ni, G.~Xie, Z.~Liu, and M.~Sun.
+  UltraFeedback: Boosting language models with high-quality feedback. arXiv:2310.01377, 2023.
+\bibitem{cobbe2021gsm8k} K.~Cobbe, V.~Kosaraju, M.~Bavarian, M.~Chen, H.~Jun, L.~Kaiser, et~al. Training verifiers to
+  solve math word problems. arXiv:2110.14168, 2021.
+\bibitem{patel2021svamp} A.~Patel, S.~Bhattamishra, and N.~Goyal. Are NLP models really able to solve simple math
+  word problems? In \emph{NAACL}, 2021. arXiv:2103.07191.
 \end{thebibliography}
+
+% Appendix (does not count toward the 8 pages; graders need not read it, so keep required evidence in the main text).
+\appendix
+\section{Hyperparameters and evaluation settings}
+\begin{table}[h]
+  \centering\small
+  \resizebox{\linewidth}{!}{\input{tables/hparams}}
+  \caption{\todo{caption}}
+  \label{tab:hparams}
+\end{table}
 
 \end{document}

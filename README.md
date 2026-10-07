@@ -118,6 +118,8 @@ saves the raw text it emits, to separate genuine `TIE` answers from the parser's
 ```bash
 python -m scripts.audit_informativeness   # paired bootstrap CIs for every comparison -> results/informativeness_audit.csv
 python -m scripts.make_report_assets      # report/figures/*.pdf and report/tables/*.tex from results/
+python -m scripts.find_example_candidates # candidate qualitative examples -> results/report_examples/task{1..5}.md
+python -m scripts.check_report_numbers    # flags decimals in report/main.tex that do not appear in results/
 ```
 
 `report/main.tex` (NeurIPS 2025 style) includes these files; upload the `report/` folder to Overleaf to compile.

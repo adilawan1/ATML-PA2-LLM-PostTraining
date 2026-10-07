@@ -1,0 +1,17 @@
+\begin{tabular}{llp{0.72\linewidth}}
+\toprule
+ & Setting & Value \\
+\midrule
+Shared & policy & Qwen2.5-1.5B-Instruct, fp16; reference = base model with adapter disabled \\
+ & LoRA & $r{=}8$, $\alpha{=}16$, dropout 0.05, q\_proj, v\_proj \\
+ & seed / sampling & 6304; temperature 0.7, top-$p$ 0.9 \\
+DPO & optimisation & lr $2{\times}10^{-5}$, batch 2 $\times$ accum 8, grad clip 1.0, max seq 768 \\
+ & budgets & standard: 1500 pairs, 1 epoch (94 steps), $\beta{=}0.1$; short: 600 pairs (38 steps) \\
+PPO & rollout & 1 prompt/update, 20 updates (forks 8), max response 512, log-prob temp. 1.0 \\
+ & objective & $\epsilon{=}0.2$, $\beta_\text{KL}{=}0.1$, $\gamma{=}1.0$, $\lambda{=}0.95$, value coef 0.5, missing-EOS penalty 1.0 \\
+ & optimisation & 2 epochs/rollout; lr policy $3{\times}10^{-6}$, value LoRA $1{\times}10^{-4}$, value head $3{\times}10^{-4}$ \\
+GRPO & rollout & $K{=}4$, 1 prompt/update, 20 updates (forks 8), max completion 512, truncated masked, log-prob temp. 0.7 \\
+ & objective & $\epsilon{=}0.2$, $\beta{=}0.1$, lr $5{\times}10^{-6}$, 1 epoch/rollout, zero-std tol. 1e-06 \\
+Reward & model & yavuz-ai/qwen2.5-1.5b-rm-ultrafeedback \\
+\bottomrule
+\end{tabular}

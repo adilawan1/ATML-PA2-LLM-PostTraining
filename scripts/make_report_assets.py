@@ -344,6 +344,46 @@ def compute():
              + "\n".join(lines) + "\n\\bottomrule\n\\end{tabular}\n")
 
 
+def hparams():
+    """Appendix table of the hyperparameters actually used, read from the saved run configs."""
+    d = js(R / "task1_dpo" / "train_standard_config.json")
+    db = js(R / "task1_dpo" / "train_beta_0.03_config.json")
+    p = js(R / "task2_ppo" / "train_standard_config.json")
+    g = js(R / "task3_grpo" / "train_standard_config.json")
+    lora = d["lora"]
+    gen = p["generation"]
+
+    def sci(x):
+        m, e = f"{x:.0e}".split("e")
+        return f"${m}{{\\times}}10^{{{int(e)}}}$"
+
+    rows = [
+        ("Shared", "policy", "Qwen2.5-1.5B-Instruct, fp16; reference = base model with adapter disabled"),
+        ("", "LoRA", f"$r{{=}}{lora['r']}$, $\\alpha{{=}}{lora['alpha']}$, dropout {lora['dropout']}, " + ", ".join(m.replace('_', '\\_') for m in lora['target_modules'])),
+        ("", "seed / sampling", f"{d['seed']}; temperature {gen['temperature']}, top-$p$ {gen['top_p']}"),
+        ("DPO", "optimisation", f"lr {sci(d['learning_rate'])}, batch {d['batch_size']} $\\times$ accum {d['grad_accum_steps']}, "
+                                f"grad clip {d['max_grad_norm']}, max seq {d['max_sequence_length']}"),
+        ("", "budgets", f"standard: {d['n_examples']} pairs, {d['epochs']} epoch ({d['optimizer_steps']} steps), $\\beta{{=}}{d['beta']}$; "
+                        f"short: {db['n_examples']} pairs ({db['optimizer_steps']} steps)"),
+        ("PPO", "rollout", f"{p['prompts_per_update']} prompt/update, {p['updates']} updates (forks 8), max response {p['max_response_length']}, "
+                           f"log-prob temp. {p['logprob_temperature']}"),
+        ("", "objective", f"$\\epsilon{{=}}{p['clip_epsilon']}$, $\\beta_\\text{{KL}}{{=}}{p['kl_beta']}$, $\\gamma{{=}}{p['gamma']}$, "
+                          f"$\\lambda{{=}}{p['gae_lambda']}$, value coef {p['value_coef']}, missing-EOS penalty {p['missing_eos_penalty']}"),
+        ("", "optimisation", f"{p['ppo_epochs']} epochs/rollout; lr policy {sci(p['policy_learning_rate'])}, value LoRA "
+                             f"{sci(p['value_lora_learning_rate'])}, value head {sci(p['value_head_learning_rate'])}"),
+        ("GRPO", "rollout", f"$K{{=}}{g['num_generations']}$, {g['prompts_per_update']} prompt/update, {g['updates']} updates (forks 8), "
+                            f"max completion {g['max_completion_length']}, truncated masked, log-prob temp. {g['logprob_temperature']}"),
+        ("", "objective", f"$\\epsilon{{=}}{g['clip_epsilon']}$, $\\beta{{=}}{g['kl_beta']}$, lr {sci(g['learning_rate'])}, "
+                          f"{g['policy_epochs']} epoch/rollout, zero-std tol. {g['zero_std_tolerance']}"),
+        ("Reward", "model", p["reward_model"].replace("_", "\\_")),
+        ("Eval", "decoding", "DPO: 300 held-out prompts, sampled, 256 new tokens; PPO/GRPO: 200 prompts, sampled, 768 new tokens; "
+                             "XSTest: greedy, 256; GSM8K/SVAMP: greedy, 512; judges: Qwen2.5-3B-Instruct, greedy, 4-bit"),
+    ]
+    body = "\n".join(f"{a} & {b} & {c} \\\\" for a, b, c in rows)
+    save_tab("hparams", "\\begin{tabular}{llp{0.72\\linewidth}}\n\\toprule\n & Setting & Value \\\\\n\\midrule\n"
+             + body + "\n\\bottomrule\n\\end{tabular}\n")
+
+
 def main():
     FIG.mkdir(parents=True, exist_ok=True)
     TAB.mkdir(parents=True, exist_ok=True)
@@ -353,6 +393,7 @@ def main():
     task4()
     task5()
     compute()
+    hparams()
 
 
 if __name__ == "__main__":
