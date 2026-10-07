@@ -1,0 +1,15 @@
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Condition & $\epsilon$ & $\beta_\text{KL}$ & Cache aff. & RM score & KL$_\text{seq}$ & Entropy & Length & Grad CV & Clip frac. \\
+\midrule
+Midpoint (start) & 0.20 & 0.10 & -- & 1.656 & -0.0017 & 0.998 & 285 & -- & -- \\
+Standard, 20 upd. & 0.20 & 0.10 & -- & 1.729 & 0.0124 & 1.000 & 284 & -- & -- \\
+\midrule
+$\epsilon{=}0.05$ & 0.05 & 0.10 & 0.168 & 1.766 & -0.0047 & 1.010 & 294 & 0.71 & 0.000 \\
+$\epsilon{=}0.20$ & 0.20 & 0.10 & 0.056 & 1.766 & -0.0047 & 1.010 & 294 & 0.71 & 0.000 \\
+$\epsilon{=}0.50$ & 0.50 & 0.10 & 0.030 & 1.766 & -0.0047 & 1.010 & 294 & 0.71 & 0.000 \\
+\midrule
+$\beta_\text{KL}{=}0$ & 0.20 & 0.00 & -- & 1.622 & -0.0094 & 1.002 & 285 & 0.69 & 0.000 \\
+$\beta_\text{KL}{=}0.20$ & 0.20 & 0.20 & -- & 1.691 & 0.0014 & 1.007 & 295 & 0.72 & 0.000 \\
+\bottomrule
+\end{tabular}

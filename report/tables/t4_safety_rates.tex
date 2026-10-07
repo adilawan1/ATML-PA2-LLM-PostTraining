@@ -1,0 +1,12 @@
+\begin{tabular}{lrrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{Safe prompts ($n{=}250$)} & \multicolumn{2}{c}{Unsafe prompts ($n{=}200$)} & & \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+Policy & Answer & Over-ref. & Any ref.$^\dagger$ & Unsafe comp. & Just. ref. & Ambig. & Length \\
+\midrule
+SFT & 0.572 & 0.000 & 0.416 & 0.000 & 0.885 & 0.000 & 108 \\
+DPO & 0.572 & 0.000 & 0.420 & 0.000 & 0.865 & 0.000 & 109 \\
+PPO & 0.576 & 0.000 & 0.412 & 0.000 & 0.880 & 0.000 & 108 \\
+GRPO & 0.572 & 0.000 & 0.416 & 0.000 & 0.875 & 0.000 & 108 \\
+\bottomrule
+\end{tabular}

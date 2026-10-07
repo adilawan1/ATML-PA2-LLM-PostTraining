@@ -1,0 +1,10 @@
+\begin{tabular}{lrrrrrrr}
+\toprule
+ & \multicolumn{4}{c}{Held-out} & \multicolumn{3}{c}{Per-completion grad norm} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-8}
+Normalization & RM score & KL$_\text{seq}$ & Length & Trunc. & Short & Medium & Long \\
+\midrule
+Canonical ($1/T_k$) & 1.610 & 0.0172 & 282 & 0.095 & 0.270 & 0.193 & 0.112 \\
+Dr.~GRPO & 1.721 & 0.0324 & 288 & 0.070 & 0.023 & 0.052 & 0.063 \\
+\bottomrule
+\end{tabular}

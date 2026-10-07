@@ -1,0 +1,194 @@
+% ATML PA2 report skeleton. Structure, floats and data only: every sentence of prose, every caption, the title and
+% the abstract must be written by the student (course AI-usage policy). Figures/tables are generated from results/ by
+%   python -m scripts.make_report_assets
+% Page budget: 8 pages of main content; references (and any appendix) do not count.
+
+\documentclass{article}
+\usepackage[preprint]{neurips_2025} % "preprint" shows the author block; switch to [final] if the course asks for it
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+\title{\todo{title}}
+
+\author{%
+  Ahmad Adil Awan \\
+  \todo{roll number, department} \\
+  \texttt{\todo{email}}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\todo{abstract}
+Code: \url{https://github.com/adilawan1/ATML-PA2-LLM-PostTraining}
+\end{abstract}
+
+% ~0.6 page
+\section{Introduction}
+\todo{motivation and research questions}
+
+% ~0.5 page: model, LoRA, data splits, decoding, seeds, metric conventions, compute (Table~\ref{tab:compute})
+\section{Experimental setup}
+\todo{setup; corrected objective defects (README section 2)}
+
+\begin{table}[t]
+  \centering\small
+  \input{tables/compute}
+  \caption{\todo{caption}}
+  \label{tab:compute}
+\end{table}
+
+% ~1.1 page
+\section{Task 1: Direct Preference Optimization}
+\todo{standard DPO, beta study (note different budgets), length confounding, qualitative examples}
+
+\begin{table}[t]
+  \centering
+  \resizebox{\linewidth}{!}{\input{tables/t1_dpo}}
+  \caption{\todo{caption}}
+  \label{tab:t1}
+\end{table}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/t1_length_strata}
+  \caption{\todo{caption}}
+  \label{fig:t1-strata}
+\end{figure}
+
+% ~1.1 page
+\section{Task 2: Proximal Policy Optimization}
+\todo{standard continuation diagnostics, clipping study (define the stability statistic: Grad CV = std/mean of the
+policy gradient norm across the 8 fork updates), KL-pressure study, qualitative examples}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/t2_ppo_trajectories}
+  \caption{\todo{caption}}
+  \label{fig:t2-traj}
+\end{figure}
+
+\begin{table}[t]
+  \centering
+  \resizebox{\linewidth}{!}{\input{tables/t2_ppo}}
+  \caption{\todo{caption}}
+  \label{tab:t2}
+\end{table}
+
+% ~1.1 page
+\section{Task 3: Group Relative Policy Optimization}
+\todo{standard continuation, group-size study (difficulty bins = tertiles of per-prompt mean cached reward),
+canonical vs Dr.~GRPO, qualitative examples}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/t3_grpo_trajectories}
+  \caption{\todo{caption}}
+  \label{fig:t3-traj}
+\end{figure}
+
+\begin{table}[t]
+  \centering
+  \resizebox{\linewidth}{!}{\input{tables/t3_group_size}}
+  \caption{\todo{caption}}
+  \label{tab:t3-k}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \resizebox{\linewidth}{!}{\input{tables/t3_normalization}}
+  \caption{\todo{caption}}
+  \label{tab:t3-norm}
+\end{table}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/t3_groupsize_normalization}
+  \caption{\todo{caption}}
+  \label{fig:t3-k-norm}
+\end{figure}
+
+% ~1.2 page
+\section{Task 4: Safety calibration}
+\todo{rates, category behaviour, manual audit agreement, disagreement examples (policy vs judge error)}
+
+\begin{table}[t]
+  \centering
+  \resizebox{\linewidth}{!}{\input{tables/t4_safety_rates}}
+  \caption{\todo{caption; define the derived "Any ref." column marked with a dagger}}
+  \label{tab:t4}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \resizebox{\linewidth}{!}{\input{tables/t4_audit_confusion}}
+  \caption{\todo{caption}}
+  \label{tab:t4-audit}
+\end{table}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.55\linewidth]{figures/t4_category_refusal}
+  \caption{\todo{caption}}
+  \label{fig:t4-cat}
+\end{figure}
+
+% ~1.1 page
+\section{Task 5: RLVR versus RLAIF}
+\todo{in-domain, controlled diagnostics ($S_\text{reason}$, $S_\text{outcome}$), transfer, qualitative examples,
+feedback-source discussion}
+
+\begin{table}[t]
+  \centering
+  \resizebox{\linewidth}{!}{\input{tables/t5_feedback}}
+  \caption{\todo{caption}}
+  \label{tab:t5}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \resizebox{\linewidth}{!}{\input{tables/t5_diagnostics}}
+  \caption{\todo{caption}}
+  \label{tab:t5-diag}
+\end{table}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/t5_diagnostics}
+  \caption{\todo{caption}}
+  \label{fig:t5-diag}
+\end{figure}
+
+% ~0.8 page
+\section{Cross-task discussion}
+\todo{preference strength vs drift; offline vs online; optimization bias; safety calibration; reward-source design}
+
+% ~0.3 page
+\section{Conclusion}
+\todo{conclusion}
+
+% References do not count toward the 8 pages.
+\begin{thebibliography}{9}
+\bibitem{rafailov2023} \todo{Rafailov et al., 2023}
+\bibitem{schulman2017} \todo{Schulman et al., 2017}
+\bibitem{ouyang2022} \todo{Ouyang et al., 2022}
+\bibitem{shao2024} \todo{Shao et al., 2024}
+\bibitem{liu2025} \todo{Liu et al., 2025}
+\bibitem{rottger2023} \todo{R\"ottger et al., 2023}
+\bibitem{deepseek2025} \todo{DeepSeek-AI et al., 2025}
+\bibitem{lee2024} \todo{Lee et al., 2024}
+\end{thebibliography}
+
+\end{document}

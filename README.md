@@ -113,6 +113,15 @@ python -m task5_feedback.inspect_judge_outputs --config configs/feedback.yaml # 
 `inspect_judge_outputs` re-runs the fixed judge with its own rubric and 4-token decoding on the controlled pairs and
 saves the raw text it emits, to separate genuine `TIE` answers from the parser's TIE fallback. It changes no metric.
 
+### Report assets
+
+```bash
+python -m scripts.audit_informativeness   # paired bootstrap CIs for every comparison -> results/informativeness_audit.csv
+python -m scripts.make_report_assets      # report/figures/*.pdf and report/tables/*.tex from results/
+```
+
+`report/main.tex` (NeurIPS 2025 style) includes these files; upload the `report/` folder to Overleaf to compile.
+
 ## 4. Implementation conventions
 
 - **Fixed data and seeds.** All runs use seed 6304, the released data files, and the released prompt IDs. Training

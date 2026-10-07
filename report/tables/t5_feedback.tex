@@ -1,0 +1,15 @@
+\begin{tabular}{l rrrr rrrr r}
+\toprule
+ & \multicolumn{4}{c}{GSM8K ($n{=}300$)} & \multicolumn{4}{c}{SVAMP transfer ($n{=}100$)} & \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Policy & Acc & Format & Length & Win vs SFT (ties) & Acc & Format & Length & Win vs SFT (ties) & $\Delta$Acc \\
+\midrule
+SFT & 0.273 & 0.353 & 275 & -- & 0.420 & 0.550 & 163 & -- & +0.147 \\
+RLVR & 0.293 & 0.363 & 276 & 0.503 (290) & 0.460 & 0.580 & 164 & 0.530 (78) & +0.167 \\
+RLAIF & 0.290 & 0.363 & 277 & 0.500 (292) & 0.480 & 0.620 & 164 & 0.535 (79) & +0.190 \\
+\midrule
+\multicolumn{11}{l}{\quad RLVR vs SFT: verifier--judge agreement 0.93 (GSM8K), 0.78 (SVAMP); decisive pairs 12 / 6, judge agrees on 0.00 / 0.50} \\
+\multicolumn{11}{l}{\quad RLAIF vs SFT: verifier--judge agreement 0.96 (GSM8K), 0.77 (SVAMP); decisive pairs 5 / 6, judge agrees on 0.00 / 0.33} \\
+\multicolumn{11}{l}{\quad RLVR vs RLAIF: verifier--judge agreement 0.93 (GSM8K), 0.78 (SVAMP); decisive pairs 11 / 2, judge agrees on 0.00 / 0.50} \\
+\bottomrule
+\end{tabular}

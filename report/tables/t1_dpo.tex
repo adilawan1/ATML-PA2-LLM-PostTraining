@@ -1,0 +1,14 @@
+\begin{tabular}{llrrrrrrr}
+\toprule
+Model & Pairs & Loss & Acc & Margin & KL$_\text{tok}$ ($10^{-3}$) & RM score & Length & Word lim. \\
+\midrule
+SFT (reference) & -- & 0.693 & 0.000 & 0.000 & 0.00 & 1.260 & 157 $\pm$ 105 & 0.52 \\
+Standard DPO, $\beta{=}0.10$ & 1 ep, 1500 & 0.676 & 0.633 & 0.393 & 0.20 & 1.281 & 157 $\pm$ 105 & 0.50 \\
+\midrule
+Short, $\beta{=}0.03$ & 600 & 0.691 & 0.613 & 0.138 & 0.15 & 1.267 & 158 $\pm$ 105 & 0.54 \\
+Short, $\beta{=}0.10$ & 600 & 0.687 & 0.610 & 0.130 & 0.17 & 1.275 & 158 $\pm$ 105 & 0.52 \\
+Short, $\beta{=}0.30$ & 600 & 0.681 & 0.613 & 0.104 & 0.12 & 1.268 & 157 $\pm$ 104 & 0.52 \\
+\midrule
+Length-balanced & 1 ep, 1500 & 0.677 & 0.623 & 0.452 & 2.17 & 1.278 & 157 $\pm$ 105 & 0.52 \\
+\bottomrule
+\end{tabular}
