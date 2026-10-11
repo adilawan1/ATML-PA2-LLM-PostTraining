@@ -163,4 +163,4 @@ outputs/         trained adapters (not committed)
 - Libraries: PyTorch, Hugging Face Transformers, PEFT, TRL, bitsandbytes, pandas, NumPy, scikit-learn.
 - Coding assistance: parts of the implementation (training/evaluation loops, analysis scripts, tests, Colab
   launcher) were written with the help of an LLM coding assistant (Anthropic Claude); the author is responsible for
-  all submitted code. The PDF report is written without generative AI, per the course policy.
+  all submitted code.
