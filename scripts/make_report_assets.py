@@ -272,7 +272,7 @@ def task5():
     agree = []
     for comp, lab in [("rlvr_vs_sft", "RLVR vs SFT"), ("rlaif_vs_sft", "RLAIF vs SFT"), ("rlvr_vs_rlaif", "RLVR vs RLAIF")]:
         g, x = gsm[comp], tr[comp]
-        agree.append(f"\\multicolumn{{11}}{{l}}{{\\quad {lab}: verifier--judge agreement {g['verifier_judge_agreement_3way']:.2f} (GSM8K), "
+        agree.append(f"\\multicolumn{{10}}{{l}}{{\\quad {lab}: verifier--judge agreement {g['verifier_judge_agreement_3way']:.2f} (GSM8K), "
                      f"{x['verifier_judge_agreement_3way']:.2f} (SVAMP); decisive pairs {g['decisive_pairs']} / {x['decisive_pairs']}, "
                      f"judge agrees on {f(g['judge_agrees_on_decisive'], 2)} / {f(x['judge_agrees_on_decisive'], 2)}}} \\\\")
     save_tab("t5_feedback", "\\begin{tabular}{l rrrr rrrr r}\n\\toprule\n"
