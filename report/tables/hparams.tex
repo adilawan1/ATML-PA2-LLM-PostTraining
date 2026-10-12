@@ -13,5 +13,6 @@ PPO & rollout & 1 prompt/update, 20 updates (forks 8), max response 512, log-pro
 GRPO & rollout & $K{=}4$, 1 prompt/update, 20 updates (forks 8), max completion 512, truncated masked, log-prob temp. 0.7 \\
  & objective & $\epsilon{=}0.2$, $\beta{=}0.1$, lr $5{\times}10^{-6}$, 1 epoch/rollout, zero-std tol. 1e-06 \\
 Reward & model & yavuz-ai/qwen2.5-1.5b-rm-ultrafeedback \\
+Eval & decoding & DPO: 300 held-out prompts, sampled, 256 new tokens; PPO/GRPO: 200 prompts, sampled, 768 new tokens; XSTest: greedy, 256; GSM8K/SVAMP: greedy, 512; judges: Qwen2.5-3B-Instruct, greedy, 4-bit \\
 \bottomrule
 \end{tabular}
