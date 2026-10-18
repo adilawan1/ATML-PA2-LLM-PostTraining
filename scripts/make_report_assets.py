@@ -225,10 +225,11 @@ def task4():
     lines = [f"{short[m]} & " + " & ".join(str(int(conf.loc[m, c])) for c in labs) + f" & {int(conf.loc[m].sum())} \\\\" for m in labs]
     save_tab("t4_audit_confusion", "\\begin{tabular}{l rrrrr r}\n\\toprule\n"
              "Manual $\\downarrow$ / AI judge $\\rightarrow$ & " + " & ".join(short[c] for c in labs) + " & Total \\\\\n\\midrule\n"
-             + "\n".join(lines) + "\n\\midrule\n"
-             f"\\multicolumn{{7}}{{l}}{{Agreement {a['agreement']:.3f}, Cohen's $\\kappa$ {a['cohen_kappa']:.3f}; safe {a['agreement_by_class']['SAFE']:.3f}, "
-             f"unsafe {a['agreement_by_class']['UNSAFE']:.3f}; $n{{=}}{a['n_labelled']}$ pairs ({a['n_distinct_responses_labelled']} distinct)}} \\\\\n"
-             "\\bottomrule\n\\end{tabular}\n")
+             + "\n".join(lines) + "\n\\bottomrule\n\\end{tabular}\n")
+    # Agreement, kappa and n go in the report caption: a full-width note row wider than the table stretches its last column.
+    print(f"t4_audit_confusion caption: agreement {a['agreement']:.3f}, kappa {a['cohen_kappa']:.3f}, safe "
+          f"{a['agreement_by_class']['SAFE']:.3f}, unsafe {a['agreement_by_class']['UNSAFE']:.3f}, "
+          f"n={a['n_labelled']} ({a['n_distinct_responses_labelled']} distinct)")
 
     c = pd.read_csv(t / "category_label_fractions.csv")
     c["refusal"] = c["JUSTIFIED_REFUSAL"] + c["OVER_REFUSAL"]
@@ -269,17 +270,17 @@ def task5():
         lines.append(f"{lab} & {f(r['gsm_exact_accuracy'])} & {f(r['gsm_format_compliance'])} & {r['gsm_len_mean']:.0f} & {win_g} & "
                      f"{f(r['transfer_exact_accuracy'])} & {f(r['transfer_format_compliance'])} & {r['transfer_len_mean']:.0f} & {win_t} & "
                      f"{r['transfer_exact_accuracy'] - r['gsm_exact_accuracy']:+.3f} \\\\")
-    agree = []
+    # Verifier-judge agreement goes in the report caption (a full-width note row would stretch the last column).
     for comp, lab in [("rlvr_vs_sft", "RLVR vs SFT"), ("rlaif_vs_sft", "RLAIF vs SFT"), ("rlvr_vs_rlaif", "RLVR vs RLAIF")]:
         g, x = gsm[comp], tr[comp]
-        agree.append(f"\\multicolumn{{10}}{{l}}{{\\quad {lab}: verifier--judge agreement {g['verifier_judge_agreement_3way']:.2f} (GSM8K), "
-                     f"{x['verifier_judge_agreement_3way']:.2f} (SVAMP); decisive pairs {g['decisive_pairs']} / {x['decisive_pairs']}, "
-                     f"judge agrees on {f(g['judge_agrees_on_decisive'], 2)} / {f(x['judge_agrees_on_decisive'], 2)}}} \\\\")
+        print(f"t5_feedback caption: {lab}: agreement {g['verifier_judge_agreement_3way']:.2f} / "
+              f"{x['verifier_judge_agreement_3way']:.2f}; decisive {g['decisive_pairs']} / {x['decisive_pairs']}; "
+              f"judge agrees {f(g['judge_agrees_on_decisive'], 2)} / {f(x['judge_agrees_on_decisive'], 2)}")
     save_tab("t5_feedback", "\\begin{tabular}{l rrrr rrrr r}\n\\toprule\n"
              " & \\multicolumn{4}{c}{GSM8K ($n{=}300$)} & \\multicolumn{4}{c}{SVAMP transfer ($n{=}100$)} & \\\\\n"
              "\\cmidrule(lr){2-5}\\cmidrule(lr){6-9}\n"
              "Policy & Acc & Format & Length & Win vs SFT (ties) & Acc & Format & Length & Win vs SFT (ties) & $\\Delta$Acc \\\\\n\\midrule\n"
-             + "\n".join(lines) + "\n\\midrule\n" + "\n".join(agree) + "\n\\bottomrule\n\\end{tabular}\n")
+             + "\n".join(lines) + "\n\\bottomrule\n\\end{tabular}\n")
 
     ps = pd.read_csv(t / "diagnostics" / "pair_summary.csv")
     summ = js(t / "diagnostics" / "summary.json")
@@ -296,11 +297,11 @@ def task5():
              " & \\multicolumn{3}{c}{Exact verifier} & \\multicolumn{3}{c}{AI pairwise judge} \\\\\n"
              "\\cmidrule(lr){2-4}\\cmidrule(lr){5-7}\n"
              "Clean correct vs \\ldots & Better & Tie & Wrong & Better & Tie & Wrong \\\\\n\\midrule\n"
-             + "\n".join(lines) + "\n\\midrule\n"
-             f"\\multicolumn{{7}}{{l}}{{$S_\\text{{reason}}$: verifier {summ['S_reason']['verifier']:.2f}, judge {summ['S_reason']['ai_judge']:.2f}; "
-             f"$S_\\text{{outcome}}$: verifier {summ['S_outcome']['verifier']:.2f}, judge {summ['S_outcome']['ai_judge']:.2f}; "
-             f"judge parse fallback {raw['tie_fallback_rate']:.2f} ($n{{=}}{raw['n']}$)}} \\\\\n"
-             "\\bottomrule\n\\end{tabular}\n")
+             + "\n".join(lines) + "\n\\bottomrule\n\\end{tabular}\n")
+    # S_reason / S_outcome go in the report caption (a full-width note row would stretch the last column).
+    print(f"t5_diagnostics caption: S_reason verifier {summ['S_reason']['verifier']:.2f}, judge {summ['S_reason']['ai_judge']:.2f}; "
+          f"S_outcome verifier {summ['S_outcome']['verifier']:.2f}, judge {summ['S_outcome']['ai_judge']:.2f}; "
+          f"parse fallback {raw['tie_fallback_rate']:.2f} (n={raw['n']})")
 
     fig, ax = plt.subplots(figsize=(TEXTWIDTH, 1.75))
     order = [("reasoning", "Reasoning corrupted"), ("outcome", "Wrong final answer"), ("filler", "Persuasive filler"),
